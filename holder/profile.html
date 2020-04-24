@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Passport</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Jquery UI CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"> -->
+
+    <!-- Custom style  -->
+    <link href="css/sideBar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Jquery UI JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script> -->
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+
+    <!-- Custom JS -->
+    <script src="js/sideBar.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body class="animate-bottom-1">
+
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="userLabel">
+        <p>Sherlock Holmes</p>
+    </div>
+    <div class="sidebar">
+        <a href="index.html"><img src="img/icon/home-run.png">Home</a>
+        <a href="booking.html"><img src="img/icon/appointment-icon.png">Appointment</a>
+        <a href="access.html"><img src="img/icon/password.png">Whitelist</a>
+        <a href="profile.html"><img src="img/icon/profile.png">Profile</a>
+        <!-- <a href="allergy.html"><img src="img/icon/allergy.png">Allergy</a> -->
+    </div>
+
+    <div class="trigger"></div>
+
+    <div class="wrapper">
+        <!-- start top bar -->
+        <div class="navbar navbar-expand topbar">
+            <i class="fas fa-bars sidebarBtn"></i>
+            <span class="logo-text">Immunodex</span>
+        </div>
+        <!-- end of top bar -->
+
+
+        <!-- Start page content -->
+        <div class="container">
+            <div class="row">
+                <div class="page-heading mt-3 mb-4 col-12">
+                    <p class="mb-0">Peronal Information</p>
+                    <span>It will be provide to Issuer</span>
+                </div>
+                <form class="col-12">
+                    <div class="form-item">
+                        <input type="text" class="form-textbox" id="fName" value="Sherlock" required>
+                        <span class="form-label" for="fName">First name</span>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" class="form-textbox" id="lName" value="Holmes" required>
+                        <span class="form-label" for="lName">Last name</span>
+                    </div>
+
+                    <div class="form-item">
+                        <select class="form-textbox" id="gender" required>
+                            <option value=""></option>
+                            <option value="Male" selected>Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <span class="form-label" for="gender">Gender</span>
+                    </div>
+
+                    <div class="form-item">
+                        <input type="text" class="form-textbox" id="id" value="123456789" required>
+                        <span class="form-label" for="id">Identity Document No.</span>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" class="form-textbox" id="dateOfBirth" value="06/01/1954" required>
+                        <span class="form-label" for="dateOfBirth">Date of Birth (dd/mm/yyyy)</span>
+                    </div>
+                    <div class="form-item">
+                        <input type="tel" class="form-textbox" id="mobileNumber" value="0 207 224 3688" required>
+                        <span class="form-label" for="mobileNumber">Mobile Number</span>
+                    </div>
+
+                    <div class="form-item">
+                        <input type="email" class="form-textbox" id="userEmail" value="sh@221b.co.uk" required>
+                        <span class="form-label" for="userEmail">Email</span>
+                    </div>
+                    <a href="index.html">
+                        <div class="btn">Save</div>
+                    </a>
+
+                </form>
+            </div>
+        </div>
+
+        <!-- end of page content -->
+    </div>
+</body>
+
+</html>

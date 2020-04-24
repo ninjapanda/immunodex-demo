@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Passport</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Jquery UI CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"> -->
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+
+    <!-- Custom style  -->
+    <link href="css/sideBar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom JS -->
+    <script src="js/sideBar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/access.js"></script>
+
+</head>
+
+<body class="animate-bottom-1">
+
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="userLabel">
+        <p>Sherlock Holmes</p>
+    </div>
+    <div class="sidebar">
+        <a href="index.html"><img src="img/icon/home-run.png">Home</a>
+        <a href="booking.html"><img src="img/icon/appointment-icon.png">Appointment</a>
+        <a href="access.html"><img src="img/icon/password.png">Whitelist</a>
+        <a href="profile.html"><img src="img/icon/profile.png">Profile</a>
+        <!-- <a href="allergy.html"><img src="img/icon/allergy.png">Allergy</a> -->
+    </div>
+
+    <div class="trigger"></div>
+
+    <div class="wrapper">
+        <!-- start top bar -->
+        <div class="navbar navbar-expand topbar">
+            <i class="fas fa-bars sidebarBtn"></i>
+            <span class="logo-text">Immunodex</span>
+        </div>
+        <!-- end of top bar -->
+
+
+        <!-- Start page content -->
+        <div class="container">
+            <div class="row">
+                <div class="page-heading mt-3 mb-4 col-12">
+                    <p class="mb-0">Whitelist Management</p>
+                </div>
+                <div class="col-12 form-row mt-2">
+                        <div class="col-9">
+                            <span class="smallTitle">Whitelisted People</span>
+                        </div>
+                        <div class="col-3" onclick="addClient()">
+                            <div class="smallBtn"><span>+ Add</span></div>
+                        </div>
+                        <div class="col-12 hr m-0 mt-2"></div>
+                        <table class="col-12">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Mobile No.</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Molly Hooper</td>
+                                    <td>020 911 123456</td>
+                                </tr>
+                                <tr>
+                                    <td>Mycroft Holmes</td>
+                                    <td>020 941 654321</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- end of page content -->
+    </div>
+</body>
+
+</html>

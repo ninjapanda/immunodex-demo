@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Passport</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Jquery UI CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"> -->
+
+    <!-- Custom style  -->
+    <link href="css/sideBar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Jquery UI JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script> -->
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+
+    <!-- Custom JS -->
+    <script src="js/sideBar.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="trigger"></div>
+
+    <div class="wrapper">
+        <!-- start top bar -->
+        <div class="navbar navbar-expand topbar">
+            <a href="#" onclick="history.back()" >
+                <img src="img/icon/Path.svg"><span>Back</span>
+            </a>
+        </div>
+        <!-- end of top bar -->
+
+
+        <!-- Start page content -->
+        <div class="container">
+            <div class="row">
+                <div class="page-heading mt-3 mb-4 col-12">
+                    <p>Register</p>
+                </div>
+                <form class="col-12">
+                    <div class="form-item">
+                        <input type="tel" class="form-textbox" id="mobileNumber" required>
+                        <span class="form-label" for="mobileNumber">mobile number</span>
+                    </div>
+                    <div class="form-item">
+                        <input type="password" class="form-textbox" id="userPw" required>
+                        <span class="form-label" for="userPw">password</span>
+                    </div>
+                    <div class="form-item">
+                        <input type="password" class="form-textbox" id="userConfirmPw" required>
+                        <span class="form-label" for="userConfirmPw">confirm password</span>
+                    </div>
+                    <div class="form-item">
+                        <input type="email" class="form-textbox error" id="userEmail" value="2n" required>
+                        <span class="form-label" for="userEmail">email</span>
+                        <span class="inputExp">This is optional.</span>
+                    </div>
+                    <a href="regVer.html">
+                        <div class="btn">Continue</div>
+                    </a>
+                    
+                </form>
+            </div>
+        </div>
+
+        <!-- end of page content -->
+    </div>
+</body>
+
+</html>
