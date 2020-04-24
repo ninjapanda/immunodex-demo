@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Issuer</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom style  -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+</head>
+
+<body> <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <div class="wrapper">
+        <!-- Start page content -->
+        <div class="container-fluid animate-bottom-1">
+            <div class="topbar">
+                <a href="#" onclick="history.back()">
+                    <img src="img/icon/Path.svg"><span>Back</span>
+                </a>
+            </div>
+            <div class="row">
+                <div class="page-heading col-12 mt-4">
+                    <p>Issuer Information</p>
+                    <span>Please provide us the information below, it will store in the profile page.</span>
+                </div>
+                <form class="col-12 mt-4 flForm">
+                    <div class="form-row">
+                        <div class="form-item col">
+                            <input type="text" class="form-textbox" id="issuerName" required>
+                            <span class="form-label" for="issuerName">Issuer Name</span>
+                        </div>
+                        <div class="form-item col">
+                            <input type="text" class="form-textbox" id="openHours" required>
+                            <span class="form-label" for="openHours">Open Hours</span>
+                            <span class="inputExp">e.g.( 09:00 - 13:00, 15:00 - 20:00 )</span>
+                        </div>
+                        <div class="form-item col-12">
+                            <textarea type="text" class="form-textbox" id="issuerDesc" rows="4" cols="50" required></textarea>
+                            <span class="form-label" for="issuerDesc">Description</span>
+                        </div>
+                        <div class="form-item col-6">
+                            <input type="tel" class="form-textbox" id="mobileNumber" required>
+                            <span class="form-label" for="mobileNumber">Mobile Number</span>
+                        </div>
+                        <div class="form-item col-6">
+                            <input type="email" class="form-textbox error" id="email" value="he" required>
+                            <span class="form-label" for="email">Email Address</span>
+                        </div>
+
+                        <div class="form-item col-12">
+                            <input type="text" class="form-textbox" id="address" required>
+                            <span class="form-label" for="address">Address</span>
+                        </div>
+
+                        <div class="form-item col-6">
+                            <select class="form-textbox" id="district" required>
+                                <option value=""></option>
+                                <option value="tm" selected>Tuen Mun</option>
+                                <option value="tw">Tsuen Wan</option>
+                            </select>
+                            <span class="form-label" for="district">District</span>
+                        </div>
+
+                        <div class="form-item col-6">
+                            <select class="form-textbox" id="territory" required>
+                                <option value=""></option>
+                                <option value="hk" selected>Hong Kong</option>
+                                <option value="kl" >Kowloon</option>
+                                <option value="nt">New Territories</option>
+                            </select>
+                            <span class="form-label" for="territory">Territory</span>
+                        </div>
+                    </div>
+                    <div class="btn-wrapper mt-4">
+                        <a href="flSchedule.html">
+                            <div class="btn btn-outline">Continue</div>
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+        <!-- end of page content -->
+    </div>
+
+    </div>
+</body>
+
+</html>

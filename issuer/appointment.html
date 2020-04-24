@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Issuer</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- datatable -->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <link type="text/css" href="css/dataTables.checkboxes.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/dataTables.checkboxes.min.js"></script>
+
+
+    <!-- Custom style  -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/appointment.js"></script>
+
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <p>Immunodex</p>
+            </div>
+
+            <ul class="list-unstyled components">
+                <div class="user-wrapper">
+                    <div class="userImg-wrapper">
+                        <img src="img/manager.png">
+                    </div>
+                    <span>Dr. John Watson</span>
+                </div>
+                <li>
+                    <a href="#patientSubmenu" data-toggle="collapse" aria-expanded="true"
+                        class="dropdown-toggle">Holder</a>
+                    <ul class="collapse list-unstyled show" id="patientSubmenu">
+                        <li class="active">
+                            <a href="appointment.html">Appointment</a>
+                        </li>
+                        <li>
+                            <a href="checkInList.html">Check-In List</a>
+                        </li>
+                        <li>
+                            <a href="testRecord.html">Testing Record</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="schedule.html">Schedule</a>
+                </li>
+
+                <li>
+                    <a href="profile.html">Issuer Info</a>
+                </li>
+                <li>
+                    <a href="account.html">Account</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Start page content -->
+        <div class="container-fluid animate-bottom-1">
+
+            <div class="row">
+                <div class="page-heading col-12 mt-4">
+                    <p>Appointment</p>
+                </div>
+                <form class="col-7 appointmentForm">
+                    <div class="form-row">
+                        <div class="col-3 form-group p-0">
+                            <select class="form-textbox" id="week" required>
+                                <option value="week_1" selected>Week 1</option>
+                                <option value="week_2">Week 2</option>
+                                <option value="week_3">Week 3</option>
+                                <option value="week_4">Week 4</option>
+                            </select>
+                        </div>
+                        <div class="col-3 form-group p-0">
+                            <select class="form-textbox" id="month" required>
+                                <option value="jan" selected>January</option>
+                                <option value="feb">February</option>
+                                <option value="mar">March</option>
+                                <option value="apr">April</option>
+                                <option value="may">May</option>
+                                <option value="jun">June</option>
+                                <option value="jul">July</option>
+                                <option value="aug">August</option>
+                                <option value="sept">September</option>
+                                <option value="oct">October</option>
+                                <option value="nov">November</option>
+                                <option value="dec">December</option>
+                            </select>
+                        </div>
+                        <div class="col-3 form-group p-0">
+                            <select class="form-textbox" id="year" required>
+                                <option value="2019">2019</option>
+                                <option value="2020" selected>2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    
+                </form>
+
+                <div class="btn-wrapper col-3 offset-2">
+                    <a href="scanQRCode.html">
+                        <div class="btn">Scan QR Code</div>
+                    </a>
+                </div>
+                <form class="col-12 mt-4">
+                    <div class="col-12 mb-4 tabs-wrapper">
+                        <div class="row">
+                            <div class="tab col active" onclick="openTab( '#monday')">Mon(1/3)</div>
+                            <div class="tab col" onclick="openTab( '#tuesday')">Tue(2/3)</div>
+                            <div class="tab col" onclick="openTab( '#wednesday')">Wed(3/3)</div>
+                            <div class="tab col" onclick="openTab( '#thursday')">Thu(4/3)</div>
+                            <div class="tab col" onclick="openTab( '#friday')">Fri(5/3)</div>
+                            <div class="tab col" onclick="openTab( '#saturday')">Sat(6/3)</div>
+                            <div class="tab col" onclick="openTab( '#sunday')">Sun(7/3)</div>
+                        </div>
+                    </div>
+                    <div id="monday" class="blanket tabcontent table-wrapper" style="display: block;">
+                        <table id="appointment_1" class="table appointmentTable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Full Name</th>
+                                    <th>Identity Document No.</th>
+                                    <th>Mobile No</th>
+                                    <th>Booking Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot right"></div><span>Cofirmed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot error"></div><span>Canceled</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="tuesday" class="blanket tabcontent table-wrapper">
+                        <table id="appointment_2" class="table appointmentTable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Full Name</th>
+                                    <th>Identity Document No.</th>
+                                    <th>Mobile No</th>
+                                    <th>Booking Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot right"></div><span>Cofirmed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot error"></div><span>Canceled</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="wednesday" class="blanket tabcontent table-wrapper">
+                        <table id="appointment_3" class="table appointmentTable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Full Name</th>
+                                    <th>Identity Document No.</th>
+                                    <th>Mobile No</th>
+                                    <th>Booking Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot right"></div><span>Cofirmed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot error"></div><span>Canceled</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="thursday" class="blanket tabcontent table-wrapper">
+                        <table id="appointment_4" class="table appointmentTable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Full Name</th>
+                                    <th>Identity Document No.</th>
+                                    <th>Mobile No</th>
+                                    <th>Booking Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot right"></div><span>Cofirmed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot error"></div><span>Canceled</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="friday" class="blanket tabcontent table-wrapper">
+                        <table id="appointment_5" class="table appointmentTable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Full Name</th>
+                                    <th>Identity Document No.</th>
+                                    <th>Mobile No</th>
+                                    <th>Booking Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot right"></div><span>Cofirmed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot error"></div><span>Canceled</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="saturday" class="blanket tabcontent table-wrapper">
+                        <table id="appointment_6" class="table appointmentTable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Full Name</th>
+                                    <th>Identity Document No.</th>
+                                    <th>Mobile No</th>
+                                    <th>Booking Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot right"></div><span>Cofirmed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot error"></div><span>Canceled</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="sunday" class="blanket tabcontent table-wrapper">
+                        <table id="appointment_7" class="table appointmentTable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Full Name</th>
+                                    <th>Identity Document No.</th>
+                                    <th>Mobile No</th>
+                                    <th>Booking Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot right"></div><span>Cofirmed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sherlock Holmes</td>
+                                    <td>123456789</td>
+                                    <td>0 207 224 3688</td>
+                                    <td>12:00</td>
+                                    <td class="table-status-wrapper">
+                                        <div class="statusDot error"></div><span>Canceled</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- end of page content -->
+    </div>
+
+</body>
+
+</html>

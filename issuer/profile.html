@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Issuer</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- datatable -->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <link type="text/css" href="css/dataTables.checkboxes.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/dataTables.checkboxes.min.js"></script>
+
+
+    <!-- Custom style  -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/profile.js"></script>
+
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <p>Immunodex</p>
+            </div>
+
+            <ul class="list-unstyled components">
+                <div class="user-wrapper">
+                    <div class="userImg-wrapper">
+                        <img src="img/manager.png">
+                    </div>
+                    <span>Dr. John Watson</span>
+                </div>
+                <li>
+                    <a href="#patientSubmenu" data-toggle="collapse" aria-expanded="true"
+                        class="dropdown-toggle">Holder</a>
+                    <ul class="collapse list-unstyled show" id="patientSubmenu">
+                        <li>
+                            <a href="appointment.html">Appointment</a>
+                        </li>
+                        <li>
+                            <a href="checkInList.html">Check-In List</a>
+                        </li>
+                        <li>
+                            <a href="testRecord.html">Testing Record</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="schedule.html">Schedule</a>
+                </li>
+
+                <li class="active">
+                    <a href="profile.html">Issuer Info</a>
+                </li>
+                <li>
+                    <a href="account.html">Account</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Start page content -->
+        <div class="container-fluid animate-bottom-1">
+
+            <div class="row">
+                <p class="sub-heading col-12 mb-1 mt-2"> Issuer Information</p>
+                <div class="col-12">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <div class="blanket">
+
+                                <form class="form-row" id="clinicDetailForm" style="display: none;">
+
+                                    <div class="form-item col-6">
+                                        <input type="text" class="form-textbox" id="clinicName" value="St Bartholomew's Hospital"
+                                            required>
+                                        <span class="form-label" for="clinicName">Issuer Name</span>
+                                    </div>
+                                    <div class="form-item col-6">
+                                        <input type="text" class="form-textbox" id="openHours"
+                                            value="Open 24 hours" required>
+                                        <span class="form-label" for="openHours">Open Hours</span>
+                                        <!-- <span class="inputExp">e.g.( 09:00 - 13:00, 15:00 - 20:00 )</span> -->
+                                    </div>
+                                    <div class="form-item col-12">
+                                        <textarea type="text" class="form-textbox" id="clinicDesc" rows="4" cols="50"
+                                            required>St Bartholomew's Hospital, commonly known as Barts, is an internationally renowned teaching hospital in the City of London. We offer a full range of local and specialist services and are a centre of excellence for cancer and cardiac care. Barts was founded in 1123 and for nearly 900 years has provided care on the same site in Smithfield.</textarea>
+                                        <span class="form-label" for="clinicDesc">Description</span>
+                                    </div>
+                                    <div class="form-item col-6">
+                                        <input type="tel" class="form-textbox" id="mobileNumber" value="+44 (0) 207 3777 000"
+                                            required>
+                                        <span class="form-label" for="mobileNumber">Mobile Number</span>
+                                    </div>
+                                    <div class="form-item col-6">
+                                        <input type="email" class="form-textbox" id="email"
+                                            value="bartshealth@nhs.uk" required>
+                                        <span class="form-label" for="email">Email Address</span>
+                                    </div>
+                                    <div class="form-item col-12">
+                                        <input type="text" class="form-textbox" id="address"
+                                            value="W Smithfield, London EC1A 7BE"
+                                            required>
+                                        <span class="form-label" for="address">Address</span>
+                                    </div>
+                                    <div class="form-item col-6">
+                                        <select class="form-textbox" id="district" required>
+                                            <option value=""></option>
+                                            <option value="others">Not London</option>
+                                            <option value="london" selected>London</option>
+                                        </select>
+                                        <span class="form-label" for="district">District</span>
+                                    </div>
+                                    <div class="form-item col-6">
+                                        <select class="form-textbox" id="territory" required>
+                                            <option value=""></option>
+                                            <option value="AT">Austria</option>
+                                            <option value="AU">Australia</option>
+                                            <option value="BD">Bangladesh</option>
+                                            <option value="BR">Brazil</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="CH">Switzerland</option>
+                                            <option value="CL">Chile</option>
+                                            <option value="CN">China</option>
+                                            <option value="CZ">Czechia</option>
+                                            <option value="DE">Germany</option>
+                                            <option value="EE">Estonia</option>
+                                            <option value="EG">Egypt</option>
+                                            <option value="ES">Spain</option>
+                                            <option value="ET">Ethiopia</option>
+                                            <option value="FR">France</option>
+                                            <option value="GB">United Kingdom</option>
+                                            <option value="HK">Hong Kong</option>
+                                            <option value="HU">Hungary</option>
+                                            <option value="ID">Indonesia</option>
+                                            <option value="IE">Ireland</option>
+                                            <option value="IN">India</option>
+                                            <option value="JP">Japan</option>
+                                            <option value="KH">Cambodia</option>
+                                            <option value="KR">Korea</option>
+                                            <option value="MN">Mongolia</option>
+                                            <option value="MX">Mexico</option>
+                                            <option value="MY">Malaysia</option>
+                                            <option value="NL">Netherlands</option>
+                                            <option value="NP">Nepal</option>
+                                            <option value="NZ">New Zealand</option>
+                                            <option value="PH">Philippines</option>
+                                            <option value="PK">Pakistan</option>
+                                            <option value="PL">Poland</option>
+                                            <option value="RU">Russia</option>
+                                            <option value="SG">Singapore</option>
+                                            <option value="SK">Slovakia</option>
+                                            <option value="TH">Thailand</option>
+                                            <option value="TW">Taiwan</option>
+                                            <option value="UA">Ukraine</option>
+                                            <option value="UK" selected>United Kingdom</option>
+                                            <option value="US">United States</option>
+                                            <option value="VN">Vietnam</option>
+                                            <option value="ZA">South Africa</option>
+                                        </select>
+                                        <span class="form-label" for="territory">Country/Territory</span>
+                                    </div>
+                                </form>
+
+
+                                <div class="form-row mt-2" id="clinicData">
+                                    <div class="col-6 mt-2">
+                                        <span class="info-title">Issuer Name</span>
+                                        <span class="info-value">St Bartholomew's Hospital</span>
+                                    </div>
+                                    <div class="col-6 mt-2">
+                                        <span class="info-title">Open Hours</span>
+                                        <span class="info-value">Open 24 hours</span>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <span class="info-title">Description</span>
+                                        <span class="info-value">
+                                            St Bartholomew's Hospital, commonly known as Barts, is an internationally renowned teaching hospital in the City of London.
+                                            We offer a full range of local and specialist services and are a centre of excellence for cancer and cardiac care.
+                                            Barts was founded in 1123 and for nearly 900 years has provided care on the same site in Smithfield. 
+                                        </span>
+                                    </div>
+                                    <div class="col-6 mt-2">
+                                        <span class="info-title">Mobile Number</span>
+                                        <span class="info-value">+44 (0) 207 3777 000</span>
+                                    </div>
+                                    <div class="col-6 mt-2">
+                                        <span class="info-title">Email Address</span>
+                                        <span class="info-value">bartshealth@nhs.uk</span>
+                                    </div>
+                                    <div class="col-6 mt-2">
+                                        <span class="info-title">Address</span>
+                                        <span class="info-value">W Smithfield, London EC1A 7BE</span>
+                                    </div>
+                                    <div class="col-6 mt-2">
+                                        <span class="info-title">Country/Territory</span>
+                                        <span class="info-value">United Kingdom</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="btn btn-outline col-3 float-right" id="clinicEditBtn"
+                                onclick="clinicFormDisplay()">
+                                Edit</div>
+                            <div class="btn col-3 float-right" style="display:none" id="clinicSaveBtn"
+                                onclick="clinicDataDisplay()">Save</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- end of page content -->
+        </div>
+
+</body>
+
+</html>
