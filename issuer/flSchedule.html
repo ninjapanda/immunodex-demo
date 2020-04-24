@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Issuer</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom style  -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/schedule.js"></script>
+
+</head>
+
+<body> <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <div class="wrapper">
+        <!-- Start page content -->
+        <div class="container-fluid animate-bottom-1">
+            <div class="topbar">
+                <a href="#" onclick="history.back()">
+                    <img src="img/icon/Path.svg"><span>Back</span>
+                </a>
+            </div>
+            <div class="row">
+                <div class="page-heading col-12 mt-4">
+                    <p>Regular Reserve Time</p>
+                    <span>Please provide us the information below, it will store in the suhedule page.</span>
+                </div>
+                <form class="col-12 mt-4">
+                    <div class="col-12 mb-4 tabs-wrapper">
+                        <div class="row">
+                            <div class="tab col active" onclick="openTab( '#monday')">Monday</div>
+                            <div class="tab col" onclick="openTab( '#tuesday')">Tuesday</div>
+                            <div class="tab col" onclick="openTab( '#wednesday')">Wednesday</div>
+                            <div class="tab col" onclick="openTab( '#thursday')">Thursday</div>
+                            <div class="tab col" onclick="openTab( '#friday')">Friday</div>
+                            <div class="tab col" onclick="openTab( '#saturday')">Saturday</div>
+                            <div class="tab col" onclick="openTab( '#sunday')">Sunday</div>
+                        </div>
+                    </div>
+                    <div id="monday" class="blanket tabcontent" style="display: block;">
+                        <div class="col-12">
+                            <div class="btn btn-outline white">Apply to all</div>
+                            <hr>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-0">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                        <option value="9-10" selected>09:00 - 10:00</option>
+                                        <option value="10-11">10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-1">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                        <option value="9-10" selected>09:00 - 10:00</option>
+                                        <option value="10-11">10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-2">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                         
+                                        <option value="9-10">09:00 - 10:00</option>
+                                        <option value="10-11" selected>10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1">1</option>
+                                        <option value="2" selected>2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 mt-4 addtimeSlotBtn">
+                                + Add More
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tuesday" class="blanket tabcontent">
+                        <div class="col-12">
+                            <div class="btn btn-outline white">Apply to all</div>
+                            <hr>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-1">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                         
+                                        <option value="9-10" selected>09:00 - 10:00</option>
+                                        <option value="10-11">10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1">1</option>
+                                        <option value="2" selected>2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 mt-4 addtimeSlotBtn">
+                                + Add More
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="wednesday" class="blanket tabcontent">
+                        <div class="col-12">
+                            <div class="btn btn-outline white">Apply to all</div>
+                            <hr>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-1">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                         
+                                        <option value="9-10" selected>09:00 - 10:00</option>
+                                        <option value="10-11">10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-2">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                         
+                                        <option value="9-10">09:00 - 10:00</option>
+                                        <option value="10-11" selected>10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1">1</option>
+                                        <option value="2" selected>2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 mt-4 addtimeSlotBtn">
+                                + Add More
+                            </div>
+                        </div>
+                    </div>
+                    <div id="thursday" class="blanket tabcontent">
+                        <div class="col-12">
+                            <div class="btn btn-outline white">Apply to all</div>
+                            <hr>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-1">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                         
+                                        <option value="9-10" selected>09:00 - 10:00</option>
+                                        <option value="10-11">10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1">1</option>
+                                        <option value="2" selected>2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 mt-4 addtimeSlotBtn">
+                                + Add More
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="friday" class="blanket tabcontent">
+                        <div class="col-12">
+                            <div class="btn btn-outline white">Apply to all</div>
+                            <hr>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-1">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                         
+                                        <option value="9-10" selected>09:00 - 10:00</option>
+                                        <option value="10-11">10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-2">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                         
+                                        <option value="9-10">09:00 - 10:00</option>
+                                        <option value="10-11" selected>10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1">1</option>
+                                        <option value="2" selected>2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 mt-4 addtimeSlotBtn">
+                                + Add More
+                            </div>
+                        </div>
+                    </div>
+                    <div id="saturday" class="blanket tabcontent">
+                        <div class="col-12">
+                            <div class="btn btn-outline white">Apply to all</div>
+                            <hr>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-1">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                         
+                                        <option value="9-10" selected>09:00 - 10:00</option>
+                                        <option value="10-11">10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1">1</option>
+                                        <option value="2" selected>2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 mt-4 addtimeSlotBtn">
+                                + Add More
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="sunday" class="blanket tabcontent">
+                        <div class="col-12">
+                            <div class="btn btn-outline white">Apply to all</div>
+                            <hr>
+                            <div class="timeSlot-wrapper form-row mb-3" id="timeSlot-1">
+                                <div class="col-2 form-label">Time Slot: </div>
+                                <div class="col">
+                                    <select id="timeSlot" class="form-control">
+                                         
+                                        <option value="9-10" selected>09:00 - 10:00</option>
+                                        <option value="10-11">10:00 - 11:00</option>
+                                    </select>
+                                </div>
+                                <div class="col form-label text-center">Reserve Patient: </div>
+                                <div class="col">
+                                    <select id="revPatient" class="form-control">
+                                         
+                                        <option value="1">1</option>
+                                        <option value="2" selected>2</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 ">
+                                    <div class="del-btn"><img src="img/Line 3.png"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 mt-4 addtimeSlotBtn">
+                                + Add More
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offset-8 col-4 mb-4">
+                        <div class="form-row">
+                            <div class="col-5" style="line-height: 38px;">
+    
+                                Setting For:
+                            </div>
+                            <div class="col-7">
+    
+                                <select id="settingTime" class="form-control">
+                                     
+                                    <option value="1">1 month</option>
+                                    <option value="2" selected>2 month</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                    </div>
+
+                    <div class="btn-wrapper mt-4 mb-4">
+                        <a href="appointment.html">
+                            <div class="btn btn-outline">Continue</div>
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+        <!-- end of page content -->
+    </div>
+
+    </div>
+</body>
+
+</html>
