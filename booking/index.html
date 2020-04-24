@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Appointment Booking</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Jquery UI CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"> -->
+
+    <!-- Custom style  -->
+    <link href="css/sideBar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Jquery UI JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script> -->
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+
+    <!-- Custom JS -->
+    <script src="js/sideBar.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(this).scrollTop(0);
+        });
+    </script>
+
+</head>
+
+<body class="animate-bottom-1 ">
+
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="userLabel">
+        <p>Sherlock Holmes</p>
+    </div>
+    <div class="sidebar">
+        <a href="index.html"><img src="img/icon/home-run.png">Home</a>
+        <a href=""><img src="img/icon/shield.png">Immunodex</a>
+        <a href="profile.html"><img src="img/icon/user.png">Profile</a>
+    </div>
+
+
+    <div class="trigger"></div>
+
+    <div class="wrapper">
+        <!-- start top bar -->
+        <div class="navbar navbar-expand topbar">
+            <i class="fas fa-bars sidebarBtn"></i>
+            <span class="logo-text">Immunodex</span>
+        </div>
+        <!-- end of top bar -->
+
+
+        <!-- Start page content -->
+        <div class="container">
+            <div class="mainBtn-wrapper mt-3">
+                <div class="btn mb-3" onclick="javascript:location.href='bkSt1.html'">
+                    <img id="btn-img-1" src="img/icon/calendar.svg">
+                    <img id="btn-img-2" src="img/icon/right-arrow.svg">
+                    <div class="btn-text">
+                        <p>BOOKING</p>
+                        <span>Make an Appointment</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="vaxBooking-wrapper" class="mt-1">
+                <div class="row">
+                    <div class="col-sm mb-2">
+                        <div class="sub-heading">
+                            Upcoming Appointment
+                        </div>
+                    </div>
+                    <div id="vaxBookingCard-wrapper">
+                        <div class="col-sm-12 vaxBookingCard">
+                            <div class="blanket row m-0 pb-0" onclick="javascript:location.href='bookingDetail.html'">
+                                <div class="col-12 mb-2">
+                                    <span class="info-value">
+                                        Covid-19 Testing
+                                    </span>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <span class="info-head">
+                                        Issuer Name
+                                    </span>
+                                    <span class="info-value">
+                                        St Bartholomew's Hospital
+                                    </span>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <span class="info-head">
+                                        Tested By
+                                    </span>
+                                    <span class="info-value">
+                                        Dr. John Watson
+                                    </span>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <span class="info-head">
+                                        Date of Injection
+                                    </span>
+                                    <span class="info-value">
+                                        17 Mar 2020
+                                    </span>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <span class="info-head">
+                                        Time
+                                    </span>
+                                    <span class="info-value">
+                                        11:45
+                                    </span>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <span class="info-head">
+                                        Address
+                                    </span>
+                                    <span class="info-value">
+                                        W Smithfield, London EC1A 7BE
+                                    </span>
+                                </div>
+                                <div class="col-12 cardNote">
+                                    TAP TO REVIEW
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="vaxBooking-wrapper" class="mt-1">
+                <div class="row">
+                    <div class="col-sm mb-2">
+                        <div class="sub-heading">
+                            History
+                        </div>
+                    </div>
+                    <div id="vaxBookingCard-wrapper">
+                        <div class="col-sm-12 vaxBookingCard">
+                            <div class="blanket row m-0 pb-0" onclick="javascript:location.href='bookingDetail.html'">
+                                <div class="col-12 mb-2">
+                                    <span class="info-value">
+                                        Covid-19 Testing
+                                    </span>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <span class="info-head">
+                                        Issuer Name
+                                    </span>
+                                    <span class="info-value">
+                                        St Bartholomew's Hospital
+                                    </span>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <span class="info-head">
+                                        Tested By
+                                    </span>
+                                    <span class="info-value">
+                                        Dr. John Watson
+                                    </span>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <span class="info-head">
+                                        Date of Injection
+                                    </span>
+                                    <span class="info-value">
+                                        3 Mar 2020
+                                    </span>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <span class="info-head">
+                                        Time
+                                    </span>
+                                    <span class="info-value">
+                                        14:30
+                                    </span>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <span class="info-head">
+                                        Address
+                                    </span>
+                                    <span class="info-value">
+                                        W Smithfield, London EC1A 7BE
+                                    </span>
+                                </div>
+                                <div class="col-12 cardNote">
+                                    TAP TO REVIEW
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- vax card 2 (no record) -->
+                        <div class="col-sm-12">
+                            <div class="blanket row m-0 pb-0">
+                                <div class="col-12 mb-2">
+                                    <div class="emptyCard center">
+                                        <span>No appointment yet</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of vax card 2  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of page content -->
+    </div>
+</body>
+
+</html>
