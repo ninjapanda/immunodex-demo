@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Passport</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Jquery UI CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"> -->
+
+    <!-- Custom style  -->
+    <link href="css/sideBar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Jquery UI JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script> -->
+
+    <!-- Custom JS -->
+    <script src="js/sideBar.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body class="animate-bottom-1">
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="trigger"></div>
+
+    <div class="wrapper">
+        <!-- start top bar -->
+        <div class="navbar navbar-expand topbar">
+            <a href="#" onclick="history.back()">
+                <img src="img/icon/Path.svg"><span>Back</span>
+            </a>
+        </div>
+        <!-- end of top bar -->
+
+
+        <!-- Start page content -->
+        <div class="container">
+            <div class="row">
+                <div class="page-heading mt-3 mb-4 col-12">
+                    <p class="mb-0">Q & A</p>
+                    <span>Please provide us information below.</span>
+                </div>
+                <form class="col-12">
+                    <div class="form-group">
+                        <label for="question1">Q1. Have you ever been diagnosed with a serious medical condition? </label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q1ans1" name="ans1" value="yes" onclick="showExp('q1ansExp');">
+                                    <label for="q1ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q1ans2" name="ans1" value="no" onclick="hideExp('q1ansExp');">
+                                    <label for="q1ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q1ansExp" placeholder="Please specify">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Q2. Does anyone in your family have a history of significant illness? </label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q2ans1" name="ans2" value="yes" onclick="showExp('q2ansExp');">
+                                    <label for="q2ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q2ans2" name="ans2" value="no" onclick="hideExp('q2ansExp');">
+                                    <label for="q2ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q2ansExp" placeholder="Please specify">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Q3. Have you experienced a reaction to a swab or antibody test in the past?</label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper error">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q3ans1" name="ans3" value="yes" onclick="showExp('q3ansExp');">
+                                    <label for="q3ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q3ans2" name="ans3" value="no" onclick="hideExp('q3ansExp');">
+                                    <label for="q3ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q3ansExp" placeholder="e.g. hives, itchiness, anaphylaxis etc">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Q4. Are you allergic to any medications or medical products?</label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q4ans1" name="ans4" value="yes" onclick="showExp('q4ansExp');">
+                                    <label for="q4ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q4ans2" name="ans4" value="no" onclick="hideExp('q4ansExp');">
+                                    <label for="q4ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q4ansExp" placeholder="Explain">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="question1">Q5. Are you allergic to any environmental agents like dust, grass or pollen? </label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q5ans1" name="ans5" value="yes" onclick="showExp('q5ansExp');">
+                                    <label for="q5ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q5ans2" name="ans5" value="no" onclick="hideExp('q5ansExp');">
+                                    <label for="q5ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q5ansExp" placeholder="Explain">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Q6. Are you allergic to any foods including eggs or egg products? </label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q6ans1" name="ans6" value="yes" onclick="showExp('q6ansExp');">
+                                    <label for="q6ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q6ans2" name="ans6" value="no" onclick="hideExp('q6ansExp');">
+                                    <label for="q6ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q6ansExp" placeholder="Specify food and reaction">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Q7. Are you currently receiving treatment for any medical conditions? </label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q7ans1" name="ans7" value="yes" onclick="showExp('q7ansExp');">
+                                    <label for="q7ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q7ans2" name="ans7" value="no" onclick="hideExp('q7ansExp');">
+                                    <label for="q7ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q7ansExp" placeholder="Please specify">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Q8. Are you currently taking any medications? </label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q8ans1" name="ans8" value="yes" onclick="showExp('q8ansExp');">
+                                    <label for="q8ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q8ans2" name="ans8" value="no" onclick="hideExp('q8ansExp');">
+                                    <label for="q8ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q8ansExp" placeholder="Please specify">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Q9. Are you pregnant or planning on pregnancy at this time? </label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q9ans1" name="ans9" value="yes" onclick="showExp('q9ansExp');">
+                                    <label for="q9ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q9ans2" name="ans9" value="no" onclick="hideExp('q9ansExp');">
+                                    <label for="q9ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q9ansExp" placeholder="Please specify">
+                        </div>
+                    </div>
+                    <a href="checkInSuccess.html">
+                        <div class="btn mt-4">Give consent</div>
+                    </a>
+                </form>
+            </div>
+        </div>
+        <!-- end of page content -->
+    </div>
+</body>
+
+</html>

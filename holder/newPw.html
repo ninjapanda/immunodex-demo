@@ -38,22 +38,18 @@
 
     <!-- Custom JS -->
     <script src="js/sideBar.js"></script>
-    <script src="js/script.js"></script>
 
 </head>
 
-<body class="animate-bottom-1">
-    <div class="loader-wrapper">
-        <div class="loader"></div>
-    </div>
+<body>
 
     <div class="trigger"></div>
 
     <div class="wrapper">
         <!-- start top bar -->
         <div class="navbar navbar-expand topbar">
-            <a href="#" onclick="javascript:location.href='index.html'">
-                <img src="img/icon/Path.svg"><span>Back</span>
+            <a href="#" onclick="history.back()">
+                <!-- <img src="img/icon/Path.svg"><span>Back</span> -->
             </a>
         </div>
         <!-- end of top bar -->
@@ -62,20 +58,27 @@
         <!-- Start page content -->
         <div class="container">
             <div class="row">
-                <div class="page-heading mt-3 mb-4 col-12" onclick="javascript:location.href='checkIn.html'">
-                    <p class="mb-0">Register the testing service</p>
-                    <span>Please show the QR code to Issuer</span>
-                    <br><br>
-                    <div class="qrcodeScan">
-                        Scan QR code
-                    </div>
+                <div class="page-heading mt-3 mb-4 col-12">
+                    <p class="mb-0">Enter New Password</p>
+                    <span>This will be used for sign in the application</span>
                 </div>
-                <div class="page-heading mt-3 mb-4 col-12" onclick="javascript:location.href='checkIn_norecord.html'">
-                    <div class="qrcodeScan">
-                        Scan QR code2 ( no testing history version)
+                <form class="col-12">
+                    <div class="form-item">
+                        <input type="password" class="form-textbox" id="userPw" required>
+                        <span class="form-label" for="userPw">Password</span>
                     </div>
-                </div>
+                    <div class="form-item">
+                        <input type="password" class="form-textbox" id="userConfirmPw" required>
+                        <span class="form-label" for="userConfirmPw">Confirm Password</span>
+                    </div>
+                    <div class="inputNote mt-4 mb-4">
+                        <span>To ensure security, password must contain <br>8 characters with at least 1 capital & 1 number</span>
+                    </div>
+                    <a href="pwSet.html">
+                        <div class="btn">Continue</div>
+                    </a>
 
+                </form>
             </div>
         </div>
 

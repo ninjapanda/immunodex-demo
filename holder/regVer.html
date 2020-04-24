@@ -38,21 +38,25 @@
 
     <!-- Custom JS -->
     <script src="js/sideBar.js"></script>
-    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('input').keyup(function () {
+                if ($(this).val().length == $(this).attr("maxlength")) {
+                    $('#confirmBtn').focus();
+                }
+            });
+        });</script>
 
 </head>
 
-<body class="animate-bottom-1">
-    <div class="loader-wrapper">
-        <div class="loader"></div>
-    </div>
+<body>
 
     <div class="trigger"></div>
 
     <div class="wrapper">
         <!-- start top bar -->
         <div class="navbar navbar-expand topbar">
-            <a href="#" onclick="javascript:location.href='index.html'">
+            <a href="#" onclick="history.back()">
                 <img src="img/icon/Path.svg"><span>Back</span>
             </a>
         </div>
@@ -62,20 +66,27 @@
         <!-- Start page content -->
         <div class="container">
             <div class="row">
-                <div class="page-heading mt-3 mb-4 col-12" onclick="javascript:location.href='checkIn.html'">
-                    <p class="mb-0">Register the testing service</p>
-                    <span>Please show the QR code to Issuer</span>
-                    <br><br>
-                    <div class="qrcodeScan">
-                        Scan QR code
-                    </div>
+                <div class="page-heading mt-3 mb-4 col-12">
+                    <p>Enter the 6 digit
+                        verification code</p>
                 </div>
-                <div class="page-heading mt-3 mb-4 col-12" onclick="javascript:location.href='checkIn_norecord.html'">
-                    <div class="qrcodeScan">
-                        Scan QR code2 ( no testing history version)
-                    </div>
-                </div>
+                <form class="col-12" id="verCode-wrapper">
 
+                    <div class="verCode-inner">
+                        <input type="tel" class="" id="verCode" maxlength="6" required>
+                        <!-- <input type="hidden"> -->
+                        <div class="line"></div>
+                    </div>
+                    
+
+                    <div class="inputNote mt-4 mb-4">
+                        Verification code has been sent to<br>your mobile number 9******31
+                    </div>
+                    <a href="accountCreated.html" id="confirmBtn">
+                        <div class="btn">Continue</div>
+                    </a>
+
+                </form>
             </div>
         </div>
 
