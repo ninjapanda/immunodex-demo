@@ -38,47 +38,33 @@
 
     <!-- Custom JS -->
     <script src="js/sideBar.js"></script>
-    <script src="js/script.js"></script>
 
 </head>
 
-<body class="animate-bottom-1">
-    <div class="loader-wrapper">
-        <div class="loader"></div>
-    </div>
+<body onclick="javascript:location.href='index.html'">
+
 
     <div class="trigger"></div>
 
     <div class="wrapper">
-        <!-- start top bar -->
-        <div class="navbar navbar-expand topbar">
-            <a href="#" onclick="javascript:location.href='index.html'">
-                <img src="img/icon/Path.svg"><span>Back</span>
-            </a>
-        </div>
-        <!-- end of top bar -->
 
 
         <!-- Start page content -->
         <div class="container">
-            <div class="row">
-                <div class="page-heading mt-3 mb-4 col-12" onclick="javascript:location.href='checkIn.html'">
-                    <p class="mb-0">Register the testing service</p>
-                    <span>Please show the QR code to Issuer</span>
-                    <br><br>
-                    <div class="qrcodeScan">
-                        Scan QR code
-                    </div>
+            <div class="center">
+                <div class="dot correct">
+                    <img src="img/icon/correct.png">
                 </div>
-<!--                 <div class="page-heading mt-3 mb-4 col-12" onclick="javascript:location.href='checkIn_norecord.html'">
-                    <div class="qrcodeScan">
-                        Scan QR code2 ( no testing history version)
-                    </div>
-                </div> -->
-
+            </div>
+            <div class="center">
+                <div class="successMsg mt-4">
+                    Checked In
+                </div>
+            </div>
+            <div class="center instruct">
+            Tap anywhere to continue
             </div>
         </div>
-
         <!-- end of page content -->
     </div>
 </body>

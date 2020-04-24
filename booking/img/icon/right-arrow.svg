@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>right-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-318.000000, -136.000000)" id="booking-btn">
+            <g transform="translate(20.000000, 112.000000)">
+                <image id="right-arrow" x="298" y="20" width="22" height="28" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAQAAABpN6lAAAAABGdBTUEAALGN5fIAKQAAANJpQ0NQSUNDIFByb2ZpbGUAABiVY2BgrEgsKMhhEmBgyM0rKXIPcoyMiIxSYL/KwM7AyAAGicnFBY4BAT4MOMG3axC1l3VBZuFWhxWwpKQWJwPpLUBcmlxQVMLAwKgDZKuXlxSA2CFAtkh2SJAzkJ0BZPNB1YOAtHNiTmZSUWJJaoqCe1FipYJzfk5+UXFBYnIqia4gApSkVpSAaOf8gsqizPSMEgVHoG9TgXbmFpSWpBbpKHjmJesxMIDCD6LjcyA4XBjFziSXFpVBjWFkMmZgAAARXTTFHXnTkQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAgKADAAQAAAABAAAAgAAAAABrRiZNAAACtklEQVR4Ae2cy4oTURCG62TcCK7FEZER30FERkR8AF07N30AN7pw6V2fwL0uvLyAF2Q2grrxKQRxrxmFiWl/uwOZIXTNLEJOONP19SKZHJJz6v/+qurTQydmHBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgEBJBHRBH7Slvt7pbElxzSkWrWuo8THQ1TktW8oyOq4/Y/Wj56FWSoltLnHoxoT85sXMEfTmomTaRU62Prhgz2ebBWUD+NECYDZzBM4apQxpSdutIshSCKUobsWhmy6ADL2gtXQpA7q9J4K1UmLMHAcIDAQgMBCAoG619AIQkAUUQrProheAgCygEOgFDQF6AQjIAgqhIUAvAAFZQCE0BPbrBaujN3T/YZ8rRRAIBCAYggAE9V0m9AIQ7GTBodH2YdEu21JH9wjf7YSjbMGeqUqvzFK9e7puT+2w86auD1W2ml4nXbRNK/tWqXxGDOx80qZdyrdC8TO/TerbkeLDzBdgv2f/8s1+AGZWzz4fgDDzhfgp6Zx9tNHJMN8qxc48sOVe+mIbtlVsiDkDq+xa+lrvA+qdwFG7YqeaPUEHjxV3I2RW2Xp62UG9k5J0d8/7TCNcECHft3/nQmgyWzr2Svd89UH+G4B8336Sv2N17snRfd/8KLWPfNf/ILUf3P0HrvfN98tCbHqR7/qP+96JsmNjeuh6H6b2ke/6H6T2g7v/yPW+qf0IX6oW8l3/cb9j53hPTvTkf+ymfpjWh3zX/yCtL7j7T1zvw9Q+8l3/g9R+cPfvuN43tR/hlwV1Wn9dADHk17fu3Movv+ybZI85VwOVbaQXzviUQ2UD+NZSNWP5rfnLGtCifk8UQZTa37VBa3W/Hx/b4X5WtwGhZb3XL/3UG53ZBcNfEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAwJQE/gNLJ8hWfuXIrQAAAABJRU5ErkJggg=="></image>
+            </g>
+        </g>
+    </g>
+</svg>

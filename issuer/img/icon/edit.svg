@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>edit</title>
+    <desc>Created with Sketch.</desc>
+    <g id="checked-in" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="checkin" transform="translate(-926.000000, -246.000000)" fill="#1B4F91">
+            <g id="edit" transform="translate(926.000000, 246.500000)">
+                <polygon id="Path" points="0 11.2156657 0 14 2.78434313 14 11 5.78433432 8.21565687 3"></polygon>
+                <path d="M13.7509646,2.23710888 L11.7628718,0.249042146 C11.430818,-0.0830140485 10.8901528,-0.0830140485 10.558099,0.249042146 L9,1.80715198 L12.1928257,5 L13.7509247,3.44189017 C14.0830185,3.10983397 14.0830185,2.56916507 13.7509646,2.23710888 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>
