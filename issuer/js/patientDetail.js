@@ -53,7 +53,7 @@ function updateResult() {
         columnClass: 'col-6',
         content: `
         <form class="formName" id="resultUpdate">
-        <span>Swab</span>
+        <span>PCR</span>
         <div class="col-12 form-group">
             <select class="form-textbox" id="result" required>
                 <option value="na" selected>N/A</option>
