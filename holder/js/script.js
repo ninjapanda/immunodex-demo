@@ -5,6 +5,7 @@ $(document).ready(() => {
         $(this).siblings().removeClass('active');
         $(this).addClass("active");
     })
+
 })
 
 function loaderFadeOut() {
