@@ -78,6 +78,10 @@ body {
     color:#050504;
 }
 
+.btn:hover{
+    color:#fff;
+}
+
 .btn.red{
     background-color: #BA3949;
 }
@@ -90,6 +94,11 @@ body {
     height: 66px;
     line-height: 54px;
     font-size: 16px;
+}
+
+.btn.issue{
+    height: 45px;
+    line-height: 33px;
 }
 
 .topbar{
@@ -323,7 +332,8 @@ body {
 
 .info-value {
     color: #050504;
-    font-size: 1rem;
+    /*font-size: 1rem;*/
+    font-size:14px;
 }
 
 .injBtn{
