@@ -59,7 +59,7 @@
 
     <div class="trigger"></div>
 
-    <div class="wrapper">
+    <div class="wrapper bg-blue">
         <!-- start top bar -->
         <div class="navbar navbar-expand topbar">
             <i class="fas fa-bars sidebarBtn"></i>
@@ -70,29 +70,33 @@
 
         <!-- Start page content -->
         <div class="container">
-            <!-- <div class="page-heading mt-4 mb-4 col-12">
-                <h1>My Passports and Papers</h1>
-            </div> -->
-            <div class="mainBtn-wrapper mt-3">
-                <div class="btn mb-3" onclick="javascript:location.href='scanQRcode.html'">
-                    <img src="img/icon/clinic.svg">
-                    <div class="btn-text">
-                        <p>CHECK IN</p>
-                        <span>Register the testing service</span>
+            <div class="page-heading mt-4 mb-4 text-white">
+                <p>Hello,<br>Sherlock Holmes</p>
+            </div>
+            <div class="mainBtn-wrapper mt-4 mb-4 row">
+                <div class="col-4">
+                    <div class="btn" onclick="javascript:location.href='scanQRcode.html'">
+                        <img src="img/icon/clinic.png">
+                        <span>check-in</span>
                     </div>
                 </div>
-                <div class="btn mb-3" onclick="javascript:location.href='https://demo.chan.ninja/booking/index.html'">
-                    <img src="img/icon/calendar.svg">
-                    <div class="btn-text">
-                        <p>BOOKING</p>
-                        <span>Make an Appointment</span>
+                <div class="col-4">
+                    <div class="btn" onclick="javascript:location.href='https://demo.chan.ninja/booking/index.html'">
+                        <img src="img/icon/calendar.png">
+                        <span>booking</span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="btn" onclick="javascript:location.href='share.html'">
+                        <img src="img/icon/share.png">
+                        <span>prove</span>
                     </div>
                 </div>
             </div>
 
 
             <div id="Record-wrapper" class="mt-1">
-                <div class="row">
+                <div id="Record-wrapper-inner" class="row">
                     <div class="col-sm mb-2">
                         <div class="sub-heading">
                             Testing Record
@@ -101,19 +105,12 @@
                     <div id="RecordCard-wrapper">
                         <div class="col-sm-12 RecordCard">
                             <div class="blanket row m-0 pb-0" onclick="javascript:location.href='detail.html'">
-                                <div class="col-6 mb-2">
+                                <div class="col-12 mb-2">
                                     <span class="info-value" style="line-height: 42px;">
                                         Covid-19
                                     </span>
                                 </div>
-                                <div class="col-6 mb-2">
-                                    <span class="info-head">
-                                        Conclusion
-                                    </span>
-                                    <span class="info-value">
-                                        N/A
-                                    </span>
-                                </div>
+                                
                                 <div class="hr"></div>
                                 <div class="col-6 mb-2">
                                     <span class="info-head">
@@ -152,23 +149,12 @@
                         <!--   card -->
                         <div class="col-sm-12 RecordCard">
                             <div class="blanket row m-0 pb-0" onclick="javascript:location.href='detail2.html'">
-                                <div class="col-6 mb-2">
+                                <div class="col-12 mb-2">
                                     <span class="info-value" style="line-height: 42px;">
                                         Covid-19
                                     </span>
                                 </div>
-                                <div class="col-6 mb-2">
-                                    <span class="info-head">
-                                        Conclusion
-                                    </span>
-                                    <span class="info-value">
-                                        <div class="resultStatus">
-                                            <div class="statusDot yellow"></div>
-                                            <span>E1</span>
-                                        </div>
-
-                                    </span>
-                                </div>
+                                
                                 <div class="hr"></div>
                                 <div class="col-6 mb-2">
                                     <span class="info-head">
@@ -207,7 +193,7 @@
                         <!-- end of   card -->
 
                         <!--   card 2 (no record) -->
-                        <div class="col-sm-12">
+                        <!-- <div class="col-sm-12">
                             <div class="blanket row m-0 pb-0">
                                 <div class="col-12 mb-2">
                                     <div class="emptyCard center">
@@ -216,7 +202,7 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
 

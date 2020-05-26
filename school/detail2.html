@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Inspector</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- datatable -->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <link type="text/css" href="css/dataTables.checkboxes.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/dataTables.checkboxes.min.js"></script>
+
+    <!-- popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+
+    <!-- Custom style  -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/record.js"></script>
+
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <p>Immunodex</p>
+            </div>
+
+            <ul class="list-unstyled components">
+                <div class="user-wrapper">
+                    <div class="userImg-wrapper">
+                        <img src="img/person.jpg">
+                    </div>
+                    <span>Greg Lestrade</span>
+                </div>
+                <li>
+                    <a href="studentAccount.html">Student Account</a>
+                </li>
+
+                <li class="active">
+                    <a href="index.html">Testing Record</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Start page content -->
+        <div class="container-fluid animate-bottom-1">
+            <div class="topbar">
+                <a href="#" onclick="history.back()">
+                    <img src="img/icon/Path.svg"><span>Back</span>
+                </a>
+            </div>
+
+            <div class="row">
+
+                <p class="sub-heading col-12 mb-1 mt-2">Patient Information</p>
+                <div class="col-md-12">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <div class="blanket">
+                                <div class="form-row" id="userData">
+                                    <div class="col-4">
+                                        <span class="info-title">Full Name</span>
+                                        <span class="info-value">Bernadette</span>
+                                    </div>
+                                    
+
+                                    <div class="col-4">
+                                        <span class="info-title">Email</span>
+                                        <span class="info-value">s20190212@school.edu	</span>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <span class="info-title">Last Login</span>
+                                        <span class="info-value">14/12/2019 12:30</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="sub-heading col-12 mb-1 mt-2">Test Record</p>
+            </div>
+
+            <div class="record-wrapper">
+
+                <div class="col-md-12 RecordCard mb-4">
+                    <div class="blanket row m-0">
+
+                        <p class="m-0">No testing record yet</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- end of page content -->
+        </div>
+
+</body>
+
+</html>
