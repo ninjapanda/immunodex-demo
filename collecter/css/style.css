@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400&display=swap');
+
+/* replace bootstrap */
+.container-fluid{
+    padding-left:25px;
+    padding-right:25px;
+}
+/* end of replace bootstrap */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 13px;
+    font-weight: 300;
+    height: 100%;
+    background-color: #fdfdfd;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    color: #363636;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    transition: transform .4s ease-in-out;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+}
+
+.center {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.blanket {
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 12px 12px 12px 12px;
+    -webkit-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+}
+
+.scan-wrapper{
+    border-radius: 4px;
+    border:1px solid #D6D6D6;
+    background-color: #F0F0F0;
+    min-height: 500px;
+    padding:10px;
+}
+
+.bg-gary{
+    background-color: #F2F2F2;
+}
+
+.page-heading p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.page-heading span {
+    font-size: 17px;
+    color: #707070;
+}
+
+.sub-heading p{
+    font-size:24px;
+    font-weight: bold;
+}
+
+.hr {
+    height: 1px;
+    width: 100%;
+    background-color: #d6d6d6;
+    /* margin: 0px 15px 8px 15px; */
+    margin-bottom: 1rem;
+}
+
+.text-green{
+    color:#1CC88A!important;
+}
+
+.text-yellow{
+    color:#E8AC0C!important;
+}
+
+.text-red{
+    color:#BA3949!important;
+}
+
+.btn{
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    height: 35px;
+    width: 100%;
+}
+
+.btn.btn-green{
+    background-color: #419C99!important;
+}
+
+.btn-green:hover{
+    color:#fff;
+    transition: all .2s;
+    -webkit-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.65);
+}
+
+.btn.disable{
+    z-index: 99;
+    background-color: #d6d6d6!important;
+    cursor: no-drop;
+    pointer-events:none;
+}
+
+#detail .btn{
+    height: 43px;
+    line-height: 30px;
+}
+
+/* detail display */
+.info-title{
+    color: #9B9B9B;
+    display: block;
+    font-size: 12px
+}
+
+.info-value {
+    color: #050504;
+    font-size: 14px;
+}
+/* end of detail display */
+
+/* qa display */
+
+#qa .form-row{
+    padding-top:10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+}
+
+#qa .qaAns{
+    background-color: #D6D6D6;
+    width: 40px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 30px;
+}
+
+#qa .qaAns.right{
+    color:#fff;
+    background-color: #3982F3;
+
+}
+
+#qa .qaAnsExp{
+    color:#3982F3;
+}
+/* end of qa display */
+
+/* login page */
+#loginTitle {
+    font-size: 24px;
+    color: #414141;
+    font-weight: 400;
+}
+
+#loginForm {
+    width: 300px;
+    margin: 0 auto;
+}
+
+#loginForm input {
+    width: 100%;
+    border: 0px;
+    border-bottom: 2px solid #DFDFDF;
+    line-height: 1.5;
+    padding: .375rem .75rem;
+    transition: all .5s;
+}
+
+#loginForm input:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+    border-bottom: 2px solid #141E30;
+}
+
+#loginForm input.error {
+    border-bottom: 2px solid #BA3949;
+}
+
+#loginNotes {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+#loginNotes p {
+    font-size: 14px;
+    color: #707070;
+}
+
+/* end of login */
+
+/* topbar */
+
+.topbar{
+    padding:1rem;
+}
+
+.topbar a {
+    position: relative;
+}
+
+.topbar span {
+    position: absolute;
+    font-size: 18px;
+    left: 20px;
+    top: 0px;
+    line-height: 21px;
+    color: #000;
+}
+/* end of topbar */
+
+/* status detail style */
+
+.status-wrapper{
+    position: relative;
+}
+
+.status-wrapper .statusDot{
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    /* position: relative; */
+    /* top: 10px;
+    left: 25px; */
+    vertical-align: middle;
+}
+
+.status-wrapper span{
+    font-size:16px;
+}
+
+.statusDot.right{
+    background-color: #1CC88A;
+}
+
+.statusDot.error{
+    background-color: #BA3949;
+}
+
+.statusDot.pending{
+    background-color: #E8AC0C;
+}
+
+/* end of status detail style */
+
+/* popup confirm */
+.jconfirm .jconfirm-box.jconfirm-type-green {
+
+    border-top: solid 7px #419C99;
+    animation-name: none;
+}
+/* end of popup confirm */

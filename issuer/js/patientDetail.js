@@ -46,6 +46,42 @@ function test2DataDisplay() {
     $("#test2EditBtn").fadeIn();
 }
 
+function issuerCred(){
+    $.confirm({
+        title: 'Issue Credential',
+        columnClass: 'col-6',
+        content: `
+        <span class="info-title">Testing ID</span>
+        <span class="info-value">00131</span>
+        
+        <span class="info-title">Full Name</span>
+        <span class="info-value">Sherlock Holmes</span>
+        <span class="info-title">Mobile No.</span>
+        <span class="info-value">0 207 224 3688</span>
+        `,
+        type: 'blue',
+        animation: 'top',
+        closeAnimation: 'bottom',
+        onOpenBefore: function () {
+            $(".jconfirm-buttons").addClass("form-row col-12 pl-0 pr-0");
+        },
+        autoClose: 'Cancel|8000',
+        buttons: {
+            Cancel: {
+                text:'Cancel',
+                btnClass:'btn btn-default col',
+                action: close()
+            },
+            deny: {
+                text: 'Confirm',
+                btnClass: 'btn col',
+                action: function () {}
+            }
+        }
+    });
+
+}
+
 
 function updateResult() {
     $.confirm({
@@ -53,7 +89,7 @@ function updateResult() {
         columnClass: 'col-6',
         content: `
         <form class="formName" id="resultUpdate">
-        <span>PCR</span>
+        <span>Swab</span>
         <div class="col-12 form-group">
             <select class="form-textbox" id="result" required>
                 <option value="na" selected>N/A</option>

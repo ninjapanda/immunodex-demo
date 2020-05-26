@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="9px" viewBox="0 0 7 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>bin</title>
+    <desc>Created with Sketch.</desc>
+    <g id="appointmet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="appointment" transform="translate(-685.000000, -222.000000)" fill="#FFFFFF">
+            <g id="Group-9" transform="translate(669.000000, 211.000000)">
+                <g id="bin" transform="translate(16.000000, 11.000000)">
+                    <path d="M1,7.9999933 C1,8.55250831 1.37291016,9 1.83333984,9 L5.16667969,9 C5.62708984,9 6,8.55250831 6,7.9999933 L6,2 L1,2 L1,7.9999933 Z" id="Path"></path>
+                    <polygon id="Path" points="5.25001172 0.333328125 4.74999498 0 2.25000502 0 1.74998828 0.333328125 0 0.333328125 0 1 7 1 7 0.333328125"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

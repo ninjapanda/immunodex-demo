@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Inspector</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- datatable -->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <link type="text/css" href="css/dataTables.checkboxes.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/dataTables.checkboxes.min.js"></script>
+
+    <!-- popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+
+    <!-- Custom style  -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/checkinTable.js"></script>
+    
+
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <p>Immunodex</p><span>Pharmacy(Yuen Long)</span>
+            </div>
+
+            <ul class="list-unstyled components">
+
+                <li class="active">
+                    <a href="index.html">Check-In List</a>
+                </li>
+
+                <li>
+                    <a href="sampleList.html">Sample List</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Start page content -->
+        <div class="container-fluid animate-bottom-1">
+
+            <div class="topbar">
+                <a href="#" onclick="history.back()">
+                    <img src="img/icon/Path.svg"><span>Back</span>
+                </a>
+            </div>
+
+            <div class="row mb-4 mt-4" id="detail">
+                <div class="col-9">
+                    <div class="blanket">
+                        <div class="col-12 form-row status-wrapper">
+                            <div class="col-1 text-center">
+                                <div class="statusDot pending"></div>
+                            </div>
+                            <div class="col">
+                                <span>Pending for User consent</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="btn btn-green disable" onclick="sendToTester()">
+                        Send to Tester
+                    </div>
+                </div>
+
+                <div class="col-12 mb-4">
+                    <div class="blanket">
+                        <div class="form-row mt-2" id="userData">
+
+                            <div class="col-4">
+                                <span class="info-title">Full Name</span>
+                                <span class="info-value">Penny</span>
+                            </div>
+                            <div class="col-4">
+                                <span class="info-title">Email</span>
+                                <span class="info-value">s20200315@school.edu</span>
+                            </div>
+                            <div class="col-4">
+                                <span class="info-title">Mobile No.</span>
+                                <span class="info-value">6421 1234</span>
+                            </div>
+                            <div class="col-4 mt-2">
+                                <span class="info-title">HKID</span>
+                                <span class="info-value">A1234567(2)</span>
+                            </div>
+                            <div class="col-4 mt-2">
+                                <span class="info-title">Date of birth</span>
+                                <span class="info-value">06/01/1954</span>
+                            </div>
+                            <div class="col-4 mt-2">
+                                <span class="info-title">Gender</span>
+                                <span class="info-value">Female</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-4">
+                    <div class="blanket">
+                        Pending for User consent
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- end of page content -->
+        </div>
+
+</body>
+
+</html>

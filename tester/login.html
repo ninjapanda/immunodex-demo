@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Immunodex Credential Issuer</title>
+    <title>Immunodex Credential Inspector</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +13,6 @@
 
     <!-- Custom style  -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/form.css" rel="stylesheet">
 
     <!-- Font awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
@@ -28,32 +27,30 @@
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
 
 </head>
 
-<body> <div class="loader-wrapper">
-        <div class="loader"></div>
-    </div>
+<body> 
     <div class="wrapper">
         <!-- Start page content -->
-        <div class="container-fluid animate-bottom-1">
-            <div class="topbar">
-                <a href="#" onclick="history.back()">
-                    <img src="img/icon/Path.svg"><span>Back</span>
-                </a>
+        <div class="container-fluid">
+            <div class="center">
+                <p id="loginTitle" class="mb-4">Immunodex</p>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <input type="text" class="" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="password" class="" id="password" placeholder="Password" required>
+                    </div>
+                    <a href="index.html">
+                        <div class="btn btn-blue mt-4">Sign in</div>
+                    </a>
+                </form>
             </div>
-            <div class="row">
-                <div class="page-heading col-12 mt-4">
-                    <p>Scan Patient QR-code</p>
-                </div>
-                <div class="mt-4 col-12">
-                    <div class="scan-wrapper" onclick="location.href='checkInList.html'">Scan Qr code (camera)</div>
-                </div>
+            <div id="loginNotes">
+                <p>Sample Tester</p>
             </div>
-
-
         </div>
 
         <!-- end of page content -->

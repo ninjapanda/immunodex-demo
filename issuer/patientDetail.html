@@ -109,18 +109,20 @@
 
             <div class="row">
                 <p class="sub-heading col-12 mb-1 mt-2">Testing ID - 00131</p>
-                <div class="col-12">
+                <div class="col-9">
                     <div class="blanket">
                         <div class="col-12 form-row status-wrapper">
                             <div class="col-1 text-center">
                                 <div class="statusDot pending"></div>
                             </div>
                             <div class="col">
-
                                 <span>Pending for testing</span>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-3" onclick="issuerCred()">
+                    <div class="btn issue">Issue</div>
                 </div>
                 <!-- <p class="sub-heading col-12 mb-1 mt-2">Patient Information</p> -->
                 <div class="col-12">
@@ -130,14 +132,15 @@
 
                                 <form class="form-row col-12" id="userDetailForm" style="display:none">
                                     <div class="form-item col-4">
+                                        <input type="tel" class="form-textbox disable" id="mobileNo" value="0 207 224 3688" required>
+                                        <span class="form-label" for="mobileNo">Mobile No.</span>
+                                    </div>
+                                    <div class="form-item col-4">
                                         <input type="text" class="form-textbox" id="fullName" value="Sherlock Holmes"
                                             required>
                                         <span class="form-label" for="fullName">Full Name</span>
                                     </div>
-                                    <div class="form-item col-4">
-                                        <input type="text" class="form-textbox" id="mobileNo" value="0 207 224 3688" required>
-                                        <span class="form-label" for="mobileNo">Mobile No.</span>
-                                    </div>
+                                    
                                     <div class="form-item col-4">
                                         <input type="text" class="form-textbox" id="hkid" value="123456789" required>
                                         <span class="form-label" for="hkid">Identity Document No.</span>
@@ -162,13 +165,14 @@
                                     </div>
                                 </form>
                                 <div class="form-row mt-2" id="userData">
-                                    <div class="col-4">
-                                        <span class="info-title">Full Name</span>
-                                        <span class="info-value">Sherlock Holmes</span>
-                                    </div>
+
                                     <div class="col-4">
                                         <span class="info-title">Mobile No.</span>
                                         <span class="info-value">0 207 224 3688</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="info-title">Full Name</span>
+                                        <span class="info-value">Sherlock Holmes</span>
                                     </div>
                                     <div class="col-4">
                                         <span class="info-title">Identity Document No.</span>
@@ -196,35 +200,10 @@
                         </div>
                     </div>
                 </div>
-                <p class="sub-heading col-12 mb-1 mt-2">Result</p>
+                
                 <div class="form-row col-12">
-
-                    <div class="col-9">
-                        <div class="blanket">
-                            <div class="col-12 form-row">
-                                <div class="col-3">
-                                    <span class="info-title">Conclusion</span>
-                                    <span class="info-value">Processing</span>
-                                </div>
-                                <div class="col-3">
-                                    <span class="info-title">PCR</span>
-                                    <span class="info-value">Processing</span>
-                                </div>
-                                <div class="col-3">
-                                    <span class="info-title">IgG</span>
-                                    <span class="info-value">+ Positive</span>
-                                </div>
-                                <div class="col-3">
-                                    <span class="info-title">IgM</span>
-                                    <span class="info-value">- Negative</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3" onclick="updateResult()">
-                        <div class="btn update">Update</div>
-                    </div>
-
+                    
+                    <p class="sub-heading col-12 mb-1 mt-4">Test</p>
                     <div class="col-12 mb-2 tabs-wrapper">
                         <div class="row">
                             <div class="tab col active" onclick="openTab( '#Swab')">PCR Test</div>
@@ -268,7 +247,7 @@
                                             <span class="form-label" for="sen">Sensitivity</span>
                                         </div>
                                         <div class="form-item col-6">
-                                            <input type="text" class="form-textbox" id="location"
+                                            <input type="text" class="form-textbox disable" id="location"
                                                 value="St Bartholomew's Hospital,City of London, UK" required>
                                             <span class="form-label" for="location">Location</span>
                                         </div>
@@ -364,7 +343,7 @@
                                             <span class="form-label" for="sen">Sensitivity</span>
                                         </div>
                                         <div class="form-item col-6">
-                                            <input type="text" class="form-textbox" id="location"
+                                            <input type="text" class="form-textbox disable" id="location"
                                                 value="St Bartholomew's Hospital,City of London, UK" required>
                                             <span class="form-label" for="location">Location</span>
                                         </div>
@@ -425,6 +404,35 @@
                         </div>
                     </div>
 
+                    <p class="sub-heading col-12 mb-1 mt-4">Result</p>
+                    <div class="col-9">
+                        <div class="blanket">
+                            <div class="col-12 form-row">
+                                <div class="col-3">
+                                    <span class="info-title">Conclusion</span>
+                                    <span class="info-value">Processing</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="info-title">PCR</span>
+                                    <span class="info-value">Processing</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="info-title">IgG</span>
+                                    <span class="info-value">+ Positive</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="info-title">IgM</span>
+                                    <span class="info-value">- Negative</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3" onclick="updateResult()">
+                        <div class="btn update">Update</div>
+                    </div>
+
+                    <p class="sub-heading col-12 mb-1 mt-4">Detail</p>
+
                     <div class="col-12 mb-2 tabs-wrapper">
                         <div class="row">
                             <div class="tab col active" onclick="openTab2( '#history')">History</div>
@@ -449,7 +457,7 @@
                             <tbody>
                                 <tr>
                                     <td>00142</td>
-                                    <td>Ab Tests</td>
+                                    <td>Ab Tests & PCR Tests</td>
                                     <td>PC Clinic</td>
                                     <td>24/12/2019</td>
                                     <td class="table-status-wrapper">
@@ -480,7 +488,7 @@
 
                     <div id="qa" class="blanket tabcontent2 col-12">
                         <div class="form-row">
-                            <div class="col-10">Have you ever been diagnosed with a serious medical condition? </div>
+                            <div class="col-10">In the past two weeks, have you had contact with someone diagnosed with COVID-19 or lived in or visit a place where COVID-19 is spreading? </div>
                             <div class="col-2">
                                 <div class="qaAns">
                                     No
@@ -488,7 +496,7 @@
                             </div>
                         </div>
                         <div class="form-row bg-gary">
-                            <div class="col-10">Does anyone in your family have a history of significant illness?</div>
+                            <div class="col-10">Do you have any underlying symptoms including but not limited to: fever, shortness of breath, cough, sore throat, pneumonia...?</div>
                             <div class="col-2">
                                 <div class="qaAns">
                                     No
@@ -496,18 +504,26 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-10">Are you currently receiving treatment for any medical conditions? </div>
+                            <div class="col-10">Are/were you hospitalized?If yes, please specify the date of hospitalization.</div>
                             <div class="col-2">
                                 <div class="qaAns right">
                                     Yes
                                 </div>
                             </div>
                             <div class="col-12 qaAnsExp">
-                                User explain here .Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                                2020/01/20
                             </div>
                         </div>
                         <div class="form-row bg-gary">
-                            <div class="col-10">Are you allergic to any medications or medical products?</div>
+                            <div class="col-10">Have you travelled overseas in the past 14 days? If yes, please specify the places you travelled, date of departure from the places and date of return.</div>
+                            <div class="col-2">
+                                <div class="qaAns">
+                                    No
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-10">Have you visited any health care facility (a hospital, emergency room, clinic, medical office, long-term care facility or nursing home, ambulance service, first responder services, or any health care setting) in the past 14 days? </div>
                             <div class="col-2">
                                 <div class="qaAns">
                                     No
@@ -583,7 +599,7 @@
                                     E1
                                 </div>
                             </div>
-                            <div class="col-10">Swab-, IgM+, IgG+ - Pt may be in recovery stage of infection, or PCR Result may be false-negative (which would mean E).</div>
+                            <div class="col-10">PCR-, IgM+, IgG+ - Pt may be in recovery stage of infection, or PCR result may be false-negative (which would mean E).</div>
                         </div>
                         <div class="form-row">
                             <div class="col-2">
@@ -591,7 +607,7 @@
                                     C1
                                 </div>
                             </div>
-                            <div class="col-10">Swab-, IgM+, IgG- - Pt may be in early stage of infection w/ Covid-19, PCR Result may be false-negative  (which would mean C)</div>
+                            <div class="col-10">PCR-, IgM+, IgG- - Pt may be in early stage of infection w/ Covid-19, PCR result may be false-negative  (which would mean C)</div>
                             
                         </div>
                     </div>
