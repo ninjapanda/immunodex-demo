@@ -1,5 +1,6 @@
 table {
     font-size: 12px;
+    /* table-layout: fixed; */
 }
 
 th,
@@ -10,7 +11,7 @@ td {
     line-height: 20px;
 }
 
-tr{
+tr {
     border-bottom: 1px solid #DEE2E6;
 }
 
@@ -30,7 +31,7 @@ tr{
     width: auto;
     line-height: 15px;
     padding: 8px;
-    margin-left: 5px;
+    /* margin-left: 5px; */
 }
 
 .btn.remove {
@@ -53,7 +54,12 @@ tr{
     top: -2px;
 }
 
-#search{
+.dataTable{
+    display: block;
+}
+
+
+#search {
     height: 31px;
     border-radius: 4px;
     border: 1px solid #d6d6d6;
@@ -152,11 +158,11 @@ table input[type="checkbox"] {
     }
 }
 
-.page-wrapper{
-    float:right;
+.page-wrapper {
+    float: right;
 }
 
-.paginate_button {
+.table-wrapper .paginate_button {
     padding: 10px;
     border: 1px solid #f2f2f2;
     border-radius: 4px;
@@ -164,18 +170,19 @@ table input[type="checkbox"] {
     cursor: pointer;
 }
 
-.paginate_button.previous {
+.table-wrapper .paginate_button.previous {
     /* border-radius: 8px 0px 0px 8px; */
     min-width: 70px;
 }
-.paginate_button.next{
+
+.table-wrapper .paginate_button.next {
     /* border-radius: 0px 8px 8px 0px; */
     min-width: 70px;
 }
 
-.paginate_button.current.active{
+.table-wrapper .paginate_button.current.active {
     background-color: #419C99;
-    color:#fff
+    color: #fff
 }
 
 
@@ -373,4 +380,82 @@ table .container input {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+@media screen and (max-width:600px) {
+    .dataTables_filter .btn{
+        width: 100%;
+    }
+    .search-wrapper{
+        width: 100%;
+        margin-top:10px;
+    }
+    #search{
+        width: 100%;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .table tbody{
+        /* display: inline-block; */
+        display: block;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+      }
+
+      table td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      
+      table td:last-child {
+        border-bottom: 0;
+      }
+
+      table .container{
+          /* right: -95%; */
+          left:50%;
+          width: 0;
+      }
+
+      #checkInTable_filter label,
+      #sampleList_all_filter label,
+      #sampleList_pending_filter label,
+      #sampleList_sent_filter label{
+          width: 100%;
+      }
+
+      #checkInTable_filter input,
+      #sampleList_all_filter input,
+      #sampleList_pending_filter input,
+      #sampleList_sent_filter input{
+          width: 100%;
+          margin-left:0px;
+      }
 }

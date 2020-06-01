@@ -43,7 +43,6 @@
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
-    <script src="js/checkinTable.js"></script>
 
 </head>
 
@@ -52,7 +51,13 @@
         <div class="loader"></div>
     </div>
     <div class="wrapper">
-        <!-- Sidebar  -->
+        <div class="topbar-wrapper topnav">
+            <div class="sidebarBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <p class="logo-text">Immunodex</p><span class="sub-text"> Pharmacy(Yuen Long)</span>
+        </div>
+
         <nav id="sidebar">
             <div class="sidebar-header">
                 <p>Immunodex</p><span>Pharmacy(Yuen Long)</span>
@@ -74,8 +79,9 @@
             </ul>
         </nav>
 
-
         <!-- Start page content -->
+        <div class="shadow-wrapper">
+        </div>
         <div class="container-fluid animate-bottom-1">
 
             <div class="row">
@@ -84,14 +90,15 @@
                 </div>
                 <div class="col-12 appointmentForm">
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-md-3 col-sm-12">
                             <select class="form-textbox" id="year" required>
                                 <option value="2019">2019 - 03 -04</option>
                                 <option value="2020" selected>2019 - 03 - 05</option>
                             </select>
                         </div>
 
-                        <div class="col-3 offset-6" onclick="location.href='scanQRcode.html'">
+                        <div class="col-md-3 offset-md-6 col-sm-12 mt-3 mt-md-0"
+                            onclick="location.href='scanQRcode.html'">
                             <div class="btn btn-green">
                                 Scan QR code
                             </div>
@@ -115,74 +122,81 @@
                         </div>
                     </div>
                     <div id="monday" class="blanket tabcontent table-wrapper" style="display: block;">
+
                         <div class="row mb-2 justify-content-end">
-                            <div class="col-auto ml-auto dataTables_filter">
-                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment</div>
+                            <div class="col-md-auto ml-auto dataTables_filter">
+                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment
+                                </div>
+                                <div class="d-inline-block search-wrapper">
                                     <input type="text" id="search" placeholder="Search">
+                                </div>
                             </div>
-                            
+
                         </div>
-                        <table id="appointment_1" class="table appointmentTable" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <input class="inp-cbx" id="checkall" type="checkbox" style="display: none" />
-                                        <label class="cbx" for="checkall">
-                                            <span>
-                                                <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                                </svg>
-                                            </span>
-                                        </label>
-                                    </th>
-                                    <th>Full Name</th>
-                                    <th>Identity Document No.</th>
-                                    <th>Mobile No</th>
-                                    <th>Booking Time</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <input class="inp-cbx" id="1" type="checkbox" style="display: none" />
-                                        <label class="cbx" for="1">
-                                            <span>
-                                                <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                                </svg>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
-                                        <div class="statusDot right"></div><span>Confirmed</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="inp-cbx" id="2" type="checkbox" style="display: none" />
-                                        <label class="cbx" for="2">
-                                            <span>
-                                                <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                                </svg>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
-                                        <div class="statusDot error"></div><span>Canceled</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table id="appointment_1" class="table appointmentTable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <input class="inp-cbx" id="checkall" type="checkbox"
+                                                style="display: none" />
+                                            <label class="cbx" for="checkall">
+                                                <span>
+                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </th>
+                                        <th scope="col">Full Name</th>
+                                        <th scope="col">Identity Document No.</th>
+                                        <th scope="col">Mobile No</th>
+                                        <th scope="col">Booking Time</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Select" scope="row">
+                                            <input class="inp-cbx" id="1" type="checkbox" style="display: none" />
+                                            <label class="cbx" for="1">
+                                                <span>
+                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </td>
+                                        <td data-label="Full Name">Sherlock Holmes</td>
+                                        <td data-label="Identity Document No.">123456789</td>
+                                        <td data-label="Mobile No.">0 207 224 3688</td>
+                                        <td data-label="Booking Time">12:00</td>
+                                        <td data-label="Status" class="table-status-wrapper">
+                                            <div class="statusDot right"></div><span>Confirmed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Select" scope="row">
+                                            <input class="inp-cbx" id="2" type="checkbox" style="display: none" />
+                                            <label class="cbx" for="2">
+                                                <span>
+                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </td>
+                                        <td data-label="Full Name">Sherlock Holmes</td>
+                                        <td data-label="Identity Document No.">123456789</td>
+                                        <td data-label="Mobile No.">0 207 224 3688</td>
+                                        <td data-label="Booking Time">12:00</td>
+                                        <td data-label="Status" class="table-status-wrapper">
+                                            <div class="statusDot error"></div><span>Canceled</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="page-wrapper mt-2">
                             <a class="paginate_button previous disabled" aria-controls="DataTables_Table_0"
                                 data-dt-idx="0" tabindex="0" id="DataTables_Table_0_previous">Previous</a><span>
@@ -199,16 +213,19 @@
                     </div>
                     <div id="tuesday" class="blanket tabcontent table-wrapper">
                         <div class="row mb-2 justify-content-end">
-                            <div class="col-auto ml-auto dataTables_filter">
-                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment</div>
+                            <div class="col-md-auto ml-auto dataTables_filter">
+                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment
+                                </div>
+                                <div class="d-inline-block search-wrapper">
                                     <input type="text" id="search" placeholder="Search">
+                                </div>
                             </div>
-                            
+
                         </div>
                         <table id="appointment_2" class="table appointmentTable" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th><input class="inp-cbx" id="checkall2" type="checkbox" style="display: none" />
+                                    <th scope="col"><input class="inp-cbx" id="checkall2" type="checkbox" style="display: none" />
                                         <label class="cbx" for="checkall2">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -217,16 +234,16 @@
                                             </span>
                                         </label>
                                     </th>
-                                    <th>Full Name</th>
-                                    <th>Identity Document No.</th>
-                                    <th>Mobile No</th>
-                                    <th>Booking Time</th>
-                                    <th>Status</th>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Identity Document No.</th>
+                                    <th scope="col">Mobile No</th>
+                                    <th scope="col">Booking Time</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input class="inp-cbx" id="tues_1" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="tues_1" type="checkbox" style="display: none" />
                                         <label class="cbx" for="tues_1">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -234,16 +251,16 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot right"></div><span>Confirmed</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input class="inp-cbx" id="tues_2" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="tues_2" type="checkbox" style="display: none" />
                                         <label class="cbx" for="tues_2">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -251,11 +268,11 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot error"></div><span>Canceled</span>
                                     </td>
                                 </tr>
@@ -275,16 +292,19 @@
                     </div>
                     <div id="wednesday" class="blanket tabcontent table-wrapper">
                         <div class="row mb-2 justify-content-end">
-                            <div class="col-auto ml-auto dataTables_filter">
-                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment</div>
+                            <div class="col-md-auto ml-auto dataTables_filter">
+                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment
+                                </div>
+                                <div class="d-inline-block search-wrapper">
                                     <input type="text" id="search" placeholder="Search">
+                                </div>
                             </div>
-                            
+
                         </div>
                         <table id="appointment_3" class="table appointmentTable" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th><input class="inp-cbx" id="checkall3" type="checkbox" style="display: none" />
+                                    <th scope="col"><input class="inp-cbx" id="checkall3" type="checkbox" style="display: none" />
                                         <label class="cbx" for="checkall3">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -292,16 +312,16 @@
                                                 </svg>
                                             </span>
                                         </label></th>
-                                    <th>Full Name</th>
-                                    <th>Identity Document No.</th>
-                                    <th>Mobile No</th>
-                                    <th>Booking Time</th>
-                                    <th>Status</th>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Identity Document No.</th>
+                                    <th scope="col">Mobile No</th>
+                                    <th scope="col">Booking Time</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input class="inp-cbx" id="web_1" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="web_1" type="checkbox" style="display: none" />
                                         <label class="cbx" for="web_1">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -309,16 +329,16 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot right"></div><span>Confirmed</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input class="inp-cbx" id="web_2" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="web_2" type="checkbox" style="display: none" />
                                         <label class="cbx" for="web_2">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -326,11 +346,11 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot error"></div><span>Canceled</span>
                                     </td>
                                 </tr>
@@ -350,16 +370,19 @@
                     </div>
                     <div id="thursday" class="blanket tabcontent table-wrapper">
                         <div class="row mb-2 justify-content-end">
-                            <div class="col-auto ml-auto dataTables_filter">
-                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment</div>
+                            <div class="col-md-auto ml-auto dataTables_filter">
+                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment
+                                </div>
+                                <div class="d-inline-block search-wrapper">
                                     <input type="text" id="search" placeholder="Search">
+                                </div>
                             </div>
-                            
+
                         </div>
                         <table id="appointment_4" class="table appointmentTable" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th><input class="inp-cbx" id="checkall4" type="checkbox" style="display: none" />
+                                    <th scope="col"><input class="inp-cbx" id="checkall4" type="checkbox" style="display: none" />
                                         <label class="cbx" for="checkall4">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -367,16 +390,16 @@
                                                 </svg>
                                             </span>
                                         </label></th>
-                                    <th>Full Name</th>
-                                    <th>Identity Document No.</th>
-                                    <th>Mobile No</th>
-                                    <th>Booking Time</th>
-                                    <th>Status</th>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Identity Document No.</th>
+                                    <th scope="col">Mobile No</th>
+                                    <th scope="col">Booking Time</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input class="inp-cbx" id="thur_1" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="thur_1" type="checkbox" style="display: none" />
                                         <label class="cbx" for="thur_1">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -384,16 +407,16 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot right"></div><span>Confirmed</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input class="inp-cbx" id="thur_2" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="thur_2" type="checkbox" style="display: none" />
                                         <label class="cbx" for="thur_2">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -401,11 +424,11 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot error"></div><span>Canceled</span>
                                     </td>
                                 </tr>
@@ -425,16 +448,19 @@
                     </div>
                     <div id="friday" class="blanket tabcontent table-wrapper">
                         <div class="row mb-2 justify-content-end">
-                            <div class="col-auto ml-auto dataTables_filter">
-                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment</div>
+                            <div class="col-md-auto ml-auto dataTables_filter">
+                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment
+                                </div>
+                                <div class="d-inline-block search-wrapper">
                                     <input type="text" id="search" placeholder="Search">
+                                </div>
                             </div>
-                            
+
                         </div>
                         <table id="appointment_5" class="table appointmentTable" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th><input class="inp-cbx" id="checkall5" type="checkbox" style="display: none" />
+                                    <th scope="col"><input class="inp-cbx" id="checkall5" type="checkbox" style="display: none" />
                                         <label class="cbx" for="checkall5">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -443,16 +469,16 @@
                                             </span>
                                         </label>
                                     </th>
-                                    <th>Full Name</th>
-                                    <th>Identity Document No.</th>
-                                    <th>Mobile No</th>
-                                    <th>Booking Time</th>
-                                    <th>Status</th>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Identity Document No.</th>
+                                    <th scope="col">Mobile No</th>
+                                    <th scope="col">Booking Time</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input class="inp-cbx" id="fri_1" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="fri_1" type="checkbox" style="display: none" />
                                         <label class="cbx" for="fri_1">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -460,16 +486,16 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot right"></div><span>Confirmed</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input class="inp-cbx" id="fri_2" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="fri_2" type="checkbox" style="display: none" />
                                         <label class="cbx" for="fri_2">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -477,11 +503,11 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot error"></div><span>Canceled</span>
                                     </td>
                                 </tr>
@@ -501,16 +527,19 @@
                     </div>
                     <div id="saturday" class="blanket tabcontent table-wrapper">
                         <div class="row mb-2 justify-content-end">
-                            <div class="col-auto ml-auto dataTables_filter">
-                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment</div>
+                            <div class="col-md-auto ml-auto dataTables_filter">
+                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment
+                                </div>
+                                <div class="d-inline-block search-wrapper">
                                     <input type="text" id="search" placeholder="Search">
+                                </div>
                             </div>
-                            
+
                         </div>
                         <table id="appointment_6" class="table appointmentTable" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th><input class="inp-cbx" id="checkall6" type="checkbox" style="display: none" />
+                                    <th scope="col"><input class="inp-cbx" id="checkall6" type="checkbox" style="display: none" />
                                         <label class="cbx" for="checkall6">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -519,16 +548,16 @@
                                             </span>
                                         </label>
                                     </th>
-                                    <th>Full Name</th>
-                                    <th>Identity Document No.</th>
-                                    <th>Mobile No</th>
-                                    <th>Booking Time</th>
-                                    <th>Status</th>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Identity Document No.</th>
+                                    <th scope="col">Mobile No</th>
+                                    <th scope="col">Booking Time</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><input class="inp-cbx" id="sat_1" type="checkbox" style="display: none" />
+                                <tr>    
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="sat_1" type="checkbox" style="display: none" />
                                         <label class="cbx" for="sat_1">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -536,16 +565,16 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot right"></div><span>Confirmed</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input class="inp-cbx" id="sat_2" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="sat_2" type="checkbox" style="display: none" />
                                         <label class="cbx" for="sat_2">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -553,11 +582,11 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot error"></div><span>Canceled</span>
                                     </td>
                                 </tr>
@@ -577,16 +606,19 @@
                     </div>
                     <div id="sunday" class="blanket tabcontent table-wrapper">
                         <div class="row mb-2 justify-content-end">
-                            <div class="col-auto ml-auto dataTables_filter">
-                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment</div>
+                            <div class="col-md-auto ml-auto dataTables_filter">
+                                <div class="btn remove"><img src="img/icon/interface.svg">Cancel selected appointment
+                                </div>
+                                <div class="d-inline-block search-wrapper">
                                     <input type="text" id="search" placeholder="Search">
+                                </div>
                             </div>
-                            
+
                         </div>
                         <table id="appointment_7" class="table appointmentTable" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th><input class="inp-cbx" id="checkall7" type="checkbox" style="display: none" />
+                                    <th scope="col"><input class="inp-cbx" id="checkall7" type="checkbox" style="display: none" />
                                         <label class="cbx" for="checkall7">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -595,16 +627,16 @@
                                             </span>
                                         </label>
                                     </th>
-                                    <th>Full Name</th>
-                                    <th>Identity Document No.</th>
-                                    <th>Mobile No</th>
-                                    <th>Booking Time</th>
-                                    <th>Status</th>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Identity Document No.</th>
+                                    <th scope="col">Mobile No</th>
+                                    <th scope="col">Booking Time</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input class="inp-cbx" id="sun_1" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="sun_1" type="checkbox" style="display: none" />
                                         <label class="cbx" for="sun_1">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -612,16 +644,16 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot right"></div><span>Confirmed</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input class="inp-cbx" id="sun_2" type="checkbox" style="display: none" />
+                                    <td data-label="Select" scope="row"><input class="inp-cbx" id="sun_2" type="checkbox" style="display: none" />
                                         <label class="cbx" for="sun_2">
                                             <span>
                                                 <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -629,11 +661,11 @@
                                                 </svg>
                                             </span>
                                         </label></td>
-                                    <td>Sherlock Holmes</td>
-                                    <td>123456789</td>
-                                    <td>0 207 224 3688</td>
-                                    <td>12:00</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Full Name">Sherlock Holmes</td>
+                                    <td data-label="Identity Document No.">123456789</td>
+                                    <td data-label="Mobile No.">0 207 224 3688</td>
+                                    <td data-label="Booking Time">12:00</td>
+                                    <td data-label="Status" class="table-status-wrapper">
                                         <div class="statusDot error"></div><span>Canceled</span>
                                     </td>
                                 </tr>
@@ -656,6 +688,9 @@
         </div>
 
         <!-- end of page content -->
+
+
+
     </div>
 
 </body>

@@ -5,6 +5,21 @@ $(document).ready(()=>{
         $(this).siblings().removeClass('active');
         $(this).addClass("active");
     })
+
+    $(".sidebarBtn").click(function(){
+        $("#sidebar").toggleClass('active');
+        $(".shadow-wrapper").toggleClass('active');
+        $(".container-fluid").toggleClass('position-fixed');
+    });
+
+    $(".shadow-wrapper").click(function(){
+        $("#sidebar").toggleClass('active');
+        $(".shadow-wrapper").toggleClass('active');
+        setTimeout(function () {
+            $(".container-fluid").removeClass('position-fixed');
+        },400);
+        
+    })
 })
 
 function loaderFadeOut() {
@@ -19,7 +34,7 @@ function openTab(tab) {
 function sendToTester() {
     $.confirm({
         title: 'Send this data to Tester',
-        columnClass: 'col-6',
+        columnClass: 'col-md-6 col-sm-12',
         content: `
         <div class="col-12">
             <span class="info-title">Batch No</span>
@@ -78,7 +93,7 @@ function saveTest(batchNo) {
     }
     $.dialog({
         title: 'Saved Test',
-        columnClass: 'col-6',
+        columnClass: 'col-md-6 col-sm-12',
         content: `
         <div class="row">
         <div class="col-12">

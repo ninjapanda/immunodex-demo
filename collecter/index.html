@@ -36,6 +36,8 @@
     <!-- Custom style  -->
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/sidebar.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/tab.css" rel="stylesheet">
     <link href="css/table.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -50,6 +52,13 @@
         <div class="loader"></div>
     </div>
     <div class="wrapper">
+        <div class="topbar-wrapper topnav">
+            <div class="sidebarBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <p class="logo-text">Immunodex</p><span class="sub-text"> Pharmacy(Yuen Long)</span>
+        </div>
+
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -74,12 +83,15 @@
 
 
         <!-- Start page content -->
+        <div class="shadow-wrapper">
+        </div>
+
         <div class="container-fluid animate-bottom-1">
             <div class="row mb-4">
                 <div class="page-heading col-12 mt-4">
                     <p>Check-In List</p>
                 </div>
-                <div class="btn-wrapper col-3 offset-9" onclick="location.href='scanQRcode.html'">
+                <div class="btn-wrapper col-md-3 offset-md-9 col-sm-12" onclick="location.href='scanQRcode.html'">
                     <div class="btn btn-green">
                         Scan QR code
                     </div>
@@ -93,7 +105,7 @@
                                 <tr>
                                     <th></th>
                                     <th>Name</th>
-                                    <th>HKID</th>
+                                    <th>Identity Document No.</th>
                                     <th>Mobile No.</th>
                                     <th>Check-In Time</th>
                                     <th>Status</th>
@@ -102,12 +114,12 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td>Penny</td>
-                                    <td>A123456(2)</td>
-                                    <td>6421 1234</td>
-                                    <td>24/12/2019 12:30</td>
-                                    <td>
+                                    <td data-label="Select"></td>
+                                    <td data-label="Name">Penny</td>
+                                    <td data-label="Identity Document No.">A123456(2)</td>
+                                    <td data-label="Mobile No.">6421 1234</td>
+                                    <td data-label="Check-In Time">24/12/2019 12:30</td>
+                                    <td data-label="Status">
                                         <span class="text-green">Checked-in</span>
                                     </td>
                                     <td>
@@ -117,12 +129,12 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td>Howard</td>
-                                    <td>A123456(1)</td>
-                                    <td>5912 6234</td>
-                                    <td>15/12/2019 20:14</td>
-                                    <td>
+                                    <td data-label="Select"></td>
+                                    <td data-label="Name">Howard</td>
+                                    <td data-label="Identity Document No.">A123456(1)</td>
+                                    <td data-label="Mobile No.">5912 6234</td>
+                                    <td data-label="Check-In Time">15/12/2019 20:14</td>
+                                    <td data-label="Status">
                                         <span>Pending user cosent</span>
                                     </td>
                                     <td>

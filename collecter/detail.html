@@ -56,6 +56,15 @@
         <div class="loader"></div>
     </div>
     <div class="wrapper">
+
+        <div class="topbar-wrapper topnav">
+            <div class="sidebarBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <p class="logo-text">Immunodex</p><span class="sub-text"> Pharmacy(Yuen Long)</span>
+        </div>
+
+
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -80,6 +89,9 @@
 
 
         <!-- Start page content -->
+        <div class="shadow-wrapper">
+        </div>
+
         <div class="container-fluid animate-bottom-1">
 
             <div class="topbar">
@@ -89,7 +101,7 @@
             </div>
 
             <div class="row mb-4 mt-4" id="detail">
-                <div class="col-9">
+                <div class="col-md-9 col-sm-12">
                     <div class="blanket">
                         <div class="col-12 form-row status-wrapper">
                             <div class="col-1 text-center">
@@ -101,37 +113,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3 col-sm-12">
                     <div class="btn btn-green" onclick="sendToTester()">
                         Send to Tester
                     </div>
                 </div>
 
-                <div class="col-12 mb-4">
+                <div class="col-12 mb-4 mt-2">
                     <div class="blanket">
                         <div class="form-row mt-2" id="userData">
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-sm-12">
                                 <span class="info-title">Full Name</span>
                                 <span class="info-value">Penny</span>
                             </div>
-                            <div class="col-4">
+                            <div class="col-md-4 col-sm-12">
                                 <span class="info-title">Email</span>
                                 <span class="info-value">s20200315@school.edu</span>
                             </div>
-                            <div class="col-4">
+                            <div class="col-md-4 col-sm-12">
                                 <span class="info-title">Mobile No.</span>
                                 <span class="info-value">6421 1234</span>
                             </div>
-                            <div class="col-4 mt-2">
+                            <div class="col-md-4 col-sm-12 mt-2">
                                 <span class="info-title">HKID</span>
                                 <span class="info-value">A1234567(2)</span>
                             </div>
-                            <div class="col-4 mt-2">
+                            <div class="col-md-4 col-sm-12 mt-2">
                                 <span class="info-title">Date of birth</span>
                                 <span class="info-value">06/01/1954</span>
                             </div>
-                            <div class="col-4 mt-2">
+                            <div class="col-md-4 col-sm-12 mt-2">
                                 <span class="info-title">Gender</span>
                                 <span class="info-value">Female</span>
                             </div>
@@ -139,7 +151,7 @@
                     </div>
                 </div>
 
-                <div class="col-6">
+                <div class="col-md-6 col-sm-12">
                     <div class="sub-heading">
                         <p>PCR Test</p>
                     </div>
@@ -185,7 +197,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 col-sm-12">
                     <div class="sub-heading">
                         <p>Ab Test</p>
                     </div>
@@ -307,36 +319,36 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Ab Tests & PCR Tests</td>
-                                    <td>PC Clinic</td>
-                                    <td>24/12/2019</td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Test Method">Ab Tests & PCR Tests</td>
+                                    <td data-label="Tester">PC Clinic</td>
+                                    <td data-label="Testing Date">24/12/2019</td>
+                                    <td data-label="Manufacturer" class="table-status-wrapper">
                                         Cellex,Inc & Novartis
                                     </td>
-                                    <td>
+                                    <td data-label="Symptoms">
                                         <span class="text-blue">Yes</span>
                                     </td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Conclusions" class="table-status-wrapper">
                                         <div class="statusDot green"></div><span>G</span>
                                     </td>
-                                    <td>
+                                    <td data-label="Test Status">
                                         <span class="text-green">Valid</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Ab Tests & PCR Tests</td>
-                                    <td>PC Clinic</td>
-                                    <td>24/12/2019</td>
-                                    <td class="table-status-wrapper">
+                                    <t data-label="Test Method"d>Ab Tests & PCR Tests</td>
+                                    <td data-label="Tester">PC Clinic</td>
+                                    <td data-label="Testing Date">24/12/2019</td>
+                                    <td data-label="Manufacturer" class="table-status-wrapper">
                                         Cellex,Inc & Novartis
                                     </td>
-                                    <td>
+                                    <td data-label="Symptoms">
                                     <span>No</span>
                                     </td>
-                                    <td class="table-status-wrapper">
+                                    <td data-label="Conclusions" class="table-status-wrapper">
                                         <div class="statusDot red"></div><span>E</span>
                                     </td>
-                                    <td>
+                                    <td data-label="Test Status">
                                         <span class="text-green">Valid</span>
                                     </td>
                                 </tr>
