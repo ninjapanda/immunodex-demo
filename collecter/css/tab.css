@@ -2,7 +2,7 @@
 /* tab */
 .tabs-wrapper {
     background-color: #F0F0F0;
-    height: 44px;
+    min-height: 44px;
     border-radius: 4px;
 }
 

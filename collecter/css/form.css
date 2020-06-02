@@ -145,6 +145,15 @@ form .btn.btn-outline.white:active{
     line-height: 40px!important;
 }
 
+.appointmentForm .form-textbox{
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    height: 35px;
+    width: 100%;
+    border-radius: 4px;
+    padding:8px;
+}
+
 
 @media not all and (min-resolution:.001dpcm) {
     @supports (-webkit-appearance:none) {
