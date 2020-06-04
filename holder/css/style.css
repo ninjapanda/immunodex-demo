@@ -132,11 +132,24 @@ input:focus {
     margin-bottom: 15px;
 }
 
+.checkin-record-wrapper {
+    height: 500px;
+    position: relative;
+    padding-top:10px;
+    overflow-y: scroll;
+}
+
+.checkin-record-wrapper .blanket {
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .text-white {
     color: #fff;
 }
 
-.text-green{
+.text-green {
     color: #1CC88A !important;
 }
 
@@ -221,6 +234,14 @@ input:focus {
     color: #050504;
     font-size: 1rem;
 }
+
+/* .checkin-record-wrapper .info-head{
+    display: inline;
+}
+
+.checkin-record-wrapper .info-value{
+    display: block;
+} */
 
 .resultStatus {
     position: relative;
@@ -571,7 +592,7 @@ form .btn:not(:disabled):not(.disabled):active {
 }
 
 .btn:not(:disabled):not(.disabled):active {
-    background-image: linear-gradient(#2366BC, #1B4F91);
+    /* background-image: linear-gradient(#2366BC, #1B4F91); */
     -webkit-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
@@ -658,6 +679,25 @@ form .btn:not(:disabled):not(.disabled):active {
 .HistroyCard .info-value {
     white-space: normal;
 }
+
+.testRecord .status {
+    padding: 1px 0px 1px 0px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    border-radius: 6px;
+    /* margin-left: 15px; */
+}
+
+.testRecord .done.status {
+    background-image: linear-gradient(to right, #5bb8b2, #94ddd9);
+}
+
+.testRecord .pending.status {
+    background-image: linear-gradient(to right, #919191, #919191);
+}
+
+
 
 .detail-wrapper {
     padding-left: 15px;
@@ -781,11 +821,11 @@ tr {
     text-transform: unset !important;
 }
 
-.jconfirm .jconfirm-box div.jconfirm-content-pane .jconfirm-content{
+.jconfirm .jconfirm-box div.jconfirm-content-pane .jconfirm-content {
     overflow: hidden;
 }
 
-#recordShare{
+#recordShare {
     text-align: center;
 }
 
@@ -795,65 +835,153 @@ tr {
     height: 14px;
 }
 
-#recordShare .checkbox-wrapper{
-    padding-right:30px;
+#recordShare .checkbox-wrapper {
+    padding-right: 30px;
 }
 
-#recordShare #title{
+#recordShare #title {
     border-bottom: 1px solid #d6d6d6;
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-#recordShare .data{
-    border-bottom:1px solid #d6d6d6;
+#recordShare .data {
+    border-bottom: 1px solid #d6d6d6;
 }
 
-#recordShare .form-row{
-    padding-top:10px;
-    padding-bottom:10px;
+#recordShare .form-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: left;
 }
 
 
-#recordShare .form-row [class*=col-]{
+#recordShare .form-row [class*=col-] {
     height: 32px;
     line-height: 28px;
 }
 
-#recordShare .expandBtn{
+#recordShare .expandBtn {
     cursor: pointer;
 }
 
-#recordShare .expandBtn:after{
-    font-size:18px;
-    margin-top:-3px;
-    color:#223049;
+#recordShare .expandBtn:after {
+    font-size: 18px;
+    margin-top: -3px;
+    color: #223049;
     content: '\002B';
 }
 
 .expandBtn.active:after {
     content: "\2212";
-  }
+}
 
-#recordShare .expandData{
+#recordShare .expandData {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    padding:0px;
+    padding: 0px;
 }
 
-#recordShare .expandData.active{
+#recordShare .expandData.active {
     max-height: 150px;
     height: 60px;
 }
 
 #recordShare .expandData .info-value,
-#recordShare .expandData .info-head{
+#recordShare .expandData .info-head {
     font-size: 12px;
 }
 
 /* end of alert */
+
+/* checkbox  */
+
+.cbx {
+    margin: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    line-height: 178px;
+}
+
+.cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098A9;
+    transition: all 0.2s ease;
+    left: 5px;
+
+}
+
+.cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+
+.cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #2196F3;
+    display: block;
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+}
+
+.cbx span:last-child {
+    padding-left: 8px;
+}
+
+.cbx:hover span:first-child {
+    border-color: #2196F3;
+}
+
+.inp-cbx:checked+.cbx span:first-child {
+    background: #2196F3;
+    border-color: #2196F3;
+    animation: wave 0.4s ease;
+}
+
+.inp-cbx:checked+.cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+.inp-cbx:checked+.cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+@keyframes wave {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+/* end of checkbox  */
 
 /* keyframes */
 .loader-wrapper {
