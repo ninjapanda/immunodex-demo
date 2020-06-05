@@ -65,11 +65,11 @@
                 </div>
                 <form class="col-12">
                     <div class="form-group">
-                        <label for="question1">Q1. Have you ever been diagnosed with a serious medical condition? </label>
+                        <label for="question1">Q1. In the past two weeks, have you had contact with someone diagnosed with COVID-19 or lived in or visit a place where COVID-19 is spreading? </label>
                         <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
                             <div class="radio-toolbar row">
                                 <div class="col-6 ">
-                                    <input type="radio" id="q1ans1" name="ans1" value="yes" onclick="showExp('q1ansExp');">
+                                    <input type="radio" id="q1ans1" name="ans1" value="yes">
                                     <label for="q1ans1">Yes</label>
                                 </div>
                                 <div class="col-6 ">
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="question1">Q2. Does anyone in your family have a history of significant illness? </label>
+                        <label for="question1">Q2. Do you have any underlying symptoms including but not limited to: fever, shortness of breath, cough, sore throat, pneumonia...? </label>
                         <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
                             <div class="radio-toolbar row">
                                 <div class="col-6 ">
@@ -93,11 +93,11 @@
                                     <label for="q2ans2">No</label>
                                 </div>
                             </div>
-                            <input type="text" class="form-control qExp" id="q2ansExp" placeholder="Please specify">
+                            <input type="text" class="form-control qExp" id="q2ansExp" placeholder="e.g fever, shortness of breath, cough, sore throat, pneumonia">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="question1">Q3. Have you experienced a reaction to a swab or antibody test in the past?</label>
+                        <label for="question1">Q3. Are/were you hospitalized?If yes, please specify the date of hospitalization.</label>
                         <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper error">
                             <div class="radio-toolbar row">
                                 <div class="col-6 ">
@@ -109,11 +109,11 @@
                                     <label for="q3ans2">No</label>
                                 </div>
                             </div>
-                            <input type="text" class="form-control qExp" id="q3ansExp" placeholder="e.g. hives, itchiness, anaphylaxis etc">
+                            <input type="text" class="form-control qExp" id="q3ansExp" placeholder="e.g. 2020/01/20 (yyyy/mm/dd)">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="question1">Q4. Are you allergic to any medications or medical products?</label>
+                        <label for="question1">Q4. Have you travelled overseas in the past 14 days? If yes, please specify the places you travelled, date of departure from the places and date of return.</label>
                         <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
                             <div class="radio-toolbar row">
                                 <div class="col-6 ">
@@ -125,16 +125,16 @@
                                     <label for="q4ans2">No</label>
                                 </div>
                             </div>
-                            <input type="text" class="form-control qExp" id="q4ansExp" placeholder="Explain">
+                            <input type="text" class="form-control qExp" id="q4ansExp" placeholder="e.g. Japan, 2020/01/10 to 2020/01/20">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="question1">Q5. Are you allergic to any environmental agents like dust, grass or pollen? </label>
+                        <label for="question1">Q5. Have you visited any health care facility (a hospital, emergency room, clinic, medical office, long-term care facility or nursing home, ambulance service, first responder services, or any health care setting) in the past 14 days?  </label>
                         <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
                             <div class="radio-toolbar row">
                                 <div class="col-6 ">
-                                    <input type="radio" id="q5ans1" name="ans5" value="yes" onclick="showExp('q5ansExp');">
+                                    <input type="radio" id="q5ans1" name="ans5" value="yes">
                                     <label for="q5ans1">Yes</label>
                                 </div>
                                 <div class="col-6 ">
@@ -142,71 +142,7 @@
                                     <label for="q5ans2">No</label>
                                 </div>
                             </div>
-                            <input type="text" class="form-control qExp" id="q5ansExp" placeholder="Explain">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="question1">Q6. Are you allergic to any foods including eggs or egg products? </label>
-                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
-                            <div class="radio-toolbar row">
-                                <div class="col-6 ">
-                                    <input type="radio" id="q6ans1" name="ans6" value="yes" onclick="showExp('q6ansExp');">
-                                    <label for="q6ans1">Yes</label>
-                                </div>
-                                <div class="col-6 ">
-                                    <input type="radio" id="q6ans2" name="ans6" value="no" onclick="hideExp('q6ansExp');">
-                                    <label for="q6ans2">No</label>
-                                </div>
-                            </div>
-                            <input type="text" class="form-control qExp" id="q6ansExp" placeholder="Specify food and reaction">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="question1">Q7. Are you currently receiving treatment for any medical conditions? </label>
-                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
-                            <div class="radio-toolbar row">
-                                <div class="col-6 ">
-                                    <input type="radio" id="q7ans1" name="ans7" value="yes" onclick="showExp('q7ansExp');">
-                                    <label for="q7ans1">Yes</label>
-                                </div>
-                                <div class="col-6 ">
-                                    <input type="radio" id="q7ans2" name="ans7" value="no" onclick="hideExp('q7ansExp');">
-                                    <label for="q7ans2">No</label>
-                                </div>
-                            </div>
-                            <input type="text" class="form-control qExp" id="q7ansExp" placeholder="Please specify">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="question1">Q8. Are you currently taking any medications? </label>
-                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
-                            <div class="radio-toolbar row">
-                                <div class="col-6 ">
-                                    <input type="radio" id="q8ans1" name="ans8" value="yes" onclick="showExp('q8ansExp');">
-                                    <label for="q8ans1">Yes</label>
-                                </div>
-                                <div class="col-6 ">
-                                    <input type="radio" id="q8ans2" name="ans8" value="no" onclick="hideExp('q8ansExp');">
-                                    <label for="q8ans2">No</label>
-                                </div>
-                            </div>
-                            <input type="text" class="form-control qExp" id="q8ansExp" placeholder="Please specify">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="question1">Q9. Are you pregnant or planning on pregnancy at this time? </label>
-                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
-                            <div class="radio-toolbar row">
-                                <div class="col-6 ">
-                                    <input type="radio" id="q9ans1" name="ans9" value="yes" onclick="showExp('q9ansExp');">
-                                    <label for="q9ans1">Yes</label>
-                                </div>
-                                <div class="col-6 ">
-                                    <input type="radio" id="q9ans2" name="ans9" value="no" onclick="hideExp('q9ansExp');">
-                                    <label for="q9ans2">No</label>
-                                </div>
-                            </div>
-                            <input type="text" class="form-control qExp" id="q9ansExp" placeholder="Please specify">
+                            <input type="text" class="form-control qExp" id="q5ansExp" placeholder="">
                         </div>
                     </div>
                     <a href="checkInSuccess.html">
