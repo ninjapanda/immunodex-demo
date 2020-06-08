@@ -320,6 +320,14 @@ body {
     padding:10px;
 }
 
+.recordStatus{
+    border-radius: 4px;
+    color:#fff;
+    background-color: #3982F3;
+    padding-left:8px;
+    padding-right:8px;
+}
+
 .status-wrapper{
     position: relative;
 }

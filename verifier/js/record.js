@@ -21,7 +21,7 @@ $(document).ready(function () {
 function setAsDatatable() {
     // var removeBtn = `<div class="btn remove"><img src="img/icon/bin.svg">Remove selected</button>`;
     for (i = 1; i <= 1; i++) {
-        $("#vaxList_" + i).DataTable({
+        $("#record").DataTable({
         });
     }
 }

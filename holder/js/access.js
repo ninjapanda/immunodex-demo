@@ -28,6 +28,15 @@ function addClient() {
                                 <input type="tel" class="form-textbox" id="mobile"required>
                                 <span class="form-label" for="mobile">Mobile Number</span>
                             </div>
+                            <div class="form-item">
+                                <select class="form-textbox" id="availableDay" required>
+                                    <option value="1">1 day</option>
+                                    <option value="7" selected>7 day</option>
+                                    <option value="14">14 day</option>
+                                    <option value="28">28 day</option>
+                                </select>
+                            <span class="form-label" for="availableDay">Available at</span>
+                            </div>
                         </form>
                         `,
                         onOpenBefore: function () {

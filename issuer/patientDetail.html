@@ -224,27 +224,32 @@
                                         <div class="col-12 hr"></div>
 
                                         <div class="form-item col-12">
-                                            <input type="text" class="form-textbox" id="productName"
-                                                value="qSARS-CoV-2 IgG/IgM Rapid Test" required>
-                                            <span class="form-label" for="productName">Product Name</span>
+
+                                            <select class="form-textbox" id="pcrTest" required>
+                                                <option value="0"></option>
+                                                <option value="1">(Roche) qSARS-CoV-2 PCR Rapid Test</option>
+                                                <option value="2" selected>(Cellex, Inc) qSARS-CoV-2 PCR Rapid Test</option>
+                                            </select>
+                                            <span class="form-label" for="pcrTest">Product Name</span>
                                         </div>
+
                                         <div class="form-item col-3">
                                             <input type="text" class="form-textbox" id="testedBy"
                                                 value="Dr. John Watson" required>
                                             <span class="form-label" for="testedBy">Tested by</span>
                                         </div>
                                         <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="manufacturer"
+                                            <input type="text" class="form-textbox" id="pcr_manufacturer"
                                                 value="Cellex, Inc" required>
-                                            <span class="form-label" for="manufacturer">Manufacturer</span>
+                                            <span class="form-label" for="pcr_manufacturer">Manufacturer</span>
                                         </div>
                                         <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="spec" value="82.5%" required>
-                                            <span class="form-label" for="spec">Specificty</span>
+                                            <input type="text" class="form-textbox" id="pcr_spec" value="90%" required>
+                                            <span class="form-label" for="pcr_spec">Specificty</span>
                                         </div>
                                         <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="sen" value="98.5%" required>
-                                            <span class="form-label" for="sen">Sensitivity</span>
+                                            <input type="text" class="form-textbox" id="pcr_sen" value="99.5%" required>
+                                            <span class="form-label" for="pcr_sen">Sensitivity</span>
                                         </div>
                                         <div class="form-item col-6">
                                             <input type="text" class="form-textbox disable" id="location"
@@ -267,7 +272,7 @@
 
                                         <div class="col-12">
                                             <span class="info-title">Product Name</span>
-                                            <span class="info-value">qSARS-CoV-2 IgG/IgM Rapid Test</span>
+                                            <span class="info-value">(Cellex, Inc) qSARS-CoV-2 PCR Rapid Test</span>
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Tested by</span>
@@ -279,11 +284,11 @@
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Specificty</span>
-                                            <span class="info-value">82.5%</span>
+                                            <span class="info-value">90%</span>
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Sensitivity</span>
-                                            <span class="info-value">98.5%</span>
+                                            <span class="info-value">99.5%</span>
                                         </div>
                                         <div class="col-6 mt-2">
                                             <span class="info-title">Location</span>
@@ -320,9 +325,13 @@
                                         <div class="col-12 hr"></div>
 
                                         <div class="form-item col-12">
-                                            <input type="text" class="form-textbox" id="productName"
-                                                value="qSARS-CoV-2 IgG/IgM Rapid Test" required>
-                                            <span class="form-label" for="productName">Product Name</span>
+
+                                            <select class="form-textbox" id="abTest" required>
+                                                <option value="0"></option>
+                                                <option value="1">(Roche) qSARS-CoV-2 IgG/IgM Rapid Test</option>
+                                                <option value="2" selected>(Cellex, Inc) qSARS-CoV-2 IgG/IgM Rapid Test</option>
+                                            </select>
+                                            <span class="form-label" for="abTest">Product Name</span>
                                         </div>
                                         <div class="form-item col-3">
                                             <input type="text" class="form-textbox" id="testedBy"
@@ -330,17 +339,17 @@
                                             <span class="form-label" for="testedBy">Tested by</span>
                                         </div>
                                         <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="manufacturer"
+                                            <input type="text" class="form-textbox" id="ab_manufacturer"
                                                 value="Cellex, Inc" required>
-                                            <span class="form-label" for="manufacturer">Manufacturer</span>
+                                            <span class="form-label" for="ab_manufacturer">Manufacturer</span>
                                         </div>
                                         <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="spec" value="82.5%" required>
-                                            <span class="form-label" for="spec">Specificty</span>
+                                            <input type="text" class="form-textbox" id="ab_spec" value="93%" required>
+                                            <span class="form-label" for="ab_spec">Specificty</span>
                                         </div>
                                         <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="sen" value="98.5% required>
-                                            <span class="form-label" for="sen">Sensitivity</span>
+                                            <input type="text" class="form-textbox" id="ab_sen" value="97.5%" required>
+                                            <span class="form-label" for="ab_sen">Sensitivity</span>
                                         </div>
                                         <div class="form-item col-6">
                                             <input type="text" class="form-textbox disable" id="location"
@@ -367,7 +376,7 @@
 
                                         <div class="col-12">
                                             <span class="info-title">Product Name</span>
-                                            <span class="info-value">qSARS-CoV-2 IgG/IgM Rapid Test</span>
+                                            <span class="info-value">(Cellex, Inc) qSARS-CoV-2 IgG/IgM Rapid Test</span>
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Tested by</span>
@@ -379,11 +388,11 @@
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Specificty</span>
-                                            <span class="info-value">82.5%</span>
+                                            <span class="info-value">93%</span>
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Sensitivity</span>
-                                            <span class="info-value">98.5%</span>
+                                            <span class="info-value">97.5%</span>
                                         </div>
                                         <div class="col-6 mt-2">
                                             <span class="info-title">Location</span>

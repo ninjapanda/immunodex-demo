@@ -46,7 +46,7 @@
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
-    <script src="js/checkinTable.js"></script>
+    <script src="js/detail.js"></script>
 
 
 </head>
@@ -165,24 +165,28 @@
                             <div class="hr p-0"></div>
 
                             <div class="form-item col-12">
-                                <input type="text" class="form-textbox" id="productName"
-                                    value="qSARA-CoV-2 PCR Swab Test" required>
-                                <span class="form-label" for="productName">Product Name</span>
+                                <select class="form-textbox" id="pcrTest" required>
+                                    <option value="0"></option>
+                                    <option value="1">(Roche) qSARS-CoV-2 PCR Rapid Test</option>
+                                    <option value="2" selected>(Cellex, Inc) qSARS-CoV-2 PCR Rapid Test</option>
+                                </select>
+                                <span class="form-label" for="pcrTest">Product Name</span>
                             </div>
 
                             <div class="form-item col-12">
-                                <input type="text" class="form-textbox" id="manufa" value="Cellex, Inc." required>
-                                <span class="form-label" for="manufa">Manufacturer</span>
+                                <input type="text" class="form-textbox" id="pcr_manufacturer" value="Cellex, Inc"
+                                    required>
+                                <span class="form-label" for="pcr_manufacturer">Manufacturer</span>
                             </div>
 
                             <div class="form-item col-6">
-                                <input type="text" class="form-textbox" id="spec" value="82.5%" required>
-                                <span class="form-label" for="spec">Specificty</span>
+                                <input type="text" class="form-textbox" id="pcr_spec" value="90%" required>
+                                <span class="form-label" for="pcr_spec">Specificty</span>
                             </div>
 
                             <div class="form-item col-6">
-                                <input type="text" class="form-textbox" id="sens" value="98.5%" required>
-                                <span class="form-label" for="sens">Sensitivity</span>
+                                <input type="text" class="form-textbox" id="pcr_sen" value="99.5%" required>
+                                <span class="form-label" for="pcr_sen">Sensitivity</span>
                             </div>
                             <div class="form-item col-12">
                                 <input type="text" class="form-textbox disable" id="colletAt"
@@ -211,22 +215,26 @@
                             <div class="hr p-0"></div>
 
                             <div class="form-item col-12">
-                                <input type="text" class="form-textbox" id="productName" value="" required>
-                                <span class="form-label" for="productName">Product Name</span>
+                                <select class="form-textbox" id="abTest">
+                                    <option value="0" selected></option>
+                                    <option value="1">(Roche) qSARS-CoV-2 IgG/IgM Rapid Test</option>
+                                    <option value="2">(Cellex, Inc) qSARS-CoV-2 IgG/IgM Rapid Test</option>
+                                </select>
+                                <span class="form-label" for="abTest">Product Name</span>
                             </div>
 
                             <div class="form-item col-12">
-                                <input type="text" class="form-textbox" id="manufa" value="" required>
+                                <input type="text" class="form-textbox" id="ab_manufacturer" value="" required>
                                 <span class="form-label" for="manufa">Manufacturer</span>
                             </div>
 
                             <div class="form-item col-6">
-                                <input type="text" class="form-textbox" id="spec" value="" required>
+                                <input type="text" class="form-textbox" id="ab_spec" value="" required>
                                 <span class="form-label" for="spec">Specificty</span>
                             </div>
 
                             <div class="form-item col-6">
-                                <input type="text" class="form-textbox" id="sens" value="" required>
+                                <input type="text" class="form-textbox" id="ab_sen" value="" required>
                                 <span class="form-label" for="sens">Sensitivity</span>
                             </div>
                             <div class="form-item col-12">
@@ -336,14 +344,14 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <t data-label="Test Method"d>Ab Tests & PCR Tests</td>
+                                    <td data-label="Test Method">Ab Tests & PCR Tests</td>
                                     <td data-label="Tester">PC Clinic</td>
                                     <td data-label="Testing Date">24/12/2019</td>
                                     <td data-label="Manufacturer" class="table-status-wrapper">
                                         Cellex,Inc & Novartis
                                     </td>
                                     <td data-label="Symptoms">
-                                    <span>No</span>
+                                        <span>No</span>
                                     </td>
                                     <td data-label="Conclusions" class="table-status-wrapper">
                                         <div class="statusDot red"></div><span>E</span>
