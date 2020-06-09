@@ -4,7 +4,7 @@ table{
 
 th,
 td {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .page-item.active .page-link {
@@ -151,6 +151,10 @@ table .container input {
 .table-status-wrapper .statusDot.pending
 .testResultStatus .statusDot.pending{
     background-color: #E8AC0C;
+}
+
+.table-status-wrapper span{
+    margin-left:8px;
 }
 
 .testResultStatus{
