@@ -23,9 +23,11 @@ td {
     height: 31px;
     font-size: 0.875rem;
     max-width: 255px;
+    width: auto;
     line-height: 31px;
     padding:0px;
     margin-left:5px;
+    padding-right:5px;
 }
 
 .btn.remove {
