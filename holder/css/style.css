@@ -827,6 +827,8 @@ tr {
 
 #recordShare {
     text-align: center;
+    max-height: 450px;
+    overflow: scroll;
 }
 
 #recordShare input[type=checkbox] {

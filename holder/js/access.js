@@ -63,7 +63,7 @@ function addClient() {
                                             <div class="form-row" id="title">
                                                 <div class="col-1 checkbox-wrapper">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="record_1">
+                                                        <input class="form-check-input" type="checkbox" value="" id="record_0">
                                                     </div>
                                                 </div>
                                                 <div class="col-4">Date</div>
@@ -212,6 +212,54 @@ function addClient() {
                                                             No
                                                         </span>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="data" id="data_4">
+                                                <div class="form-row">
+                                                    <div class="col-1 checkbox-wrapper">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="record_4">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">12 Apr, 2020
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="resultStatus">
+                                                        <div class="statusDot green"></div>
+                                                        <span>A</span>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-2 text-green">Valid</div>
+                                                    <div class="col-1 expandBtn" onclick="expand('data_4')"></div>
+                                                </div>
+
+                                                <div class="form-row expandData" id="data_4_exapnd">
+                                                    <div class="col-1 checkbox-wrapper"></div>
+                                                    <div class="col-4">
+                                                        <span class="info-head">
+                                                            Issuer
+                                                        </span>
+                                                        <span class="info-value">
+                                                            QS LAB
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <span class="info-head">
+                                                            Method
+                                                        </span>
+                                                        <span class="info-value">
+                                                            Swab
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <span class="info-head">
+                                                            Symptoms
+                                                        </span>
+                                                        <span class="info-value">
+                                                            YES
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-1"></div>
                                                 </div>
                                             </div>
                                         </div>

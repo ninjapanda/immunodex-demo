@@ -14,10 +14,6 @@
     <!-- Jquery UI CSS -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"> -->
 
-    <!-- Custom style  -->
-    <link href="css/sideBar.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
     <!-- Font awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
 
@@ -35,6 +31,11 @@
 
     <!-- Bootstrap JS -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+
+
+    <!-- Custom style  -->
+    <link href="css/sideBar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Custom JS -->
     <script src="js/sideBar.js"></script>
@@ -73,7 +74,7 @@
                     <div class="col-12 mt-3">
                         <div class="row blanket">
                             <div class="col-2">
-                                <input class="inp-cbx" id="select_all" type="checkbox" style="display: none" checked/>
+                                <input class="inp-cbx" id="select_all" type="checkbox" style="display: none" checked />
                                 <label class="cbx" for="select_all" style="line-height: unset;">
                                     <span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -85,11 +86,20 @@
                             <div class="col-10"><span>Select All Record</span></div>
                         </div>
                     </div>
-                    <div class="row mt-4 checkin-record-wrapper">
+
+                    <div class="col-12 tabs-wrapper">
+                        <div class="row">
+                            <div class="tab col active" onclick="openTab( '#all')">All</div>
+                            <div class="tab col" onclick="openTab( '#recent')">Recent Record</div>
+                        </div>
+                    </div>
+
+                    <div id="all" class="row mt-2 checkin-record-wrapper tabcontent"  style="display: block;">
                         <div class="col-12">
                             <div class="row blanket">
                                 <div class="col-2">
-                                    <input class="inp-cbx" id="record_1" type="checkbox" style="display: none" checked/>
+                                    <input class="inp-cbx" id="record_1" type="checkbox" style="display: none"
+                                        checked />
                                     <label class="cbx" for="record_1">
                                         <span>
                                             <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -107,7 +117,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-6 mb-2">
                                             <span class="info-head">Testing ID</span>
                                             <span class="info-value">00512</span>
@@ -156,7 +166,8 @@
                             </div>
                             <div class="row blanket">
                                 <div class="col-2">
-                                    <input class="inp-cbx" id="record_2" type="checkbox" style="display: none" checked/>
+                                    <input class="inp-cbx" id="record_2" type="checkbox" style="display: none"
+                                        checked />
                                     <label class="cbx" for="record_2">
                                         <span>
                                             <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -174,7 +185,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-6 mb-2">
                                             <span class="info-head">Testing ID</span>
                                             <span class="info-value">00131</span>
@@ -224,7 +235,8 @@
 
                             <div class="row blanket">
                                 <div class="col-2">
-                                    <input class="inp-cbx" id="record_2" type="checkbox" style="display: none" checked/>
+                                    <input class="inp-cbx" id="record_2" type="checkbox" style="display: none"
+                                        checked />
                                     <label class="cbx" for="record_2">
                                         <span>
                                             <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -242,7 +254,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-6 mb-2">
                                             <span class="info-head">Testing ID</span>
                                             <span class="info-value">00042</span>
@@ -284,6 +296,147 @@
                                             </span>
                                             <span class="info-value">
                                                 04/03/2020
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="recent" class="row mt-2 checkin-record-wrapper tabcontent" >
+                        <div class="col-12">
+                            <div class="row blanket">
+                                <div class="col-2">
+                                    <input class="inp-cbx" id="record_1" type="checkbox" style="display: none"
+                                        checked />
+                                    <label class="cbx" for="record_1">
+                                        <span>
+                                            <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="col-10 testRecord">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="col-6 mb-2" style="margin-left:-15px">
+                                                <div class="status done">
+                                                    Valid
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">Testing ID</span>
+                                            <span class="info-value">00512</span>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">Test Method</span>
+                                            <span class="info-value">Swab & Ab</span>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">
+                                                Conclusion
+                                            </span>
+                                            <span class="info-value">
+                                                <div class="resultStatus">
+                                                    <div class="statusDot green"></div>
+                                                    <span>G</span>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">
+                                                Symptoms
+                                            </span>
+                                            <span class="info-value">
+                                                YES
+                                            </span>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">
+                                                Issuer
+                                            </span>
+                                            <span class="info-value">
+                                                Q&C Lab
+                                            </span>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">
+                                                Date
+                                            </span>
+                                            <span class="info-value">
+                                                20/03/2020
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row blanket">
+                                <div class="col-2">
+                                    <input class="inp-cbx" id="record_2" type="checkbox" style="display: none"
+                                        checked />
+                                    <label class="cbx" for="record_2">
+                                        <span>
+                                            <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="col-10 testRecord">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="col-6 mb-2" style="margin-left:-15px">
+                                                <div class="status pending">
+                                                    pending
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">Testing ID</span>
+                                            <span class="info-value">00131</span>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">Test Method</span>
+                                            <span class="info-value">Swab</span>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">
+                                                Conclusion
+                                            </span>
+                                            <span class="info-value">
+                                                <div class="resultStatus">
+                                                    <div class="statusDot red"></div>
+                                                    <span>A</span>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">
+                                                Symptoms
+                                            </span>
+                                            <span class="info-value">
+                                                NO
+                                            </span>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">
+                                                Issuer
+                                            </span>
+                                            <span class="info-value">
+                                                PD Clinic
+                                            </span>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <span class="info-head">
+                                                Date
+                                            </span>
+                                            <span class="info-value">
+                                                12/03/2020
                                             </span>
                                         </div>
                                     </div>
