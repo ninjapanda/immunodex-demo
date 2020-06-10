@@ -112,7 +112,7 @@ function issuerCred() {
         title: 'Issue Credential',
         columnClass: 'col-6',
         content: `
-        <span class="info-title">Testing ID</span>
+        <span class="info-title">Assessment ID</span>
         <span class="info-value">00131</span>
         
         <span class="info-title">Full Name</span>
@@ -150,7 +150,7 @@ function updateResult() {
         columnClass: 'col-6',
         content: `
         <form class="formName" id="resultUpdate">
-        <span>Swab</span>
+        <span>RT-PCR</span>
         <div class="col-12 form-group">
             <select class="form-textbox" id="result" required>
                 <option value="na" selected>N/A</option>

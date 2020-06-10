@@ -105,7 +105,7 @@ function addClient() {
                                                             Method
                                                         </span>
                                                         <span class="info-value">
-                                                            Swab
+                                                            RT-PCR
                                                         </span>
                                                     </div>
                                                     <div class="col-2">
@@ -201,7 +201,7 @@ function addClient() {
                                                             Method
                                                         </span>
                                                         <span class="info-value">
-                                                            Swab
+                                                            RT-PCR
                                                         </span>
                                                     </div>
                                                     <div class="col-2">
@@ -248,7 +248,7 @@ function addClient() {
                                                             Method
                                                         </span>
                                                         <span class="info-value">
-                                                            Swab
+                                                            RT-PCR
                                                         </span>
                                                     </div>
                                                     <div class="col-2">
