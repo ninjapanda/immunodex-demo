@@ -444,13 +444,22 @@
 
                     <div class="col-12 mb-2 tabs-wrapper">
                         <div class="row">
-                            <div class="tab col active" onclick="openTab2( '#history')">History</div>
+                            <div class="tab col active" onclick="openTab2( '#history')">Record</div>
                             <div class="tab col" onclick="openTab2( '#qa')">Q&A</div>
                             <div class="tab col" onclick="openTab2( '#sig')">Significance</div>
                         </div>
                     </div>
 
-                    <div id="history" class="blanket tabcontent2 col-12" style="display: block;">
+                    <div id="history" class="blanket tabcontent2 col-12 record" style="display: block;">
+                        <div class="row">
+                            <div class="col-3 mb-3  pl-0">
+                                <div class="recordStatus blue">Latest</div>
+                            </div>
+                            <div class="col-3 offset-6" onclick="location.href='scanQRCode.html'">
+                                <div class="btn">Scan QR code</div>
+                            </div>
+                        </div>
+                        
                         <table id="patienttestRecord" style="width:100%">
                             <thead>
                                 <tr>
@@ -468,13 +477,13 @@
                                     <td>00142</td>
                                     <td>Ab Tests & PCR Tests</td>
                                     <td>PC Clinic</td>
-                                    <td>24/12/2019</td>
+                                    <td>06/01/2020</td>
                                     <td class="table-status-wrapper">
                                         <div class="statusDot error"></div><span>A</span>
                                     </td>
                                     <td>YES</td>
-                                    <td class="table-status-wrapper">
-                                        <div class="statusDot right"></div><span>Valid</span>
+                                    <td>
+                                        <span class="text-green">Valid</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -486,8 +495,8 @@
                                         <div class="statusDot pending"></div><span>E1</span>
                                     </td>
                                     <td>YES</td>
-                                    <td class="table-status-wrapper">
-                                        <div class="statusDot right"></div><span>Valid</span>
+                                    <td>
+                                        <span class="text-green">Valid</span>
                                     </td>
                                 </tr>
                             </tbody>

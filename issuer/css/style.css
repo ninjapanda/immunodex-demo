@@ -101,6 +101,14 @@ body {
     line-height: 30px;
 }
 
+.record .btn{
+    height: 34px;
+    line-height:22px;
+    font-size: 12px;
+    width: 150px;
+    float: right;
+}
+
 .text-green {
     color: #1CC88A;
 }
@@ -328,6 +336,26 @@ body {
 }
 
 .statusDot.pending {
+    background-color: #E8AC0C;
+}
+
+.recordStatus{
+    border-radius: 4px;
+    color: #fff;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+
+}
+
+.recordStatus.blue{
+    background-color: #3982F3;
+}
+
+.recordStatus.yellow{
     background-color: #E8AC0C;
 }
 

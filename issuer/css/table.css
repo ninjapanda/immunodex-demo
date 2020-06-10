@@ -188,5 +188,5 @@ table .container input {
 #patienttestRecord .table-status-wrapper .statusDot {
     position: relative;
     top: 1px;
-    left: -12px;
+    left: 0px;
 }
