@@ -33,6 +33,11 @@
     <script type="text/javascript" src="js/dataTables.checkboxes.min.js"></script>
 
 
+    <!-- popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+
     <!-- Custom style  -->
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/sidebar.css" rel="stylesheet">
@@ -95,8 +100,10 @@
                     <div class="col-12 mb-2 tabs-wrapper">
                         <div class="row">
                             <div class="tab col active" onclick="openTab( '#all')">All</div>
-                            <div class="tab col text-yellow" onclick="openTab( '#samplePending')">Pending</div>
-                            <div class="tab col text-green" onclick="openTab( '#sampleSent')">Sent</div>
+                            <div class="tab col text-yellow" onclick="openTab( '#samplePending')">Pending for Collect</div>
+                            <div class="tab col text-yellow" onclick="openTab( '#sampleSent')">Sent to Tester</div>
+                            <div class="tab col text-orange" onclick="openTab( '#samplePendingIssue')">Pening for Issue</div>
+                            <div class="tab col text-green" onclick="openTab( '#sampleIssued')">Issued</div>
                         </div>
                     </div>
 
@@ -123,9 +130,9 @@
                                         <td data-label="Mobile No.">6421 1234</td>
                                         <td data-label="Send Time">24/12/2019 12:30</td>
                                         <td data-label="Status">
-                                            <span class="text-green">Sent to Tester</span>
+                                            <span class="text-yellow">Sent to Tester</span>
                                         </td>
-                                        <td data-label="Result">
+                                        <td class="text-yellow" data-label="Result">
                                             Processing
                                         </td>
                                         <td>
@@ -141,7 +148,7 @@
                                         <td data-label="Mobile No.">5123 9876</td>
                                         <td data-label="Send Time">13/11/2019 14:50</td>
                                         <td data-label="Status">
-                                            <span class="text-green">Sent to Tester</span>
+                                            <span class="text-orange">Pending for Issue</span>
                                         </td>
                                         <td data-label="Result">
                                             Finished
@@ -159,7 +166,7 @@
                                         <td data-label="Mobile No.">9234 1241</td>
                                         <td data-label="Send Time">15/12/2019 20:14</td>
                                         <td data-label="Status">
-                                            <span class="text-yellow">Pending</span>
+                                            <span class="text-yellow">Pending for Collect</span>
                                         </td>
                                         <td data-label="Result">
                                             N/A
@@ -172,18 +179,18 @@
                                     </tr>
                                     <tr>
                                         <td data-label="Select"></td>
-                                        <td data-label="Name">Raj</td>
-                                        <td data-label="Identity Document No.">A123456(1)</td>
-                                        <td data-label="Mobile No.">5912 6234</td>
-                                        <td data-label="Send Time">01/12/2019 10:51</td>
+                                        <td data-label="Name">Amy</td>
+                                        <td data-label="Identity Document No.">A123456(5)</td>
+                                        <td data-label="Mobile No.">6123 5213</td>
+                                        <td data-label="Send Time">19/12/2019 11:30</td>
                                         <td data-label="Status">
-                                            <span class="text-yellow">Pending</span>
+                                            <span class="text-green">Issued</span>
                                         </td>
                                         <td data-label="Result">
-                                            N/A
+                                            Finished
                                         </td>
                                         <td>
-                                            <div class="tableBtn" onclick="location.href='sampleDetail_pending.html'">
+                                            <div class="tableBtn" onclick="location.href='sampleDetail_issued.html'">
                                                 <img src="img/icon/search@3x_2.png">Review
                                             </div>
                                         </td>
@@ -215,25 +222,7 @@
                                         <td data-label="Mobile No.">9234 1241</td>
                                         <td data-label="Send Time">15/12/2019 20:14</td>
                                         <td data-label="Status">
-                                            <span class="text-yellow">Pending</span>
-                                        </td>
-                                        <td data-label="Result">
-                                            N/A
-                                        </td>
-                                        <td>
-                                            <div class="tableBtn" onclick="location.href='sampleDetail_pending.html'">
-                                                <img src="img/icon/search@3x_2.png">Review
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Select"></td>
-                                        <td data-label="Name">Raj</td>
-                                        <td data-label="Identity Document No.">A123456(1)</td>
-                                        <td data-label="Mobile No.">5912 6234</td>
-                                        <td data-label="Send Time">01/12/2019 10:51</td>
-                                        <td data-label="Status">
-                                            <span class="text-yellow">Pending</span>
+                                            <span class="text-yellow">Pending for Collect</span>
                                         </td>
                                         <td data-label="Result">
                                             N/A
@@ -251,6 +240,44 @@
                     <div id="sampleSent" class="tabcontent col-12 p-0">
                         <div class="blanket">
                             <table id="sampleList_sent" class="table" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Identity Document No.</th>
+                                        <th scope="col">Mobile No.</th>
+                                        <th scope="col">Send Time</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Result</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Select"></td>
+                                        <td data-label="Name">Penny</td>
+                                        <td data-label="Identity Document No.">A123456(2)</td>
+                                        <td data-label="Mobile No.">6421 1234</td>
+                                        <td data-label="Send Time">24/12/2019 12:30</td>
+                                        <td data-label="Status">
+                                            <span class="text-yellow">Sent to Tester</span>
+                                        </td>
+                                        <td class="text-yellow" data-label="Result">
+                                            Processing
+                                        </td>
+                                        <td>
+                                            <div class="tableBtn" onclick="location.href='sampleDetail.html'">
+                                                <img src="img/icon/search@3x_2.png">Review
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="samplePendingIssue" class="tabcontent col-12 p-0">
+                        <div class="blanket">
+                            <table id="sampleList_pending_issue" class="table" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th></th>
@@ -271,7 +298,7 @@
                                         <td data-label="Mobile No.">5123 9876</td>
                                         <td data-label="Send Time">13/11/2019 14:50</td>
                                         <td data-label="Status">
-                                            <span class="text-green">Sent to Tester</span>
+                                            <span class="text-orange">Pending for Issue</span>
                                         </td>
                                         <td data-label="Result">
                                             Finished
@@ -282,20 +309,40 @@
                                             </div>
                                         </td>
                                     </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="sampleIssued" class="tabcontent col-12 p-0">
+                        <div class="blanket">
+                            <table id="sampleList_issued" class="table" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Name</th>
+                                        <th>HKID</th>
+                                        <th>Mobile No.</th>
+                                        <th>Send Time</th>
+                                        <th>Status</th>
+                                        <th>Result</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
                                     <tr>
                                         <td data-label="Select"></td>
-                                        <td data-label="Name">Penny</td>
-                                        <td data-label="Identity Document No.">A123456(2)</td>
-                                        <td data-label="Mobile No.">6421 1234</td>
-                                        <td data-label="Send Time">24/12/2019 12:30</td>
+                                        <td data-label="Name">Amy</td>
+                                        <td data-label="Identity Document No.">A123456(5)</td>
+                                        <td data-label="Mobile No.">6123 5213</td>
+                                        <td data-label="Send Time">19/12/2019 11:30</td>
                                         <td data-label="Status">
-                                            <span class="text-green">Sent to Tester</span>
+                                            <span class="text-green">Issued</span>
                                         </td>
                                         <td data-label="Result">
-                                            Processing
+                                            Finished
                                         </td>
                                         <td>
-                                            <div class="tableBtn" onclick="location.href='sampleDetail.html'">
+                                            <div class="tableBtn" onclick="location.href='sampleDetail_issued.html'">
                                                 <img src="img/icon/search@3x_2.png">Review
                                             </div>
                                         </td>

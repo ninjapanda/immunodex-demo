@@ -46,7 +46,7 @@
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
-    <script src="js/detail.js"></script>
+    <script src="js/checkinTable.js"></script>
     
 
 </head>
@@ -56,14 +56,12 @@
         <div class="loader"></div>
     </div>
     <div class="wrapper">
-
         <div class="topbar-wrapper topnav">
             <div class="sidebarBtn">
                 <i class="fas fa-bars"></i>
             </div>
             <p class="logo-text">Immunodex</p><span class="sub-text"> Pharmacy(Yuen Long)</span>
         </div>
-
 
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -90,7 +88,7 @@
         <!-- Start page content -->
         <div class="shadow-wrapper">
         </div>
-
+        
         <div class="container-fluid animate-bottom-1">
 
             <div class="topbar">
@@ -101,30 +99,33 @@
 
             <div class="row mb-4 mt-4" id="detail">
                 <div class="col-md-9 col-sm-12">
-                    <div class="blanket">
+                    <div class="blanket" style="height: 61px;line-height: 36px;">
                         <div class="col-12 form-row status-wrapper">
                             <div class="col-1 text-center">
-                                <div class="statusDot pending"></div>
+                                <div class="statusDot right"></div>
                             </div>
                             <div class="col">
-                                <span>Pending for Collect Sample</span>
+                                <span>Issued</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-12">
-                    <div class="btn btn-green" onclick="sendToTester()">
-                        Send to Tester
+                    <div class="blanket">
+                        <div class="col-12">
+                            <span class="info-title">Revice at</span>
+                            <span class="info-value">24/12/2019 12:30</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-12 mb-4 mt-2">
+                <div class="col-12 mb-4">
                     <div class="blanket">
                         <div class="form-row mt-2" id="userData">
 
                             <div class="col-md-4 col-sm-12">
                                 <span class="info-title">Full Name</span>
-                                <span class="info-value">Howard</span>
+                                <span class="info-value">Amy</span>
                             </div>
                             <div class="col-md-4 col-sm-12">
                                 <span class="info-title">Email</span>
@@ -150,52 +151,70 @@
                     </div>
                 </div>
 
+                <div class="col-12 mb-4">
+                    <div class="sub-heading">
+                        <p>Result</p>
+                    </div>
+                    <div class="blanket">
+                        <div class="form-row" id="userData">
+
+                            <div class="col-md-3 col-sm-12">
+                                <span class="info-title">Conclusion</span>
+                                <span class="info-value text-red">Self-Quarantine</span>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <span class="info-title">PCR</span>
+                                <span class="info-value">+ Positive</span>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <span class="info-title">IgG</span>
+                                <span class="info-value">+ Positive</span>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <span class="info-title">IgM</span>
+                                <span class="info-value">- Negative</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-6 col-sm-12">
                     <div class="sub-heading">
                         <p>PCR Test</p>
                     </div>
                     <div class="blanket">
-                        <form class="form-row testForm">
+                        <form class="form-row">
 
-                            <div class="form-item col-12">
-                                <input type="text" class="form-textbox" id="batch" value="24824E9" required>
-                                <span class="form-label" for="batch">Batch No.</span>
+                            <div class="col-12 mb-2">
+                                <span class="info-title">Batch No.</span>
+                                <span class="info-value">24824E9</span>
                             </div>
+
                             <div class="hr p-0"></div>
 
-                            <div class="form-item col-12">
-                                <select class="form-textbox" id="pcrTest">
-                                    <option value="0"></option>
-                                    <option value="1">(Roche) qSARS-CoV-2 PCR Rapid Test</option>
-                                    <option value="2" selected>(Cellex, Inc) qSARS-CoV-2 PCR Rapid Test</option>
-                                </select>
-                                <span class="form-label" for="pcrTest">Product Name</span>
+                            <div class="col-12 mb-2">
+                                <span class="info-title">Product Name</span>
+                                <span class="info-value">qSARA-CoV-2 PCR Swab Test</span>
                             </div>
 
-                            <div class="form-item col-12">
-                                <input type="text" class="form-textbox" id="pcr_manufacturer" value="Cellex, Inc"
-                                    required>
-                                <span class="form-label" for="pcr_manufacturer">Manufacturer</span>
+                            <div class="col-12 mb-2">
+                                <span class="info-title">Manufacturer</span>
+                                <span class="info-value">Cellex, Inc.</span>
                             </div>
 
-                            <div class="form-item col-6">
-                                <input type="text" class="form-textbox" id="pcr_spec" value="90%" required>
-                                <span class="form-label" for="pcr_spec">Specificity</span>
+                            <div class="col-6 mb-2">
+                                <span class="info-title">Specificity</span>
+                                <span class="info-value">82.5%</span>
                             </div>
 
-                            <div class="form-item col-6">
-                                <input type="text" class="form-textbox" id="pcr_sen" value="99.5%" required>
-                                <span class="form-label" for="pcr_sen">Sensitivity</span>
+                            <div class="col-6 mb-2">
+                                <span class="info-title">Sensitivity</span>
+                                <span class="info-value">98.5%</span>
                             </div>
-                            <div class="form-item col-12">
-                                <input type="text" class="form-textbox disable" id="colletAt"
-                                    value="Pok Oi Hospital, Hong Kong" required>
-                                <span class="form-label" for="mobileNo">Collect At</span>
-                            </div>
-                            <div class="col-12" onclick="saveTest('24824E9')">
-                                <div class="btn btn-green">
-                                    Save
-                                </div>
+
+                            <div class="col-12 mb-2">
+                                <span class="info-title">Collect At</span>
+                                <span class="info-value">Pok Oi Hospital, Hong Kong</span>
                             </div>
                         </form>
                     </div>
@@ -205,46 +224,38 @@
                         <p>Ab Test</p>
                     </div>
                     <div class="blanket">
-                        <form class="form-row testForm">
+                        <form class="form-row">
 
-                            <div class="form-item col-12">
-                                <input type="text" class="form-textbox" id="batch" value="" required>
-                                <span class="form-label" for="batch">Batch No.</span>
+                            <div class="col-12 mb-2">
+                                <span class="info-title">Batch No.</span>
+                                <span class="info-value">55212E2</span>
                             </div>
+
                             <div class="hr p-0"></div>
 
-                            <div class="form-item col-12">
-                                <select class="form-textbox" id="abTest">
-                                    <option value="0" selected></option>
-                                    <option value="1">(Roche) qSARS-CoV-2 IgG/IgM Rapid Test</option>
-                                    <option value="2">(Cellex, Inc) qSARS-CoV-2 IgG/IgM Rapid Test</option>
-                                </select>
-                                <span class="form-label" for="abTest">Product Name</span>
+                            <div class="col-12 mb-2">
+                                <span class="info-title">Product Name</span>
+                                <span class="info-value">qSARA-CoV-2 IgG/IgM Rapid Test</span>
                             </div>
 
-                            <div class="form-item col-12">
-                                <input type="text" class="form-textbox" id="ab_manufacturer" value="" required>
-                                <span class="form-label" for="manufa">Manufacturer</span>
+                            <div class="col-12 mb-2">
+                                <span class="info-title">Manufacturer</span>
+                                <span class="info-value">Novartis</span>
                             </div>
 
-                            <div class="form-item col-6">
-                                <input type="text" class="form-textbox" id="ab_spec" value="" required>
-                                <span class="form-label" for="spec">Specificity</span>
+                            <div class="col-6 mb-2">
+                                <span class="info-title">Specificity</span>
+                                <span class="info-value">92.5%</span>
                             </div>
 
-                            <div class="form-item col-6">
-                                <input type="text" class="form-textbox" id="ab_sen" value="" required>
-                                <span class="form-label" for="sens">Sensitivity</span>
+                            <div class="col-6 mb-2">
+                                <span class="info-title">Sensitivity</span>
+                                <span class="info-value">98.5%</span>
                             </div>
-                            <div class="form-item col-12">
-                                <input type="text" class="form-textbox disable" id="colletAt"
-                                    value="Pok Oi Hospital, Hong Kong" required>
-                                <span class="form-label" for="mobileNo">Collect At</span>
-                            </div>
-                            <div class="col-12" onclick="saveTest('')">
-                                <div class="btn btn-green">
-                                    Save
-                                </div>
+
+                            <div class="col-12 mb-2">
+                                <span class="info-title">Collect At</span>
+                                <span class="info-value">Pok Oi Hospital, Hong Kong</span>
                             </div>
                         </form>
                     </div>
@@ -327,16 +338,16 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td  data-label="Test Method">Ab Tests</td>
-                                    <td  data-label="Tester">Tai Oi Hospital</td>
+                                    <td data-label="Test Method">Ab Tests RT-PCR Tests</td>
+                                    <td data-label="Tester">PC Clinic</td>
                                     <td data-label="Testing Date">24/12/2019</td>
-                                    <td  data-label="Manufacturer" class="table-status-wrapper">
-                                        Cellex,Inc
+                                    <td data-label="Manufacturer" class="table-status-wrapper">
+                                        Cellex,Inc & Novartis
                                     </td>
                                     <td data-label="Symptoms">
-                                        <span class="text-blue">Yes</span>
+                                        <span>No</span>
                                     </td>
-                                    <td  data-label="Conclusions" class="table-status-wrapper">
+                                    <td data-label="Conclusions" class="table-status-wrapper">
                                         <div class="statusDot green"></div><span>G</span>
                                     </td>
                                     <td data-label="Test Status">
@@ -344,17 +355,17 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Test Method">Ab Tests RT-PCR Tests</td>
-                                    <td data-label="Tester">PC Clinic</td>
+                                    <td data-label="Test Method">Ab Tests</td>
+                                    <td data-label="Tester">GPS Lab</td>
                                     <td data-label="Testing Date">24/12/2019</td>
-                                    <td  data-label="Manufacturer" class="table-status-wrapper">
-                                        Cellex,Inc & Novartis
+                                    <td data-label="Manufacturer" class="table-status-wrapper">
+                                        Cellex,Inc
                                     </td>
                                     <td data-label="Symptoms">
-                                        <span>No</span>
-                                    </td>
-                                    <td  data-label="Conclusions"class="table-status-wrapper">
-                                        <div class="statusDot red"></div><span>E</span>
+                                        <span class="text-blue">Yes</span>
+                                    </td data-label="Tester">
+                                    <td data-label="Conclusions" class="table-status-wrapper">
+                                        <div class="statusDot red"></div><span>B</span>
                                     </td>
                                     <td data-label="Test Status">
                                         <span class="text-green">Valid</span>

@@ -107,6 +107,10 @@ body {
     color: #E8AC0C !important;
 }
 
+.text-orange{
+    color:#E8500C;
+}
+
 .text-red {
     color: #BA3949 !important;
 }
@@ -287,6 +291,11 @@ body {
 
 .statusDot.pending {
     background-color: #E8AC0C;
+}
+
+
+.statusDot.pending2 {
+    background-color:#E8500C;
 }
 
 /* end of status detail style */
