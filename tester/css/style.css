@@ -130,6 +130,17 @@ body {
     background-color:#1B4F91!important;
 }
 
+.btn.btn-blue.btn-outline{
+    color:#1B4F91;
+    border:1px solid #1B4F91;
+    background-color: #fff!important;
+}
+
+.btn.btn-blue.btn-outline:hover{
+    background-color: #1B4F91!important;
+    color:#fff;
+}
+
 .btn.disable{
     z-index: 99;
     background-color: #d6d6d6!important;
