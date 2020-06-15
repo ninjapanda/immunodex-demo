@@ -80,35 +80,60 @@
                         Any person or organization on this Whitelist will be allowed to obtain proof-of-health from you.
                     </span>
                 </div>
-                <div class="col-12 form-row mt-2">
-                        <div class="col-9">
-                            <span class="smallTitle">Whitelisted People</span>
-                        </div>
-                        <div class="col-3" onclick="addClient()">
-                            <div class="smallBtn"><span>+ Add</span></div>
-                        </div>
-                        <div class="col-12 hr m-0 mt-2"></div>
-                        <table class="col-12">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Mobile No.</td>
-                                    <td>Expiry Date</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Molly Hooper</td>
-                                    <td>+020 9112 3456</td>
-                                    <td>16 Jun,2020</td>
-                                </tr>
-                                <tr>
-                                    <td>Mycroft Holmes</td>
-                                    <td>+020 9415 4321</td>
-                                    <td>12 Jun,2020</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="col-12 form-row mt-2 pr-2">
+                    <div class="col-9">
+                        <span class="smallTitle">Whitelisted People</span>
+                    </div>
+                    <div class="col-3" onclick="addClient()">
+                        <div class="smallBtn"><span>+ Add</span></div>
+                    </div>
+                    <div class="col-12 hr m-0 mt-2"></div>
+                    <table class="col-12">
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Mobile No.</td>
+                                <td>Expiry Date</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="location.href='accessDetail.html'">
+                                <td>Molly Hooper</td>
+                                <td>+020 9112 3456</td>
+                                <td>16 Jun,2020</td>
+                                <td><img class="whitelistPath" src="img/icon/next.svg"></td>
+                            </tr>
+                            <tr onclick="location.href='accessDetail.html'">
+                                <td>Mycroft Holmes</td>
+                                <td>+020 9415 4321</td>
+                                <td>12 Jun,2020</td>
+                                <td><img class="whitelistPath" src="img/icon/next.svg"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-12 form-row mt-5 pr-2">
+                    <div class="col-12">
+                        <span class="smallTitle">Trusted Party</span>
+                    </div>
+                    <div class="col-12 hr m-0 mt-2"></div>
+                    <table class="col-12">
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Share At</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hong Kong GOV</td>
+                                <td>14, Jun 2020</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <footer class="position-fixed" style="left:0;bottom:0;height:25px">

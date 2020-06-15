@@ -295,8 +295,68 @@ function expand(data) {
     var id = data + "_exapnd";
     $("#" + id).toggleClass('active');
 
-    var height1 = $("#"+id).children('div').children(".info-head").height();
-    var height2 = $("#"+id).children('div').children(".info-value").height();
-    var maxHeight = height1+height2+15;
-    $("#" + id+".active").css('height',maxHeight);
+    var height1 = $("#" + id).children('div').children(".info-head").height();
+    var height2 = $("#" + id).children('div').children(".info-value").height();
+    var maxHeight = height1 + height2 + 15;
+    $("#" + id + ".active").css('height', maxHeight);
+}
+
+function stopShare() {
+    $.confirm({
+        title: 'Stop Share',
+        columnClass: 'col-12',
+        closeIcon: true,
+        backgroundDismiss: true,
+        animation: 'top',
+        closeAnimation: 'bottom',
+        content: `
+        <div class="form-row">
+            <div class="col-6">
+                <span class="info-head">
+                    Name
+                </span>
+                <span class="info-value">
+                    Molly Hooper
+                </span>
+            </div>
+            <div class="col-6">
+                <span class="info-head">
+                    Mobile No.
+                </span>
+                <span class="info-value">
+                    +020 9112 3456
+                </span>
+            </div>
+
+            <div class="col-12 mt-2">
+                <span class="info-head">
+                    Expiry Date
+                </span>
+                <span class="info-value">
+                    16, Jun 2020
+                </span>
+            </div>
+        </div>
+        `,
+        onOpenBefore: function () {
+            $(".jconfirm-buttons").addClass("col-12 pl-0 pr-0");
+            $(".jconfirm-title").addClass("alertTitle");
+        },
+        buttons: {
+            Confirm: {
+                text: 'Confirm',
+                btnClass: 'alertBtn red',
+                animation: 'top',
+                closeAnimation: 'bottom',
+                action: function () {
+                    location.href='access.html'
+                }
+            }
+        }
+    });
+}
+
+function editShare(){
+    $("#editBtn").toggleClass("active")
+    $("#accessDetail #recordShare input[type=checkbox]").toggleClass("active")
 }

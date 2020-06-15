@@ -32,6 +32,10 @@
 
     <!-- Jquery UI JS -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script> -->
+    
+    <!-- popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 
     <!-- Custom JS -->
     <script src="js/sideBar.js"></script>
@@ -98,11 +102,15 @@
 
             <div id="Record-wrapper" class="mt-1">
                 <div id="Record-wrapper-inner" class="row">
-                    <div class="col-sm mb-2">
-                        <div class="sub-heading">
-                            My Record
+                        <div class="col-7 mb-3 pl-4">
+                            <div class="sub-heading">
+                                My Record
+                            </div>
                         </div>
-                    </div>
+                        <div class="col-5 mb-3 pr-4" onclick="shareRecord()">
+                            <div class="text-blue" id="shareBtn"><span>Public Record</span></div>
+                        </div>
+                    
                     <div id="RecordCard-wrapper">
                         <div class="col-sm-12 RecordCard">
                             <div class="blanket row m-0 pb-0" onclick="javascript:location.href='detail.html'">
