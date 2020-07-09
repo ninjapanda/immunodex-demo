@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+    <!-- Custom style  -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="wrapper">
+        <div class="topbar-wrapper topnav">
+            <div class="sidebarBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <p class="logo-text">Immunodex</p><span class="sub-text"> HKTDC</span>
+        </div>
+
+
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <p>Immunodex</p>
+                <span>HKTDC</span>
+            </div>
+
+            <ul class="list-unstyled components">
+
+                <li>
+                    <a href="index.html">Health Declaration</a>
+                </li>
+                <li class="active">
+                    <a href="requestList.html">Declaration Request</a>
+                </li>
+                <li>
+                    <a href="createRequest.html">Create Request</a>
+                </li>
+                <li>
+                    <a href="accountDetail.html">Account</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Start page content -->
+        <div class="shadow-wrapper">
+        </div>
+        <div class="container-fluid animate-bottom-1">
+
+            <div class="row">
+                <div class="page-heading col-12 mt-4">
+                    <p>Declaration Request</p>
+                    <div class="row mb-4">
+                        <div class="col-9">
+                            <span>List of Request</span>
+                        </div>
+                        <div class="col-3" onclick="location.href='createRequest.html'">
+                            <div class="btn btn-orange">+ Create Request</div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <form class="col-12">
+
+                    <div class="blanket table-wrapper">
+
+                        <div class="row mb-2 justify-content-end">
+                            <div class="col-md-auto ml-auto dataTables_filter">
+
+                                <div class="d-inline-block search-wrapper">
+                                    <input type="text" id="search" placeholder="Search">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="table-responsive">
+                            <table id="appointment_1" class="table appointmentTable" style="width:100%">
+                                <thead>
+                                    <tr>
+
+                                        <th scope="col">Purpose</th>
+                                        <th scope="col">Start Date</th>
+                                        <th scope="col">Available Time</th>
+                                        <th scope="col">Address</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td data-label="Purpose">Entrance for SmartBiz Expo 2020</td>
+                                        <td data-label="Start Date">2 Dec 2020</td>
+                                        <td data-label="Available Time">2 days</td>
+                                        
+                                        <td data-label="Address">Hong Kong Convention and Exhibition Centre</td>
+                                        <td>
+                                            <div class="tableBtn" onclick="location.href='requestDetail.html'">Review
+                                            </div>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-wrapper mt-2">
+                            <a class="paginate_button previous disabled" aria-controls="DataTables_Table_0"
+                                data-dt-idx="0" tabindex="0" id="DataTables_Table_0_previous">Previous</a><span>
+                                <a class="paginate_button current active" aria-controls="DataTables_Table_0"
+                                    data-dt-idx="1" tabindex="0">1</a>
+                                <a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1"
+                                    tabindex="0">2</a>
+                                <a class="paginate_button next disabled" aria-controls="DataTables_Table_0"
+                                    data-dt-idx="7" tabindex="0" id="DataTables_Table_0_next">Next</a>
+                        </div>
+                        <br><br>
+
+
+                    </div>
+                </form>
+            </div>
+
+            <footer>
+                <div class="row">
+                    <div class="col-12 copyright">
+                        Powered by Emali.io @2020 Immunodex.com All rights reserved
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end of page content -->
+    </div>
+
+</body>
+
+</html>
