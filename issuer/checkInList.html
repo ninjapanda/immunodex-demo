@@ -34,6 +34,9 @@
     <link type="text/css" href="css/dataTables.checkboxes.css" rel="stylesheet" />
     <script type="text/javascript" src="js/dataTables.checkboxes.min.js"></script>
 
+    <!-- popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 
     <!-- Custom style  -->
     <link href="css/style.css" rel="stylesheet">
@@ -47,7 +50,8 @@
 
 </head>
 
-<body> <div class="loader-wrapper">
+<body>
+    <div class="loader-wrapper">
         <div class="loader"></div>
     </div>
     <div class="wrapper">
@@ -110,8 +114,15 @@
                         </a>
                     </div>
                 </div>
-                <div class="blanket col-12 table-wrapper mt-4">
-                    <table id="checkInList_1" class="table checkInTable" style="width:100%">
+                <div class="col-12 mb-4 mt-4 tabs-wrapper">
+                    <div class="row">
+                        <div class="tab col active" onclick="openTab( '#all')">All</div>
+                        <div class="tab col text-orange" onclick="openTab( '#pending')">Pending for notifying</div>
+                    </div>
+                </div>
+
+                <div id="all" class="blanket col-12 tabcontent table-wrapper" style="display: block;">
+                    <table id="checkInList_all" class="table checkInTable" style="width:100%">
                         <thead>
                             <tr>
                                 <th></th>
@@ -149,7 +160,22 @@
                                     <div class="statusDot pending"></div><span>Pending for testing</span>
                                 </td>
                                 <td>
-                                    <a href="patientDetail.html">
+                                    <a href="patientDetail1.html">
+                                        <img src="img/icon/edit.svg">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Sherlock Holmes</td>
+                                <td>123456789</td>
+                                <td>0 207 224 3688</td>
+                                <td>12:00</td>
+                                <td class="table-status-wrapper">
+                                    <div class="statusDot pending2"></div><span>Pending for notifying</span>
+                                </td>
+                                <td>
+                                    <a href="patientDetail2.html">
                                         <img src="img/icon/edit.svg">
                                     </a>
                                 </td>
@@ -157,6 +183,43 @@
                         </tbody>
                     </table>
                 </div>
+
+                <div id="pending" class="blanket col-12 tabcontent table-wrapper">
+                    <table id="checkInList_pending" class="table checkInTable" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Full Name</th>
+                                <th>HKID</th>
+                                <th>Mobile No</th>
+                                <th>Check-In Time</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td></td>
+                                <td>Sherlock Holmes</td>
+                                <td>123456789</td>
+                                <td>0 207 224 3688</td>
+                                <td>12:00</td>
+                                <td class="table-status-wrapper">
+                                    <div class="statusDot pending2"></div><span>Pending for notifying</span>
+                                </td>
+                                <td>
+                                    <a href="patientDetail2.html">
+                                        <img src="img/icon/edit.svg">
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
             </div>
 
             <footer>

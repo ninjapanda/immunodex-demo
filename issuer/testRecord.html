@@ -35,6 +35,11 @@
     <script type="text/javascript" src="js/dataTables.checkboxes.min.js"></script>
 
 
+    <!-- popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+
     <!-- Custom style  -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
@@ -103,8 +108,16 @@
                     <p>Testing Record</p>
                 </div>
 
-                <form class="col-12 mt-4">
-                    <div  class="blanket">
+                <div class="col-12 mb-4 mt-4 tabs-wrapper">
+                    <div class="row">
+                        <div class="tab col active" onclick="openTab( '#all')">All</div>
+                        <div class="tab col text-yellow" onclick="openTab( '#pending')">Pending for issuing</div>
+                    </div>
+                </div>
+
+                <div id="all" class="blanket col-12 tabcontent table-wrapper" style="display: block;">
+
+
                         <table id="testRecord_1" class="table testRecord" style="width:100%">
                             <thead>
                                 <tr>
@@ -125,7 +138,9 @@
                                     <td>PC Issuer</td>
                                     <td>24/12/2019</td>
                                     <td class="table-status-wrapper">
-                                        <span class="testResultStatus"> <div class="statusDot error"></div>A</span>
+                                        <span class="testResultStatus">
+                                            <div class="statusDot error"></div>A
+                                        </span>
                                     </td>
                                     <td>YES</td>
                                     <td><span class="text-green">Valid</span>
@@ -138,25 +153,91 @@
                                 </tr>
                                 <tr>
                                     <td>00130</td>
-                                    <td>PCR Tests</td>
+                                    <td>RT-PCR Tests</td>
                                     <td>H&S Issuer</td>
                                     <td>24/12/2019</td>
                                     <td class="table-status-wrapper">
-                                        <span class="testResultStatus"> <div class="statusDot pending"></div>E1</span>
+                                        <span class="testResultStatus">
+                                            <div class="statusDot pending"></div>E1
+                                        </span>
                                     </td>
                                     <td>YES</td>
-                                    <td><span>Pending</span>
+                                    <td><span>Pending for holder</span>
                                     </td>
                                     <td>
-                                        <a href="testDetail.html">
+                                        <a href="testDetail1.html">
+                                            <img src="img/icon/search@3x.png">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>00123</td>
+                                    <td>RT-PCR Tests</td>
+                                    <td>H&S Issuer</td>
+                                    <td>26/12/2019</td>
+                                    <td class="table-status-wrapper">
+                                        <span class="testResultStatus">
+                                            <div class="statusDot pending"></div>G1
+                                        </span>
+                                    </td>
+                                    <td>YES</td>
+                                    <td><span class="text-yellow">Pending for issuing</span>
+                                    </td>
+                                    <td>
+                                        <a href="testDetail2.html">
                                             <img src="img/icon/search@3x.png">
                                         </a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                </form>
+
+
+                </div>
+
+                <div id="pending" class="blanket col-12 tabcontent table-wrapper">
+
+
+                        <table id="testPendingIssue" class="table testRecord" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Assessment ID</th>
+                                    <th>Test Method</th>
+                                    <th>Issuer</th>
+                                    <th>Testing Date</th>
+                                    <th>Conclusions</th>
+                                    <th>Symptoms</th>
+                                    <th>Test Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+                                <tr>
+                                    <td>00123</td>
+                                    <td>RT-PCR Tests</td>
+                                    <td>H&S Issuer</td>
+                                    <td>26/12/2019</td>
+                                    <td class="table-status-wrapper">
+                                        <span class="testResultStatus">
+                                            <div class="statusDot pending"></div>G1
+                                        </span>
+                                    </td>
+                                    <td>YES</td>
+                                    <td><span class="text-yellow">Pending for issuing</span>
+                                    </td>
+                                    <td>
+                                        <a href="testDetail2.html">
+                                            <img src="img/icon/search@3x.png">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                </div>
             </div>
 
             <footer>

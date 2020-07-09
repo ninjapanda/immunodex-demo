@@ -96,14 +96,21 @@ body {
     font-size: 16px;
 }
 
-.btn.issue {
-    height: 43px;
-    line-height: 30px;
+.btn.issue.detail {
+    height: 60px;
+    line-height: 50px;
 }
 
-.record .btn{
+.btn.disable {
+    cursor: no-drop !important;
+    z-index: 2;
+    /* background-color: #f0f0f0; */
+    opacity: .5;
+}
+
+.record .btn {
     height: 34px;
-    line-height:22px;
+    line-height: 22px;
     font-size: 12px;
     width: 150px;
     float: right;
@@ -111,6 +118,14 @@ body {
 
 .text-green {
     color: #1CC88A;
+}
+
+.text-orange {
+    color: #E8500C;
+}
+
+.text-yellow{
+    color:#E8AC0C;
 }
 
 .topbar {
@@ -314,6 +329,8 @@ body {
 
 .status-wrapper {
     position: relative;
+    height: 40px;
+    line-height: 40px;
 }
 
 .status-wrapper .statusDot {
@@ -339,23 +356,27 @@ body {
     background-color: #E8AC0C;
 }
 
-.recordStatus{
+.statusDot.pending2{
+    background-color: #E8500C;
+}
+
+.recordStatus {
     border-radius: 4px;
     color: #fff;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
     text-align: center;
-    width: 100px;
-    height: 34px;
-    line-height: 34px;
+    width: 70px;
+    height: 24px;
+    line-height: 24px;
 
 }
 
-.recordStatus.blue{
+.recordStatus.blue {
     background-color: #3982F3;
 }
 
-.recordStatus.yellow{
+.recordStatus.yellow {
     background-color: #E8AC0C;
 }
 

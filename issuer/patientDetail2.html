@@ -77,10 +77,10 @@
                         <li>
                             <a href="appointment.html">Appointment</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="checkInList.html">Check-In List</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="testRecord.html">Testing Record</a>
                         </li>
                     </ul>
@@ -113,22 +113,16 @@
                     <div class="blanket">
                         <div class="col-12 form-row status-wrapper">
                             <div class="col-1 text-center">
-                                <div class="statusDot right"></div>
+                                <div class="statusDot pending2"></div>
                             </div>
                             <div class="col">
-
-                                <span>Valid</span>
+                                <span>Pending to notify Holder</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="blanket row">
-                        <div class="col-12 ">
-                            <span class="info-title">Issued</span>
-                            <span class="info-value">16, May 2020, 12:20</span>
-                        </div>
-                    </div>
+                <div class="col-3" onclick="notifyUser()">
+                    <div class="btn issue detail">Notify Holder</div>
                 </div>
                 <!-- <p class="sub-heading col-12 mb-1 mt-2">Patient Information</p> -->
                 <div class="col-12">
@@ -138,18 +132,18 @@
 
                                 <form class="form-row col-12" id="userDetailForm" style="display:none">
                                     <div class="form-item col-4">
+                                        <input type="tel" class="form-textbox disable" id="mobileNo" value="0 207 224 3688" required>
+                                        <span class="form-label" for="mobileNo">Mobile No.</span>
+                                    </div>
+                                    <div class="form-item col-4">
                                         <input type="text" class="form-textbox" id="fullName" value="Sherlock Holmes"
                                             required>
                                         <span class="form-label" for="fullName">Full Name</span>
                                     </div>
-                                    <div class="form-item col-4">
-                                        <input type="text" class="form-textbox" id="mobileNo" value="0 207 224 3688"
-                                            required>
-                                        <span class="form-label" for="mobileNo">Mobile No.</span>
-                                    </div>
+                                    
                                     <div class="form-item col-4">
                                         <input type="text" class="form-textbox" id="hkid" value="123456789" required>
-                                        <span class="form-label" for="hkid">HKID</span>
+                                        <span class="form-label" for="hkid">Identity Document No.</span>
                                     </div>
                                     <div class="form-item col-4">
                                         <input type="text" class="form-textbox" id="dateOfBirth" value="06/01/1954"
@@ -159,8 +153,8 @@
                                     <div class="form-item col-4">
                                         <select class="form-textbox" id="gender" required>
                                             <option value=""></option>
-                                            <option value="m" selected>Male</option>
-                                            <option value="fm">Female</option>
+                                            <option value="m" selected>male</option>
+                                            <option value="fm">Male</option>
                                         </select>
                                         <span class="form-label" for="gender">Gender</span>
                                     </div>
@@ -171,16 +165,17 @@
                                     </div>
                                 </form>
                                 <div class="form-row mt-2" id="userData">
-                                    <div class="col-4">
-                                        <span class="info-title">Full Name</span>
-                                        <span class="info-value">Sherlock Holmes</span>
-                                    </div>
+
                                     <div class="col-4">
                                         <span class="info-title">Mobile No.</span>
                                         <span class="info-value">0 207 224 3688</span>
                                     </div>
                                     <div class="col-4">
-                                        <span class="info-title">HKID</span>
+                                        <span class="info-title">Full Name</span>
+                                        <span class="info-value">Sherlock Holmes</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="info-title">Identity Document No.</span>
                                         <span class="info-value">123456789</span>
                                     </div>
                                     <div class="col-4 mt-2">
@@ -197,34 +192,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="btn btn-outline col-3 float-right" id="userEditBtn" onclick="userFormDisplay()">
+                                Edit</div>
+                            <div class="btn col-3 float-right" style="display:none" id="userSaveBtn"
+                                onclick="userDataDisplay()">Save</div>
+
                         </div>
                     </div>
                 </div>
-                <p class="sub-heading col-12 mb-1 mt-2">Result</p>
+                
                 <div class="form-row col-12">
-
-                    <div class="col-12">
-                        <div class="blanket">
-                            <div class="col-12 form-row">
-                                <div class="col-3">
-                                    <span class="info-title">Conclusion</span>
-                                    <span class="info-value">B</span>
-                                </div>
-                                <div class="col-3">
-                                    <span class="info-title">RT-PCR</span>
-                                    <span class="info-value">+ Positive</span>
-                                </div>
-                                <div class="col-3">
-                                    <span class="info-title">IgG</span>
-                                    <span class="info-value">+ Positive</span>
-                                </div>
-                                <div class="col-3">
-                                    <span class="info-title">IgM</span>
-                                    <span class="info-value">- Negative</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    <p class="sub-heading col-12 mb-1 mt-4">Test</p>
                     <div class="col-12 mb-2 tabs-wrapper">
                         <div class="row">
                             <div class="tab col active" onclick="openTab( '#RT-PCR')">PCR Test</div>
@@ -237,10 +216,57 @@
                             <div class="col-12">
                                 <div style="min-height: 140px;">
 
+                                    <form class="form-row col-12" id="testDetailForm" style="display:none">
+                                        <div class="col-12">
+                                            <span class="info-title">PCR Result</span>
+                                            <span class="info-value">Processing</span>
+                                        </div>
+                                        <div class="col-12 hr"></div>
+
+                                        <div class="form-item col-12">
+
+                                            <select class="form-textbox" id="pcrTest" required>
+                                                <option value="0"></option>
+                                                <option value="1">(Roche) qSARS-CoV-2 PCR Rapid Test</option>
+                                                <option value="2" selected>(Cellex, Inc) qSARS-CoV-2 PCR Rapid Test</option>
+                                            </select>
+                                            <span class="form-label" for="pcrTest">Product Name</span>
+                                        </div>
+
+                                        <div class="form-item col-3">
+                                            <input type="text" class="form-textbox" id="testedBy"
+                                                value="Dr. John Watson" required>
+                                            <span class="form-label" for="testedBy">Tested by</span>
+                                        </div>
+                                        <div class="form-item col-3">
+                                            <input type="text" class="form-textbox" id="pcr_manufacturer"
+                                                value="Cellex, Inc" required>
+                                            <span class="form-label" for="pcr_manufacturer">Manufacturer</span>
+                                        </div>
+                                        <div class="form-item col-3">
+                                            <input type="text" class="form-textbox" id="pcr_spec" value="90%" required>
+                                            <span class="form-label" for="pcr_spec">Specificity</span>
+                                        </div>
+                                        <div class="form-item col-3">
+                                            <input type="text" class="form-textbox" id="pcr_sen" value="99.5%" required>
+                                            <span class="form-label" for="pcr_sen">Sensitivity</span>
+                                        </div>
+                                        <div class="form-item col-6">
+                                            <input type="text" class="form-textbox disable" id="location"
+                                                value="St Bartholomew's Hospital,City of London, UK" required>
+                                            <span class="form-label" for="location">Location</span>
+                                        </div>
+                                        <div class="form-item col-6">
+                                            <input type="text" class="form-textbox" id="batchNo" value="24824E9"
+                                                required>
+                                            <span class="form-label" for="batchNo">Batch No</span>
+                                        </div>
+                                    </form>
+
                                     <div class="form-row mt-2" id="testData">
                                         <div class="col-12">
-                                            <span class="info-title">RT-PCR Result</span>
-                                            <span class="info-value">+ Positive</span>
+                                            <span class="info-title">PCR Result</span>
+                                            <span class="info-value">Processing</span>
                                         </div>
                                         <div class="col-12 hr"></div>
 
@@ -258,11 +284,11 @@
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Specificity</span>
-                                            <span class="info-value">82.5%</span>
+                                            <span class="info-value">90%</span>
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Sensitivity</span>
-                                            <span class="info-value">98.5%</span>
+                                            <span class="info-value">99.5%</span>
                                         </div>
                                         <div class="col-6 mt-2">
                                             <span class="info-title">Location</span>
@@ -274,6 +300,10 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="btn col-12 mt-4" id="testEditBtn" onclick="testFormDisplay()">
+                                    Update</div>
+                                <div class="btn col-12" style="display:none" id="testSaveBtn"
+                                    onclick="testDataDisplay()">Save</div>
 
                             </div>
                         </div>
@@ -282,6 +312,56 @@
                         <div class="form-row">
                             <div class="col-12">
                                 <div style="min-height: 140px;">
+
+                                    <form class="form-row col-12" id="test2DetailForm" style="display:none">
+                                        <div class="col-3">
+                                            <span class="info-title">IgG</span>
+                                            <span class="info-value">+ Positive</span>
+                                        </div>
+                                        <div class="col-3">
+                                            <span class="info-title">IgM</span>
+                                            <span class="info-value">+ Positive</span>
+                                        </div>
+                                        <div class="col-12 hr"></div>
+
+                                        <div class="form-item col-12">
+
+                                            <select class="form-textbox" id="abTest" required>
+                                                <option value="0"></option>
+                                                <option value="1">(Roche) qSARS-CoV-2 IgG/IgM Rapid Test</option>
+                                                <option value="2" selected>(Cellex, Inc) qSARS-CoV-2 IgG/IgM Rapid Test</option>
+                                            </select>
+                                            <span class="form-label" for="abTest">Product Name</span>
+                                        </div>
+                                        <div class="form-item col-3">
+                                            <input type="text" class="form-textbox" id="testedBy"
+                                                value="Dr. John Watson" required>
+                                            <span class="form-label" for="testedBy">Tested by</span>
+                                        </div>
+                                        <div class="form-item col-3">
+                                            <input type="text" class="form-textbox" id="ab_manufacturer"
+                                                value="Cellex, Inc" required>
+                                            <span class="form-label" for="ab_manufacturer">Manufacturer</span>
+                                        </div>
+                                        <div class="form-item col-3">
+                                            <input type="text" class="form-textbox" id="ab_spec" value="93%" required>
+                                            <span class="form-label" for="ab_spec">Specificity</span>
+                                        </div>
+                                        <div class="form-item col-3">
+                                            <input type="text" class="form-textbox" id="ab_sen" value="97.5%" required>
+                                            <span class="form-label" for="ab_sen">Sensitivity</span>
+                                        </div>
+                                        <div class="form-item col-6">
+                                            <input type="text" class="form-textbox disable" id="location"
+                                                value="St Bartholomew's Hospital,City of London, UK" required>
+                                            <span class="form-label" for="location">Location</span>
+                                        </div>
+                                        <div class="form-item col-6">
+                                            <input type="text" class="form-textbox" id="batchNo" value="24824E9"
+                                                required>
+                                            <span class="form-label" for="batchNo">Batch No</span>
+                                        </div>
+                                    </form>
 
                                     <div class="form-row mt-2" id="test2Data">
                                         <div class="col-3">
@@ -298,7 +378,7 @@
                                             <span class="info-title">Product Name</span>
                                             <span class="info-value">(Cellex, Inc) qSARS-CoV-2 IgG/IgM Rapid Test</span>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-3 mt-2">
                                             <span class="info-title">Tested by</span>
                                             <span class="info-value">Dr. John Watson</span>
                                         </div>
@@ -308,15 +388,15 @@
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Specificity</span>
-                                            <span class="info-value">82.5%</span>
+                                            <span class="info-value">93%</span>
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Sensitivity</span>
-                                            <span class="info-value">98.5%</span>
+                                            <span class="info-value">97.5%</span>
                                         </div>
                                         <div class="col-6 mt-2">
                                             <span class="info-title">Location</span>
-                                            <span class="info-value">Pok Oi Hospital, Hong Kong</span>
+                                            <span class="info-value">St Bartholomew's Hospital,<br>City of London, UK</span>
                                         </div>
                                         <div class="col-6 mt-2">
                                             <span class="info-title">Batch No</span>
@@ -324,12 +404,45 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="btn col-12 mt-4" id="test2EditBtn" onclick="test2FormDisplay()">
+                                    Update</div>
+                                <div class="btn col-12" style="display:none" id="test2SaveBtn"
+                                    onclick="test2DataDisplay()">Save</div>
 
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 mt-4 mb-2 tabs-wrapper">
+                    <p class="sub-heading col-12 mb-1 mt-4">Result</p>
+                    <div class="col-9">
+                        <div class="blanket">
+                            <div class="col-12 form-row">
+                                <div class="col-3">
+                                    <span class="info-title">Conclusion</span>
+                                    <span class="info-value">Processing</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="info-title">PCR</span>
+                                    <span class="info-value">Processing</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="info-title">IgG</span>
+                                    <span class="info-value">+ Positive</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="info-title">IgM</span>
+                                    <span class="info-value">- Negative</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3" onclick="updateResult()">
+                        <div class="btn update">Update</div>
+                    </div>
+
+                    <p class="sub-heading col-12 mb-1 mt-4">Detail</p>
+
+                    <div class="col-12 mb-2 tabs-wrapper">
                         <div class="row">
                             <div class="tab col active" onclick="openTab2( '#history')">Record</div>
                             <div class="tab col" onclick="openTab2( '#qa')">Q&A</div>
@@ -337,7 +450,13 @@
                         </div>
                     </div>
 
-                    <div id="history" class="blanket tabcontent2 col-12" style="display: block;">
+                    <div id="history" class="blanket tabcontent2 col-12 record" style="display: block;">
+                        <div class="row">
+                            <div class="col-3 mb-3  pl-0">
+                                <div class="recordStatus blue">Latest</div>
+                            </div>
+                        </div>
+                        
                         <table id="patienttestRecord" style="width:100%">
                             <thead>
                                 <tr>
@@ -353,28 +472,28 @@
                             <tbody>
                                 <tr>
                                     <td>00142</td>
-                                    <td>Ab Tests</td>
-                                    <td>PC Issuer</td>
-                                    <td>24/12/2019</td>
+                                    <td>Ab Tests RT-PCR Tests</td>
+                                    <td>PC Clinic</td>
+                                    <td>06/01/2020</td>
                                     <td class="table-status-wrapper">
                                         <div class="statusDot error"></div><span>A</span>
                                     </td>
                                     <td>YES</td>
-                                    <td class="table-status-wrapper">
-                                        <div class="statusDot right"></div><span>Valid</span>
+                                    <td>
+                                        <span class="text-green">Valid</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>00130</td>
                                     <td>PCR Tests</td>
-                                    <td>H&S Issuer</td>
+                                    <td>H&S Lab</td>
                                     <td>24/12/2019</td>
                                     <td class="table-status-wrapper">
                                         <div class="statusDot pending"></div><span>E1</span>
                                     </td>
                                     <td>YES</td>
-                                    <td class="table-status-wrapper">
-                                        <div class="statusDot right"></div><span>Valid</span>
+                                    <td>
+                                        <span class="text-green">Valid</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -384,8 +503,7 @@
 
                     <div id="qa" class="blanket tabcontent2 col-12">
                         <div class="form-row">
-                            <div class="col-10">In the past two weeks, have you had contact with someone diagnosed with
-                                COVID-19 or lived in or visit a place where COVID-19 is spreading? </div>
+                            <div class="col-10">In the past two weeks, have you had contact with someone diagnosed with COVID-19 or lived in or visit a place where COVID-19 is spreading? </div>
                             <div class="col-2">
                                 <div class="qaAns">
                                     No
@@ -393,8 +511,7 @@
                             </div>
                         </div>
                         <div class="form-row bg-gary">
-                            <div class="col-10">Do you have any underlying symptoms including but not limited to: fever,
-                                shortness of breath, cough, sore throat, pneumonia...?</div>
+                            <div class="col-10">Do you have any underlying symptoms including but not limited to: fever, shortness of breath, cough, sore throat, pneumonia...?</div>
                             <div class="col-2">
                                 <div class="qaAns">
                                     No
@@ -402,8 +519,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-10">Are/were you hospitalized?If yes, please specify the date of
-                                hospitalization.</div>
+                            <div class="col-10">Are/were you hospitalized?If yes, please specify the date of hospitalization.</div>
                             <div class="col-2">
                                 <div class="qaAns right">
                                     Yes
@@ -414,8 +530,7 @@
                             </div>
                         </div>
                         <div class="form-row bg-gary">
-                            <div class="col-10">Have you travelled overseas in the past 14 days? If yes, please specify
-                                the places you travelled, date of departure from the places and date of return.</div>
+                            <div class="col-10">Have you travelled overseas in the past 14 days? If yes, please specify the places you travelled, date of departure from the places and date of return.</div>
                             <div class="col-2">
                                 <div class="qaAns">
                                     No
@@ -423,9 +538,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-10">Have you visited any health care facility (a hospital, emergency room,
-                                clinic, medical office, long-term care facility or nursing home, ambulance service,
-                                first responder services, or any health care setting) in the past 14 days? </div>
+                            <div class="col-10">Have you visited any health care facility (a hospital, emergency room, clinic, medical office, long-term care facility or nursing home, ambulance service, first responder services, or any health care setting) in the past 14 days? </div>
                             <div class="col-2">
                                 <div class="qaAns">
                                     No
@@ -442,7 +555,7 @@
                                 </div>
                             </div>
                             <div class="col-10">Patient may be in window period of infection w/ Covid-19 </div>
-
+                            
                         </div>
                         <div class="form-row bg-gary">
                             <div class="col-2">
@@ -459,7 +572,7 @@
                                 </div>
                             </div>
                             <div class="col-10">Patient may be in earily stage of infection w/ Covid-19 </div>
-
+                            
                         </div>
                         <div class="form-row bg-gary">
                             <div class="col-2">
@@ -476,7 +589,7 @@
                                 </div>
                             </div>
                             <div class="col-10">Patient is in active phase of infection w/ Covid-19 </div>
-
+                            
                         </div>
                         <div class="form-row bg-gary">
                             <div class="col-2">
@@ -492,8 +605,8 @@
                                     G
                                 </div>
                             </div>
-                            <div class="col-10">Patient may have had a past infection, and has recoverd. </div>
-
+                            <div class="col-10">Patient may have had a past infection, and has recovered. </div>
+                            
                         </div>
                         <div class="form-row bg-gary">
                             <div class="col-2">
@@ -501,8 +614,7 @@
                                     E1
                                 </div>
                             </div>
-                            <div class="col-10">RT-PCR-, IgM+, IgG+ - Pt may be in recovery stage of infection, or
-                                RT-PCR result may be false-negative (which would mean E).</div>
+                            <div class="col-10">PCR-, IgM+, IgG+ - Pt may be in recovery stage of infection, or PCR result may be false-negative (which would mean E).</div>
                         </div>
                         <div class="form-row">
                             <div class="col-2">
@@ -510,13 +622,13 @@
                                     C1
                                 </div>
                             </div>
-                            <div class="col-10">RT-PCR-, IgM+, IgG- - Pt may be in early stage of infection w/ Covid-19,
-                                RT-PCR result may be false-negative (which would mean C)</div>
-
+                            <div class="col-10">PCR-, IgM+, IgG- - Pt may be in early stage of infection w/ Covid-19, PCR result may be false-negative  (which would mean C)</div>
+                            
                         </div>
                     </div>
 
                 </div>
+
                 <footer class="position-relative">
                     <div class="row">
                         <div class="col-12 copyright">
@@ -524,6 +636,7 @@
                         </div>
                     </div>
                 </footer>
+
             </div>
 
             <!-- end of page content -->
