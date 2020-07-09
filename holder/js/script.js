@@ -1,7 +1,9 @@
 $(document).ready(() => {
     loaderFadeOut();
 
-    $('.tab').click(function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    $('.tab, .tab2').click(function () {
         $(this).siblings().removeClass('active');
         $(this).addClass("active");
     })
@@ -11,7 +13,6 @@ $(document).ready(() => {
 function loaderFadeOut() {
     $(".loader-wrapper").hide();
 }
-
 
 function openTab(tab) {
     $('.tabcontent').hide();
@@ -35,35 +36,4 @@ function expandExp() {
     now += 180;
 
     $('#arrow').toggleClass('flip');
-}
-
-function shareRecord(){
-    $.confirm({
-        title: 'Share Record',
-        columnClass: 'col-12',
-        closeIcon: true,
-        backgroundDismiss: true,
-        animation: 'top',
-        closeAnimation: 'bottom',
-        content: `
-        <span class="info-value">
-                    Click Confirm to share <b>All record</b> to trusted party
-                </span>
-        `,
-        onOpenBefore: function () {
-            $(".jconfirm-buttons").addClass("col-12 pl-0 pr-0");
-            $(".jconfirm-title").addClass("alertTitle");
-        },
-        buttons: {
-            Confirm: {
-                text: 'Confirm',
-                btnClass: 'alertBtn',
-                animation: 'top',
-                closeAnimation: 'bottom',
-                action: function () {
-                    location.href='index.html'
-                }
-            }
-        }
-    });
 }

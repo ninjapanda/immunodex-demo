@@ -16,7 +16,7 @@ body {
 
 .bg-blue {
     /* background-color: #2365BB; */
-    background-image: linear-gradient(90deg,#2366BC, #3B85DB);
+    background-image: linear-gradient(90deg, #2366BC, #3B85DB);
 }
 
 .bg-blue .logo-text {
@@ -36,6 +36,40 @@ body {
 
 input:focus {
     outline: -webkit-focus-ring-color auto 0px;
+}
+
+.notice {
+    padding: 5px;
+    background-color: #ffcb4d;
+    color: #fff;
+    border-radius: 6px;
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px;
+    position: absolute;
+    width: 25px;
+    text-align: center;
+    top: 2px;
+    height: 25px;
+}
+
+.notice img {
+    height: 16px;
+    width: auto;
+}
+
+.notes {
+    font-size: 17px;
+}
+
+.btn-wrapper {
+    position: fixed;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    bottom: 30px;
+    right: 0px;
+    margin-top: 20px;
 }
 
 #loginForm {
@@ -120,7 +154,7 @@ input:focus {
     /* Safari and Chrome */
     -o-animation: fadein .75s;
     /* Opera */
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .blanket {
@@ -131,12 +165,21 @@ input:focus {
     -moz-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.35);
     box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.35);
     margin-bottom: 15px;
+    overflow: hidden;
 }
 
+
+#checkIn-wrapper{
+    width: 100%;
+}
+
+#testRecord-wrapper{
+    width: 100%;
+}
 .checkin-record-wrapper {
     height: 500px;
     position: relative;
-    padding-top:10px;
+    padding-top: 10px;
     overflow-y: scroll;
 }
 
@@ -146,12 +189,13 @@ input:focus {
     margin-right: 0px;
 }
 
+
 .text-white {
     color: #fff;
 }
 
-.text-blue{
-    color:#007AFF;
+.text-blue {
+    color: #007AFF;
 }
 
 .text-green {
@@ -181,12 +225,19 @@ input:focus {
 }
 
 #RecordCard-wrapper {
-    overflow: auto;
+    overflow: scroll;
     height: 600px;
     padding: 5px;
 }
 
-#Record-wrapper-inner {
+.content-white-wrapper {
+    overflow: auto;
+    height: calc(100vh - 150px);
+    padding: 5px;
+    width: 100%;
+}
+
+#wrapper-inner {
     border-radius: 30px 30px 0px 0px;
     padding-top: 25px;
     background-color: #fff;
@@ -199,7 +250,7 @@ input:focus {
 
 .page-heading p {
     font-size: 32px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .page-heading span {
@@ -214,12 +265,17 @@ input:focus {
     display: inline-block;
 }
 
-#shareBtn{
+.sub-heading span {
+    font-size: 14px;
+    color: #707070;
+}
+
+#shareBtn {
     line-height: 33px;
     text-align: center;
     font-size: 14px;
     background-color: #2366BC;
-    color:#fff;
+    color: #fff;
     border-radius: 12px;
 }
 
@@ -247,14 +303,6 @@ input:focus {
     color: #050504;
     font-size: 1rem;
 }
-
-/* .checkin-record-wrapper .info-head{
-    display: inline;
-}
-
-.checkin-record-wrapper .info-value{
-    display: block;
-} */
 
 .resultStatus {
     position: relative;
@@ -303,8 +351,11 @@ input:focus {
 }
 
 .Status.pending {
-    /* border: 1px solid #FFB400; */
     background-color: #ffcb4d;
+}
+
+.Status.pending2 {
+    background-color: #FFA12C;
 }
 
 .Status .statusDot {
@@ -317,24 +368,30 @@ input:focus {
     left: 15px;
 }
 
-.vaxDetailStatus .statusDot {
+.detailStatus .statusDot {
     border-radius: 50%;
     height: 14px;
     width: 14px;
     display: inline-block;
     position: absolute;
-    top: 15px;
+    top: 50%;
     left: 20px;
+    transform: translateY(-50%)
 }
 
 .Status.right .statusDot,
-.vaxDetailStatus.right .statusDot {
+.detailStatus.right .statusDot {
     background-color: #23CE97;
 }
 
 .Status.pending .statusDot,
-.vaxDetailStatus.pending .statusDot {
+.detailStatus.pending .statusDot {
     background-color: #ffb400;
+}
+
+.Status.pending2 .statusDot,
+.detailStatus.pending2 .statusDot {
+    background-color: #FFA12C;
 }
 
 .Status.right span {
@@ -345,8 +402,12 @@ input:focus {
     color: #cd9000;
 }
 
+.Status.pending2 span {
+    color: #966315;
+}
 
-.vaxDetailStatus {
+
+.detailStatus {
     position: relative;
 }
 
@@ -384,6 +445,10 @@ input:focus {
     transform: translate(-50%, -50%);
 }
 
+.empty {
+    min-height: 200px;
+}
+
 .correct img {
     width: 66px;
     height: 66px;
@@ -411,7 +476,7 @@ input[type=number]::-webkit-outer-spin-button {
     height: 144px;
     width: 144px;
     border-radius: 50%;
-    background-image: linear-gradient(#2366BC, #1B4F91);
+    background-image: linear-gradient(90deg, #2366BC, #3B85DB);
     display: inline-block;
 }
 
@@ -449,6 +514,15 @@ input[type=number]::-webkit-outer-spin-button {
     font-weight: bold;
     margin: 0 auto;
     position: unset;
+}
+
+.topbar img {
+    width: 12px;
+    height: 21px;
+}
+
+.bg-blue .topbar span {
+    color: #fff;
 }
 
 /* sidebar */
@@ -526,25 +600,25 @@ form .btn {
     color: #fff;
     font-size: 18px;
     font-weight: 300;
-    background-image: linear-gradient(#2366BC, #1B4F91);
+    background-image: linear-gradient(90deg, #2366BC, #3B85DB);
     border-radius: 14px;
 }
 
-form .btn.btn-outline{
-    background-image: linear-gradient(#fff,#fff);
-    border:1px solid #2366BC;
-    color:#2366BC;
+form .btn.btn-outline {
+    background-image: linear-gradient(#fff, #fff);
+    border: 1px solid #2366BC;
+    color: #2366BC;
 }
 
-form .btn.btn-outline:active{
-    color:#fff!important;
+form .btn.btn-outline:active {
+    color: #fff !important;
 }
 
 form .btn:not(:disabled):not(.disabled):active {
-    background-image: linear-gradient(#2366BC, #1B4F91);
+    /* background-image: linear-gradient(#2366BC, #1B4F91);
     -webkit-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75); */
 }
 
 .inputNote {
@@ -604,32 +678,32 @@ form .btn:not(:disabled):not(.disabled):active {
     background-color: #007AFF;
     border-radius: 10px;
     text-align: center;
-    padding-left:5px;
-    padding-right:5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-.smallBtn.red{
+.smallBtn.red {
     background-color: #BA3949;
 }
 
 #editBtn {
-    color:#007AFF;
+    color: #007AFF;
     background-color: #fff;
     border: 1px solid #007AFF;
 }
 
-#editBtn span::before{
+#editBtn span::before {
     content: 'Edit';
 }
 
-#editBtn.active span::before{
+#editBtn.active span::before {
     content: 'Save';
 }
 
 #editBtn.active {
     color: #fff;
     background-color: #007AFF;
-    border:0px;
+    border: 0px;
 }
 
 
@@ -692,6 +766,10 @@ form .btn:not(:disabled):not(.disabled):active {
 .qaSection {
     overflow: auto;
     height: 180px;
+}
+
+.qaSection .form-row {
+    border-radius: 8px;
 }
 
 #vaxHistory-wrapper {
@@ -806,6 +884,50 @@ form .btn:not(:disabled):not(.disabled):active {
     padding: 20px;
 }
 
+/* tab 2 ( index page ) */
+#tabs-wrapper {
+    position: relative;
+}
+
+#tabs-wrapper .tab2 {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    height: 30px;
+    font-size: 17px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+#tabs-wrapper .tab2.active {
+    color: rgba(255, 255, 255, 1);
+}
+
+#tabs-wrapper .tab2::after {
+    content: '';
+    position: absolute;
+    left: 40%;
+    top: 130%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #fff;
+    clear: both;
+    opacity: 0;
+    z-index: 1;
+    transition: top .4s;
+    
+}
+
+#tabs-wrapper .tab2.active::after {
+    opacity: 1;
+    top:100%;
+    transition-property: all;
+    transition-delay: .4s;
+}
+
+
 .testResult .form-row {
     padding: 0px 5px 0px 5px;
 }
@@ -868,13 +990,13 @@ tr {
     color: #fff !important;
     font-size: 18px;
     font-weight: 300;
-    background-image: linear-gradient(#2366BC, #1B4F91) !important;
+    background-image: linear-gradient(90deg, #2366BC, #3B85DB) !important;
     border-radius: 20px !important;
     text-transform: unset !important;
 }
 
-.alertBtn.red{
-    background-image: linear-gradient(#BA3949,#BA3949) !important;  
+.alertBtn.red {
+    background-image: linear-gradient(#BA3949, #BA3949) !important;
 }
 
 .jconfirm .jconfirm-box div.jconfirm-content-pane .jconfirm-content {
@@ -951,11 +1073,11 @@ tr {
     font-size: 12px;
 }
 
-#accessDetail #recordShare input[type=checkbox]{
+#accessDetail #recordShare input[type=checkbox] {
     display: none;
 }
 
-#accessDetail #recordShare input[type=checkbox].active{
+#accessDetail #recordShare input[type=checkbox].active {
     display: block;
 }
 
@@ -1049,28 +1171,56 @@ tr {
 
 /* end of checkbox  */
 
-.whitelistPath{
+#declRequest .img-wrapper {
+    margin-bottom: 20px;
+    margin-top: -15px;
+}
+
+#declRequest img {
+    width: 100%;
+}
+
+#statement .statement-wrapper {
+    height: 350px;
+    overflow: scroll;
+    font-size: 17px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+#statement .statementNotes {
+    font-size: 15px;
+    color: #707070;
+}
+
+#statement .form-check label {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.whitelistPath {
     height: 12px;
     width: auto;
-    margin-top:-5px;
+    margin-top: -5px;
 }
 
-#shareRecord .form-check-input{
-    margin-top:-5px;
+#shareRecord .form-check-input {
+    margin-top: -5px;
 }
 
-footer{
-    position: relative;
-    /* left: 0; */
-    /* right: 25px; */
-    bottom: -20px;
+footer {
+    position: unset;
+    margin-top: 15px;
+    right: 0px;
+    bottom: 0px;
     width: 100%;
     height: 15px;
     text-align: center;
 }
 
-.copyright{
-    color:#979797;
+.copyright {
+    color: #979797;
     font-size: 11px;
 }
 
@@ -1162,5 +1312,17 @@ footer{
             padding-left: 15px !important;
             -webkit-appearance: none;
         }
+    }
+}
+
+@media screen and (max-height: 667px) {
+    .btn-wrapper {
+        position: relative;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        bottom: 0px;
+        right: 0px;
+        margin-top: 20px;
     }
 }

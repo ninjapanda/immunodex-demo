@@ -32,7 +32,7 @@
 
     <!-- Jquery UI JS -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script> -->
-    
+
     <!-- popup -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
@@ -99,132 +99,265 @@
                 </div>
             </div>
 
+            <div id="tabs-wrapper" class="row">
+                <div class="col-6 tab2" onclick="openTab('#Record-wrapper')">
+                    Testing
+                </div>
+                <div class="col-6 tab2 active" onclick="openTab('#Decl-wrapper')">
+                    Declaration
+                </div>
+            </div>
 
-            <div id="Record-wrapper" class="mt-1">
-                <div id="Record-wrapper-inner" class="row">
-                        <div class="col-7 mb-3 pl-4">
+            <div id="Record-wrapper" class="mt-1 tabcontent" >
+
+                <div id="wrapper-inner" class="row">
+
+                    <div id="checkIn-wrapper">
+                        <div class="col mb-3 pl-4">
+                            <div class="sub-heading">
+                                Check-In
+                                <div class="notice">1</div>
+                            </div>
+
+                        </div>
+
+                        <div class="checkInCard-wrapper">
+                            <div class="col-sm-12 RecordCard">
+                                <div class="blanket row m-0 pb-0" onclick="javascript:location.href='detail0.html'">
+                                    <div class="col-12 mb-2">
+                                        <span class="info-value" style="line-height: 42px;">
+                                            Covid-19
+                                        </span>
+                                    </div>
+                                    <div class="hr"></div>
+                                    <div class="col-6 mb-2">
+                                        <span class="info-head">
+                                            Check-In Date
+                                        </span>
+                                        <span class="info-value">
+                                            18 Jun, 2020
+                                        </span>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                        <span class="info-head">
+                                            Check-In Times
+                                        </span>
+                                        <span class="info-value">
+                                            17:02
+                                        </span>
+                                    </div>
+
+                                    <div class="col-12 mb-2">
+                                        <span class="info-head">
+                                            Issue
+                                        </span>
+                                        <span class="info-value">
+                                            St Bartholomew's Hospital
+                                        </span>
+                                    </div>
+
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div class="Status pending">
+                                            <div class="statusDot"></div><span>Pending for testing</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 cardNote">
+                                        TAP TO REVIEW
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="testRecord-wrapper">
+                        <div class="col-12 mb-3 pl-4">
                             <div class="sub-heading">
                                 My Record
                             </div>
                         </div>
-                        <div class="col-5 mb-3 pr-4" onclick="shareRecord()">
-                            <div class="text-blue" id="shareBtn"><span>Public Record</span></div>
-                        </div>
-                    
-                    <div id="RecordCard-wrapper">
-                        <div class="col-sm-12 RecordCard">
-                            <div class="blanket row m-0 pb-0" onclick="javascript:location.href='detail.html'">
-                                <div class="col-12 mb-2">
-                                    <span class="info-value" style="line-height: 42px;">
-                                        Covid-19
-                                    </span>
-                                </div>
-                                
-                                <div class="hr"></div>
-                                <div class="col-6 mb-2">
-                                    <span class="info-head">
-                                        Testing method
-                                    </span>
-                                    <span class="info-value">
-                                        RT-PCR
-                                    </span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <span class="info-head">
-                                        Testing Date
-                                    </span>
-                                    <span class="info-value">
-                                        24/12/2019
-                                    </span>
-                                </div>
-                                <div class="col-12 mt-2">
-                                    <span class="info-head">
-                                        Doctor's Orders
-                                    </span>
-                                    <span class="info-value">
-                                        Self-Quarantine
-                                    </span>
-                                </div>
-                                <div class="col-12 mt-2 mb-2">
-                                    <div class="Status pending">
-                                        <div class="statusDot"></div><span>Pending for testing</span>
+
+                        <div id="RecordCard-wrapper">
+                            <div class="col-sm-12 RecordCard">
+                                <div class="blanket row m-0 pb-0" onclick="javascript:location.href='detail.html'">
+                                    <div class="col-12 mb-2">
+                                        <span class="info-value" style="line-height: 42px;">
+                                            Covid-19
+                                        </span>
                                     </div>
-                                </div>
-                                <div class="col-12 cardNote">
-                                    TAP TO REVIEW
+
+                                    <div class="hr"></div>
+                                    <div class="col-6 mb-2">
+                                        <span class="info-head">
+                                            Testing method
+                                        </span>
+                                        <span class="info-value">
+                                            RT-PCR
+                                        </span>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                        <span class="info-head">
+                                            Testing Date
+                                        </span>
+                                        <span class="info-value">
+                                            24/12/2019
+                                        </span>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <span class="info-head">
+                                            Doctor's Orders
+                                        </span>
+                                        <span class="info-value">
+                                            Self-Quarantine
+                                        </span>
+                                    </div>
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div class="Status pending2">
+                                            <div class="statusDot"></div><span>Pending for User</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 cardNote">
+                                        TAP TO REVIEW
+                                    </div>
                                 </div>
                             </div>
+                            <!--   card -->
+                            <div class="col-sm-12 RecordCard">
+                                <div class="blanket row m-0 pb-0" onclick="javascript:location.href='detail2.html'">
+                                    <div class="col-12 mb-2">
+                                        <span class="info-value" style="line-height: 42px;">
+                                            Covid-19
+                                        </span>
+                                    </div>
+
+                                    <div class="hr"></div>
+                                    <div class="col-6 mb-2">
+                                        <span class="info-head">
+                                            Testing method
+                                        </span>
+                                        <span class="info-value">
+                                            RT-PCR
+                                        </span>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                        <span class="info-head">
+                                            Testing Date
+                                        </span>
+                                        <span class="info-value">
+                                            24/12/2019
+                                        </span>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <span class="info-head">
+                                            Doctor's Orders
+                                        </span>
+                                        <span class="info-value">
+                                            Self-Quarantine & Retest Required
+                                        </span>
+                                    </div>
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div class="Status right">
+                                            <div class="statusDot"></div><span>Valid</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 cardNote">
+                                        TAP TO REVIEW
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of   card -->
+
+                            <!--   card 2 (no record) -->
+                            <!-- <div class="col-sm-12">
+                                <div class="blanket row m-0 pb-0">
+                                    <div class="col-12 mb-2">
+                                        <div class="emptyCard center">
+                                            <span>No record yet</span>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div> -->
                         </div>
+                    </div>
+
+                    <!-- end of card 2 -->
+                    <footer>
+
+                        <div class="col-12 copyright">
+                            Powered by Emali.io @2020 Immunodex.com All rights reserved
+                        </div>
+
+                    </footer>
+                </div>
+
+            </div>
+
+            <div id="Decl-wrapper" class="mt-1 tabcontent" style="display: block;">
+
+                <div id="wrapper-inner" class="row">
+
+                    <div class="col-12 mb-3 pl-4">
+                        <div class="sub-heading">
+                            Health Declaration
+                        </div>
+                    </div>
+    
+                    <div id="DeclCard-wrapper" class="content-white-wrapper">
                         <!--   card -->
                         <div class="col-sm-12 RecordCard">
-                            <div class="blanket row m-0 pb-0" onclick="javascript:location.href='detail2.html'">
+                            <div class="blanket row m-0 pb-0" onclick="javascript:location.href='declDetail.html'">
+                                
                                 <div class="col-12 mb-2">
                                     <span class="info-value" style="line-height: 42px;">
-                                        Covid-19
+                                        Health Declaration - TDC
                                     </span>
                                 </div>
-                                
+    
                                 <div class="hr"></div>
                                 <div class="col-6 mb-2">
                                     <span class="info-head">
-                                        Testing method
+                                        Create Date
                                     </span>
                                     <span class="info-value">
-                                        RT-PCR
+                                        12/03/2019
                                     </span>
                                 </div>
                                 <div class="col-6 mb-2">
                                     <span class="info-head">
-                                        Testing Date
+                                        Be available to
                                     </span>
                                     <span class="info-value">
-                                        24/12/2019
+                                        19/03/2019
                                     </span>
                                 </div>
-                                <div class="col-12 mt-2">
+                                <div class="col-12 mb-2">
                                     <span class="info-head">
-                                        Doctor's Orders
+                                        Address
                                     </span>
                                     <span class="info-value">
-                                        Self-Quarantine & Retest Required
+                                        W Smithfield, London EC1A 7BE
                                     </span>
                                 </div>
-                                <div class="col-12 mt-2 mb-2">
-                                    <div class="Status right">
-                                        <div class="statusDot"></div><span>Valid</span>
-                                    </div>
-                                </div>
+                                
                                 <div class="col-12 cardNote">
                                     TAP TO REVIEW
                                 </div>
                             </div>
                         </div>
                         <!-- end of   card -->
-
-                        <!--   card 2 (no record) -->
-                        <!-- <div class="col-sm-12">
-                            <div class="blanket row m-0 pb-0">
-                                <div class="col-12 mb-2">
-                                    <div class="emptyCard center">
-                                        <span>No record yet</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div> -->
+    
                     </div>
+    
+                    <footer style="position: initial;">
 
+                            <div class="col-12 copyright">
+                                Powered by Emali.io @2020 Immunodex.com All rights reserved
+                            </div>
 
-                    <!-- end of card 2 -->
+                    </footer>
                 </div>
             </div>
-            <footer>
-                <div class="row">
-                    <div class="col-12 copyright">
-                        Powered by Emali.io @2020 Immunodex.com All rights reserved
-                    </div>
-                </div>
-            </footer>
+
         </div>
         <!-- end of page content -->
     </div>
