@@ -107,9 +107,9 @@ function test2DataDisplay() {
     $("#test2EditBtn").fadeIn();
 }
 
-function issuerCred() {
+function notifyUser() {
     $.confirm({
-        title: 'Issue Credential',
+        title: 'Notify User',
         columnClass: 'col-6',
         content: `
         <span class="info-title">Assessment ID</span>
@@ -126,7 +126,7 @@ function issuerCred() {
         onOpenBefore: function () {
             $(".jconfirm-buttons").addClass("form-row col-12 pl-0 pr-0");
         },
-        autoClose: 'Cancel|8000',
+        // autoClose: 'Cancel|8000',
         buttons: {
             Cancel: {
                 text: 'Cancel',
@@ -136,7 +136,9 @@ function issuerCred() {
             deny: {
                 text: 'Confirm',
                 btnClass: 'btn col',
-                action: function () {}
+                action: function () {
+                    location.href="testRecord.html"
+                }
             }
         }
     });
