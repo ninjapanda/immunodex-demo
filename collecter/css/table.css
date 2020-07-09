@@ -47,6 +47,10 @@ tr {
     box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.65);
 }
 
+.dataTables_filter .btn.btn-green:hover {
+    background-color: #419C99!important;
+}
+
 .dataTables_filter .btn img {
     width: 30px;
     height: 12px;
@@ -55,7 +59,7 @@ tr {
 }
 
 .dataTable{
-    display: block;
+    /* display: block; */
 }
 
 

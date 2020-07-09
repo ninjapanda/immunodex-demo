@@ -4,7 +4,7 @@ table{
 
 th,
 td {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .page-item.active .page-link {
@@ -133,7 +133,7 @@ table .container input {
     display: inline-block;
     position: absolute;
     top: 17px;
-    left: 5px;
+    /* left: 5px; */
 }
 
 .table-status-wrapper .statusDot.right{
@@ -148,6 +148,11 @@ table .container input {
 
 .table-status-wrapper .statusDot.pending{
     background-color: #979797;
+}
+
+
+.table-status-wrapper span {
+    padding-left: 20px;
 }
 
 #patientVaxRecord thead{

@@ -1,7 +1,9 @@
 $(document).ready(() => {
     loaderFadeOut();
 
-    $('.tab').click(function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    $('.tab, .tab2').click(function () {
         $(this).siblings().removeClass('active');
         $(this).addClass("active");
     })
@@ -11,7 +13,6 @@ $(document).ready(() => {
 function loaderFadeOut() {
     $(".loader-wrapper").hide();
 }
-
 
 function openTab(tab) {
     $('.tabcontent').hide();

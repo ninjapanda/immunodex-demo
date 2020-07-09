@@ -108,7 +108,7 @@
             </div>
 
             <div class="row">
-                <p class="sub-heading col-12 mb-1 mt-2">Testing ID - 00131</p>
+                <p class="sub-heading col-12 mb-1 mt-2">Assessment ID - 00131</p>
                 <div class="col-12">
                     <div class="blanket">
                         <div class="col-12 form-row status-wrapper">
@@ -202,7 +202,7 @@
                                     <span class="info-value">B</span>
                                 </div>
                                 <div class="col-3">
-                                    <span class="info-title">Swab</span>
+                                    <span class="info-title">RT-PCR</span>
                                     <span class="info-value">+ Positive</span>
                                 </div>
                                 <div class="col-3">
@@ -218,68 +218,26 @@
                     </div>
                     <div class="col-12 mb-2 tabs-wrapper">
                         <div class="row">
-                            <div class="tab col active" onclick="openTab( '#Swab')">PCR Test</div>
+                            <div class="tab col active" onclick="openTab( '#RT-PCR')">PCR Test</div>
                             <div class="tab col" onclick="openTab( '#ab')">Ab Test</div>
                         </div>
                     </div>
-                    <div id="Swab" class="blanket tabcontent testResult col-12" style="display: block;">
+                    <div id="RT-PCR" class="blanket tabcontent testResult col-12" style="display: block;">
 
                         <div class="form-row">
                             <div class="col-12">
                                 <div style="min-height: 140px;">
 
-                                    <form class="form-row col-12" id="testDetailForm" style="display:none">
-                                        <div class="col-12">
-                                            <span class="info-title">Swab Result</span>
-                                            <span class="info-value">+ Positive</span>
-                                        </div>
-                                        <div class="col-12 hr"></div>
-
-                                        <div class="form-item col-12">
-                                            <input type="text" class="form-textbox" id="productName"
-                                                value="qSARS-CoV-2 IgG/IgM Rapid Test" required>
-                                            <span class="form-label" for="productName">Product Name</span>
-                                        </div>
-                                        <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="testedBy"
-                                                value="Dr. John Watson" required>
-                                            <span class="form-label" for="testedBy">Tested by</span>
-                                        </div>
-                                        <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="manufacturer"
-                                                value="Cellex, Inc" required>
-                                            <span class="form-label" for="manufacturer">Manufacturer</span>
-                                        </div>
-                                        <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="spec" value="82.5%" required>
-                                            <span class="form-label" for="spec">Specificty</span>
-                                        </div>
-                                        <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="sen" value="98.5%" required>
-                                            <span class="form-label" for="sen">Sensitivity</span>
-                                        </div>
-                                        <div class="form-item col-6">
-                                            <input type="text" class="form-textbox" id="location"
-                                                value="Pok Oi Hospital, Hong Kong" required>
-                                            <span class="form-label" for="location">Location</span>
-                                        </div>
-                                        <div class="form-item col-6">
-                                            <input type="text" class="form-textbox" id="bactchNo" value="24824E9"
-                                                required>
-                                            <span class="form-label" for="bactchNo">Bactch No</span>
-                                        </div>
-                                    </form>
-
                                     <div class="form-row mt-2" id="testData">
                                         <div class="col-12">
-                                            <span class="info-title">Swab Result</span>
+                                            <span class="info-title">RT-PCR Result</span>
                                             <span class="info-value">+ Positive</span>
                                         </div>
                                         <div class="col-12 hr"></div>
 
                                         <div class="col-12">
                                             <span class="info-title">Product Name</span>
-                                            <span class="info-value">qSARS-CoV-2 IgG/IgM Rapid Test</span>
+                                            <span class="info-value">(Cellex, Inc) qSARS-CoV-2 PCR Rapid Test</span>
                                         </div>
                                         <div class="col-3 mt-2">
                                             <span class="info-title">Tested by</span>
@@ -290,7 +248,7 @@
                                             <span class="info-value">Cellex, Inc</span>
                                         </div>
                                         <div class="col-3 mt-2">
-                                            <span class="info-title">Specificty</span>
+                                            <span class="info-title">Specificity</span>
                                             <span class="info-value">82.5%</span>
                                         </div>
                                         <div class="col-3 mt-2">
@@ -316,52 +274,6 @@
                             <div class="col-12">
                                 <div style="min-height: 140px;">
 
-                                    <form class="form-row col-12" id="test2DetailForm" style="display:none">
-                                        <div class="col-3">
-                                            <span class="info-title">IgG</span>
-                                            <span class="info-value">+ Positive</span>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="info-title">IgM</span>
-                                            <span class="info-value">+ Positive</span>
-                                        </div>
-                                        <div class="col-12 hr"></div>
-
-                                        <div class="form-item col-12">
-                                            <input type="text" class="form-textbox" id="productName"
-                                                value="qSARS-CoV-2 IgG/IgM Rapid Test" required>
-                                            <span class="form-label" for="productName">Product Name</span>
-                                        </div>
-                                        <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="testedBy"
-                                                value="Dr. John Watson" required>
-                                            <span class="form-label" for="testedBy">Tested by</span>
-                                        </div>
-                                        <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="manufacturer"
-                                                value="Cellex, Inc" required>
-                                            <span class="form-label" for="manufacturer">Manufacturer</span>
-                                        </div>
-                                        <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="spec" value="82.5%" required>
-                                            <span class="form-label" for="spec">Specificty</span>
-                                        </div>
-                                        <div class="form-item col-3">
-                                            <input type="text" class="form-textbox" id="sen" value="98.5% required>
-                                            <span class="form-label" for="sen">Sensitivity</span>
-                                        </div>
-                                        <div class="form-item col-6">
-                                            <input type="text" class="form-textbox" id="location"
-                                                value="Pok Oi Hospital, Hong Kong" required>
-                                            <span class="form-label" for="location">Location</span>
-                                        </div>
-                                        <div class="form-item col-6">
-                                            <input type="text" class="form-textbox" id="bactchNo" value="24824E9"
-                                                required>
-                                            <span class="form-label" for="bactchNo">Bactch No</span>
-                                        </div>
-                                    </form>
-
                                     <div class="form-row mt-2" id="test2Data">
                                         <div class="col-3">
                                             <span class="info-title">IgG</span>
@@ -375,7 +287,7 @@
 
                                         <div class="col-12">
                                             <span class="info-title">Product Name</span>
-                                            <span class="info-value">qSARS-CoV-2 IgG/IgM Rapid Test</span>
+                                            <span class="info-value">(Cellex, Inc) qSARS-CoV-2 IgG/IgM Rapid Test</span>
                                         </div>
                                         <div class="col-3">
                                             <span class="info-title">Tested by</span>
@@ -386,7 +298,7 @@
                                             <span class="info-value">Cellex, Inc</span>
                                         </div>
                                         <div class="col-3 mt-2">
-                                            <span class="info-title">Specificty</span>
+                                            <span class="info-title">Specificity</span>
                                             <span class="info-value">82.5%</span>
                                         </div>
                                         <div class="col-3 mt-2">
@@ -410,7 +322,7 @@
 
                     <div class="col-12 mt-4 mb-2 tabs-wrapper">
                         <div class="row">
-                            <div class="tab col active" onclick="openTab2( '#history')">History</div>
+                            <div class="tab col active" onclick="openTab2( '#history')">Record</div>
                             <div class="tab col" onclick="openTab2( '#qa')">Q&A</div>
                             <div class="tab col" onclick="openTab2( '#sig')">Significance</div>
                         </div>
@@ -420,7 +332,7 @@
                         <table id="patienttestRecord" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Testing ID</th>
+                                    <th>Assessment ID</th>
                                     <th>Test Method</th>
                                     <th>Issuer</th>
                                     <th>Testing Date</th>
@@ -565,7 +477,7 @@
                                     G
                                 </div>
                             </div>
-                            <div class="col-10">Patient may have had a past infection, and has recoverd. This is the only “true immune” status</div>
+                            <div class="col-10">Patient may have had a past infection, and has recoverd. </div>
                             
                         </div>
                         <div class="form-row bg-gary">
@@ -574,7 +486,7 @@
                                     E1
                                 </div>
                             </div>
-                            <div class="col-10">Swab-, IgM+, IgG+ - Pt may be in recovery stage of infection, or Swab result may be false-negative (which would mean E).</div>
+                            <div class="col-10">RT-PCR-, IgM+, IgG+ - Pt may be in recovery stage of infection, or RT-PCR result may be false-negative (which would mean E).</div>
                         </div>
                         <div class="form-row">
                             <div class="col-2">
@@ -582,13 +494,19 @@
                                     C1
                                 </div>
                             </div>
-                            <div class="col-10">Swab-, IgM+, IgG- - Pt may be in early stage of infection w/ Covid-19, Swab result may be false-negative  (which would mean C)</div>
+                            <div class="col-10">RT-PCR-, IgM+, IgG- - Pt may be in early stage of infection w/ Covid-19, RT-PCR result may be false-negative  (which would mean C)</div>
                             
                         </div>
                     </div>
 
                 </div>
-
+                <footer class="position-relative">
+                    <div class="row">
+                        <div class="col-12 copyright">
+                            Powered by Emali.io @2020 Immunodex.com All rights reserved
+                        </div>
+                    </div>
+                </footer>
             </div>
 
             <!-- end of page content -->

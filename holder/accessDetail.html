@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Passport</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Jquery UI CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"> -->
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+
+    <!-- Custom style  -->
+    <link href="css/sideBar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom JS -->
+    <script src="js/sideBar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/access.js"></script>
+
+</head>
+
+<body class="animate-bottom-1">
+
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="userLabel">
+        <p>account holder’s name</p>
+    </div>
+    <div class="sidebar">
+        <a href="index.html"><img src="img/icon/home-run.png">Home</a>
+        <a href="booking.html"><img src="img/icon/appointment-icon.png">Appointment</a>
+        <a href="access.html"><img src="img/icon/password.png">Whitelist</a>
+        <a href="profile.html"><img src="img/icon/profile.png">Profile</a>
+        <!-- <a href="allergy.html"><img src="img/icon/allergy.png">Allergy</a> -->
+    </div>
+
+    <div class="trigger"></div>
+
+    <div class="wrapper">
+        <!-- start top bar -->
+        <div class="navbar navbar-expand topbar">
+            <a href="#" onclick="javascript:location.href='access.html'">
+                <img src="img/icon/Path.svg"><span>Back</span>
+            </a>
+        </div>
+        <!-- end of top bar -->
+
+
+        <!-- Start page content -->
+        <div class="container">
+            <div class="row">
+                <div class="page-heading mt-3 mb-4 col-12">
+                    <p class="mb-0">Access Detail</p>
+
+                    <span>
+                        Shared record to the verifier
+                    </span>
+                </div>
+
+                <div class="col-12 form-row mt-2 mb-2 pr-2">
+                    <div class="col-9">
+                        <span class="smallTitle">Verifier</span>
+                    </div>
+                    <div class="col-3" onclick="stopShare()">
+                        <div class="smallBtn red"><span>Stop Share</span></div>
+                    </div>
+                    <div class="col-12 hr m-0 mt-2"></div>
+                    <div class="col-12 p-2">
+                        <div class="form-row">
+                            <div class="col-6">
+                                <span class="info-head">
+                                    Name
+                                </span>
+                                <span class="info-value">
+                                    Molly Hooper
+                                </span>
+                            </div>
+                            <div class="col-6">
+                                <span class="info-head">
+                                    Mobile No.
+                                </span>
+                                <span class="info-value">
+                                    +020 9112 3456
+                                </span>
+                            </div>
+
+                            <div class="col-12 mt-2">
+                                <span class="info-head">
+                                    Expiry Date
+                                </span>
+                                <span class="info-value">
+                                    16, Jun 2020
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 hr m-0 mt-2"></div>
+
+                </div>
+                <div class="col-12 form-row mt-5 pr-2" id="accessDetail">
+                    <div class="col-9">
+                        <span class="smallTitle">Shared Record</span>
+                    </div>
+                    <div class="col-3" onclick="editShare()">
+                        <div id="editBtn" class="smallBtn"><span></span></div>
+                    </div>
+                    <div class="col-12 hr m-0 mt-2"></div>
+                    <div class="mb-4 mt-2 col-12" id="recordShare">
+                        <div class="form-row" id="title">
+                            <div class="col-1 checkbox-wrapper">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="record_0">
+                                </div>
+                            </div>
+                            <div class="col-4">Date</div>
+                            <div class="col-3">Result</div>
+                            <div class="col-2">Status</div>
+                            <div class="col-1"></div>
+                        </div>
+                        <div class="data" id="data_1">
+                            <div class="form-row">
+                                <div class="col-1 checkbox-wrapper">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="record_1">
+                                    </div>
+                                </div>
+                                <div class="col-4">13 May, 2020
+                                </div>
+                                <div class="col-3">
+                                    <div class="resultStatus">
+                                        <div class="statusDot green"></div>
+                                        <span>A</span>
+                                    </div>
+                                </div>
+                                <div class="col-2 text-green">Valid</div>
+                                <div class="col-1 expandBtn" onclick="expand('data_1')"></div>
+                            </div>
+
+                            <div class="form-row expandData" id="data_1_exapnd">
+                                <div class="col-1 checkbox-wrapper"></div>
+                                <div class="col-4">
+                                    <span class="info-head">
+                                        Issuer
+                                    </span>
+                                    <span class="info-value">
+                                        PD Clinic
+                                    </span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="info-head">
+                                        Method
+                                    </span>
+                                    <span class="info-value">
+                                        RT-PCR
+                                    </span>
+                                </div>
+                                <div class="col-2">
+                                    <span class="info-head">
+                                        Symptoms
+                                    </span>
+                                    <span class="info-value">
+                                        YES
+                                    </span>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+
+
+                        </div>
+                        <div class="data" id="data_2">
+                            <div class="form-row">
+                                <div class="col-1 checkbox-wrapper">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="record_2" checked>
+                                    </div>
+                                </div>
+                                <div class="col-4">02 May, 2020</div>
+                                <div class="col-3">
+
+                                    <div class="resultStatus">
+                                        <div class="statusDot red"></div>
+                                        <span>E1</span>
+                                    </div>
+                                </div>
+                                <div class="col-2 text-green">Valid</div>
+                                <div class="col-1 expandBtn" onclick="expand('data_2')"></div>
+                            </div>
+
+                            <div class="form-row expandData" id="data_2_exapnd">
+                                <div class="col-1 checkbox-wrapper"></div>
+                                <div class="col-4">
+                                    <span class="info-head">
+                                        Issuer
+                                    </span>
+                                    <span class="info-value">
+                                        Q&S Lab
+                                    </span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="info-head">
+                                        Method
+                                    </span>
+                                    <span class="info-value">
+                                        Blood
+                                    </span>
+                                </div>
+                                <div class="col-2">
+                                    <span class="info-head">
+                                        Symptoms
+                                    </span>
+                                    <span class="info-value">
+                                        YES
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="position-fixed" style="left:0;bottom:0;height:25px">
+                <div class="row">
+                    <div class="col-12 copyright">
+                        Powered by Emali.io @2020 Immunodex.com All rights reserved
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- end of page content -->
+    </div>
+</body>
+
+</html>

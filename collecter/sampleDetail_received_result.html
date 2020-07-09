@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Immunodex Credential Inspector</title>
+    <title>Immunodex</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -98,14 +98,14 @@
             </div>
 
             <div class="row mb-4 mt-4" id="detail">
-                <div class="col-md-9 col-sm-12">
+                <div class="col-md-6 col-sm-12">
                     <div class="blanket" style="height: 61px;line-height: 36px;">
                         <div class="col-12 form-row status-wrapper">
                             <div class="col-1 text-center">
-                                <div class="statusDot right"></div>
+                                <div class="statusDot pending2"></div>
                             </div>
                             <div class="col">
-                                <span>Sent to Tester</span>
+                                <span>Pending for Issue</span>
                             </div>
                         </div>
                     </div>
@@ -113,9 +113,15 @@
                 <div class="col-md-3 col-sm-12">
                     <div class="blanket">
                         <div class="col-12">
-                            <span class="info-title">Sent at</span>
+                            <span class="info-title">Revice Result at</span>
                             <span class="info-value">24/12/2019 12:30</span>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-12">
+                    <div class="btn btn-green" onclick="issueCred()" style="height:61px;line-height: 48px;">
+                        Issue Credential
                     </div>
                 </div>
 
@@ -125,7 +131,7 @@
 
                             <div class="col-md-4 col-sm-12">
                                 <span class="info-title">Full Name</span>
-                                <span class="info-value">Penny</span>
+                                <span class="info-value">Bernadette</span>
                             </div>
                             <div class="col-md-4 col-sm-12">
                                 <span class="info-title">Email</span>
@@ -203,7 +209,7 @@
                             </div>
 
                             <div class="col-6 mb-2">
-                                <span class="info-title">Specificty</span>
+                                <span class="info-title">Specificity</span>
                                 <span class="info-value">82.5%</span>
                             </div>
 
@@ -244,7 +250,7 @@
                             </div>
 
                             <div class="col-6 mb-2">
-                                <span class="info-title">Specificty</span>
+                                <span class="info-title">Specificity</span>
                                 <span class="info-value">92.5%</span>
                             </div>
 
@@ -338,7 +344,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td data-label="Test Method">Ab Tests & PCR Tests</td>
+                                    <td data-label="Test Method">Ab Tests RT-PCR Tests</td>
                                     <td data-label="Tester">PC Clinic</td>
                                     <td data-label="Testing Date">24/12/2019</td>
                                     <td data-label="Manufacturer" class="table-status-wrapper">
@@ -376,6 +382,13 @@
                         </table>
                     </div>
                 </div>
+                <footer>
+                    <div class="row">
+                        <div class="col-12 copyright">
+                            Powered by Emali.io @2020 Immunodex.com All rights reserved
+                        </div>
+                    </div>
+                </footer>
             </div>
 
             <!-- end of page content -->

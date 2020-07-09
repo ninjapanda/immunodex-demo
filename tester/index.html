@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Immunodex Credential Inspector</title>
+    <title>Immunodex</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -80,8 +80,8 @@
                         <div class="row">
                             <div class="tab col active" onclick="openTab( '#all')">All</div>
                             <div class="tab col text-yellow" onclick="openTab( '#samplePending')">Pending for Test</div>
-                            <div class="tab col text-orange" onclick="openTab( '#samplePending2')">Pending for User</div>
-                            <div class="tab col text-green" onclick="openTab( '#sampleValid')">Valid</div>
+                            <div class="tab col text-orange" onclick="openTab( '#samplePending2')">Pending to Send</div>
+                            <div class="tab col text-green" onclick="openTab( '#sampleSent')">Sent to Issuer</div>
                         </div>
                     </div>
 
@@ -105,6 +105,21 @@
                                         <td>9521W2</td>
                                         <td>Pharmacy(Windsor Club)</td>
                                         <td>15/12/2019 17:25</td>
+                                        <td>Ab</td>
+                                        <td>
+                                            <span class="text-orange">Pending to Send</span>
+                                        </td>
+                                        <td>
+                                            <div class="tableBtn" onclick="location.href='detail_pending_ab.html'">
+                                                <img src="img/icon/search@3x_2.png">Review
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>24824E9</td>
+                                        <td>Pharmacy(Windsor Club)</td>
+                                        <td>15/12/2019 20:14</td>
                                         <td>PCR</td>
                                         <td>
                                             <span class="text-yellow">Pending for Test</span>
@@ -117,31 +132,16 @@
                                     </tr>
                                     <tr>
                                         <td></td>
-                                        <td>24824E9</td>
-                                        <td>Pharmacy(Windsor Club)</td>
-                                        <td>15/12/2019 20:14</td>
-                                        <td>Ab</td>
-                                        <td>
-                                            <span class="text-yellow">Pending for Test</span>
-                                        </td>
-                                        <td>
-                                            <div class="tableBtn" onclick="location.href='detail_pending_ab.html'">
-                                                <img src="img/icon/edit.png">Start Test
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
                                         <td>952334A2</td>
                                         <td>Pharmacy(Taikoo SHing)</td>
                                         <td>01/12/2019 15:20</td>
                                         <td>PCR</td>
                                         <td>
-                                            <span class="text-orange">Pending for User</span>
+                                            <span class="text-green">Sent to Issuer</span>
                                         </td>
                                         <td>
-                                            <div class="tableBtn" onclick="location.href='detail_pending2.html'">
-                                                <img src="img/icon/edit.png">Start Test
+                                            <div class="tableBtn" onclick="location.href='detail_valid2.html'">
+                                                <img src="img/icon/search@3x_2.png">Review
                                             </div>
                                         </td>
                                     </tr>
@@ -152,11 +152,11 @@
                                         <td>24/12/2019 12:30</td>
                                         <td>Ab</td>
                                         <td>
-                                            <span class="text-green">Valid</span>
+                                            <span class="text-green">Sent to Issuer</span>
                                         </td>
                                         <td>
                                             <div class="tableBtn" onclick="location.href='detail_valid.html'">
-                                                <img src="img/icon/edit.png">Start Test
+                                                <img src="img/icon/search@3x_2.png">Review
                                             </div>
                                         </td>
                                     </tr>
@@ -179,21 +179,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td>9521W2</td>
-                                        <td>Pharmacy(Windsor Club)</td>
-                                        <td>15/12/2019 17:25</td>
-                                        <td>PCR</td>
-                                        <td>
-                                            <span class="text-yellow">Pending for Test</span>
-                                        </td>
-                                        <td>
-                                            <div class="tableBtn" onclick="location.href='detail_pending.html'">
-                                                <img src="img/icon/edit.png">Start Test
-                                            </div>
-                                        </td>
-                                    </tr>
                                     <tr>
                                         <td></td>
                                         <td>24824E9</td>
@@ -230,16 +215,16 @@
                                 <tbody>
                                     <tr>
                                         <td></td>
-                                        <td>952334A2</td>
-                                        <td>Pharmacy(Taikoo SHing)</td>
-                                        <td>01/12/2019 15:20</td>
-                                        <td>PCR</td>
+                                        <td>9521W2</td>
+                                        <td>Pharmacy(Windsor Club)</td>
+                                        <td>15/12/2019 17:25</td>
+                                        <td>ab</td>
                                         <td>
-                                            <span class="text-orange">Pending for User</span>
+                                            <span class="text-orange">Pending to Send</span>
                                         </td>
                                         <td>
-                                            <div class="tableBtn" onclick="location.href='detail_pending2.html'">
-                                                <img src="img/icon/edit.png">Start Test
+                                            <div class="tableBtn" onclick="location.href='detail_pending_ab.html'">
+                                                <img src="img/icon/search@3x_2.png">Review
                                             </div>
                                         </td>
                                     </tr>
@@ -247,7 +232,7 @@
                             </table>
                         </div>
                     </div>
-                    <div id="sampleValid" class="tabcontent col-12 p-0">
+                    <div id="sampleSent" class="tabcontent col-12 p-0">
                         <div class="blanket">
                             <table id="sampleList_valid" class="table" style="width:100%">
                                 <thead>
@@ -264,16 +249,31 @@
                                 <tbody>
                                     <tr>
                                         <td></td>
+                                        <td>952334A2</td>
+                                        <td>Pharmacy(Taikoo SHing)</td>
+                                        <td>01/12/2019 15:20</td>
+                                        <td>PCR</td>
+                                        <td>
+                                            <span class="text-green">Sent to Issuer</span>
+                                        </td>
+                                        <td>
+                                            <div class="tableBtn" onclick="location.href='detail_valid2.html'">
+                                                <img src="img/icon/search@3x_2.png">Review
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
                                         <td>552112E2</td>
                                         <td>Pharmacy(Yuen Long)</td>
                                         <td>24/12/2019 12:30</td>
                                         <td>Ab</td>
                                         <td>
-                                            <span class="text-green">Valid</span>
+                                            <span class="text-green">Sent to Issuer</span>
                                         </td>
                                         <td>
                                             <div class="tableBtn" onclick="location.href='detail_valid.html'">
-                                                <img src="img/icon/edit.png">Start Test
+                                                <img src="img/icon/search@3x_2.png">Review
                                             </div>
                                         </td>
                                     </tr>
@@ -283,6 +283,13 @@
                     </div>
                 </div>
             </div>
+            <footer>
+                <div class="row">
+                    <div class="col-12 copyright">
+                        Powered by Emali.io @2020 Immunodex.com All rights reserved
+                    </div>
+                </div>
+            </footer>
         </div>
 
         <!-- end of page content -->

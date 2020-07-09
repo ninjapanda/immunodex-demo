@@ -43,11 +43,12 @@
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
-    <script src="js/vaxRecord.js"></script>
+    <script src="js/record.js"></script>
 
 </head>
 
-<body> <div class="loader-wrapper">
+<body>
+    <div class="loader-wrapper">
         <div class="loader"></div>
     </div>
     <div class="wrapper">
@@ -64,7 +65,7 @@
                     </div>
                     <span>Greg Lestrade</span>
                 </div>
-                
+
                 <li class="active">
                     <a href="index.html">Testing Record</a>
                 </li>
@@ -92,36 +93,40 @@
                     </div>
                 </div>
                 <div class="blanket col-12 table-wrapper mt-4">
-                    <table id="vaxList_1" class="table checkInTable" style="width:100%">
+                    <table id="record" class="table checkInTable" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Testing ID</th>
+                                <th></th>
+                                <th>Expiry Date</th>
+
                                 <th>Name</th>
                                 <th>Identity Document No.</th>
                                 <th>Test method</th>
                                 <th>Testing Date</th>
                                 <th>Conclusion</th>
-                                <th>Symptoms</th>
+
                                 <th>Passport Status</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>00131</td>
-                                <td>Sherlock Holmes</td>
-                                <td>123456789</td>
-                                <td>Ab Test & PCR Test</td>
+                                <td class="recordStatus-wrapper">
+                                    <div class="recordStatus blue">Latest</div>
+                                </td>
+                                <td>12 Jun 2020</td>
+
+                                <td>Mrcoft Holmes</td>
+                                <td>123498763</td>
+                                <td>Ab Test RT-PCR Test</td>
                                 <td>03/03/2020</td>
                                 <td class="table-status-wrapper">
-                                    <div class="resultStatus">
-                                        <div class="statusDot red"></div>
-                                        <span>A</span>
-                                    </div>
+                                    <div class="statusDot red"></div>
+                                    <span>A</span>
                                 </td>
-                                <td>YES</td>
-                                <td class="table-status-wrapper">
-                                    <div class="statusDot right"></div><span>Valid</span>
+
+                                <td>
+                                    <span class="text-green">Valid</span>
                                 </td>
                                 <td>
                                     <a href="detail.html">
@@ -130,20 +135,20 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>00131</td>
+                                <td></td>
+                                <td>03 Jun 2020</td>
+
                                 <td>Sherlock Holmes</td>
                                 <td>123456789</td>
                                 <td>PCR Test</td>
                                 <td>17/03/2020</td>
                                 <td class="table-status-wrapper">
-                                    <div class="resultStatus">
                                         <div class="statusDot yellow"></div>
                                         <span>E1</span>
-                                    </div>
                                 </td>
-                                <td>YES</td>
-                                <td class="table-status-wrapper">
-                                    <div class="statusDot yellow"></div><span>Pending</span>
+
+                                <td>
+                                    <span>Pending</span>
                                 </td>
                                 <td>
                                     <a href="detail.html">
@@ -155,6 +160,13 @@
                     </table>
                 </div>
             </div>
+            <footer class="position-relative">
+                <div class="row">
+                    <div class="col-12 copyright">
+                        Powered by Emali.io @2020 Immunodex.com All rights reserved
+                    </div>
+                </div>
+            </footer>
         </div>
 
         <!-- end of page content -->

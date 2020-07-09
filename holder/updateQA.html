@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex Credential Passport</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Jquery UI CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"> -->
+
+    <!-- Custom style  -->
+    <link href="css/sideBar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Jquery UI JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script> -->
+
+    <!-- Custom JS -->
+    <script src="js/sideBar.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body class="animate-bottom-1">
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="trigger"></div>
+
+    <div class="wrapper">
+        <!-- start top bar -->
+        <div class="navbar navbar-expand topbar">
+            <a href="#" onclick="history.back()">
+                <img src="img/icon/Path.svg"><span>Back</span>
+            </a>
+        </div>
+        <!-- end of top bar -->
+
+
+        <!-- Start page content -->
+        <div class="container">
+            <div class="row">
+                <div class="page-heading mt-3 mb-4 col-12">
+                    <p class="mb-0">Q & A</p>
+                    <span>Please provide us information below.</span>
+                </div>
+                <form class="col-12">
+                    <div class="form-group">
+                        <label for="question1">Q1. In the past two weeks, have you had contact with someone diagnosed with COVID-19 or lived in or visit a place where COVID-19 is spreading? </label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q1ans1" name="ans1" value="yes">
+                                    <label for="q1ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q1ans2" name="ans1" value="no" onclick="hideExp('q1ansExp');" checked>
+                                    <label for="q1ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q1ansExp" placeholder="Please specify">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Q2. Do you have any underlying symptoms including but not limited to: fever, shortness of breath, cough, sore throat, pneumonia...? </label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q2ans1" name="ans2" value="yes" onclick="showExp('q2ansExp');" checked>
+                                    <label for="q2ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q2ans2" name="ans2" value="no" onclick="hideExp('q2ansExp');">
+                                    <label for="q2ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q2ansExp" value="Cough" style="display:inline-block" placeholder="e.g fever, shortness of breath, cough, sore throat, pneumonia">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Q3. Are/were you hospitalized?If yes, please specify the date of hospitalization.</label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q3ans1" name="ans3" value="yes" onclick="showExp('q3ansExp');">
+                                    <label for="q3ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q3ans2" name="ans3" value="no" onclick="hideExp('q3ansExp');" checked>
+                                    <label for="q3ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q3ansExp" placeholder="e.g. 2020/01/20 (yyyy/mm/dd)">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Q4. Have you travelled overseas in the past 14 days? If yes, please specify the places you travelled, date of departure from the places and date of return.</label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q4ans1" name="ans4" value="yes" onclick="showExp('q4ansExp');">
+                                    <label for="q4ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q4ans2" name="ans4" value="no" onclick="hideExp('q4ansExp');" checked>
+                                    <label for="q4ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q4ansExp" placeholder="e.g. Japan, 2020/01/10 to 2020/01/20">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="question1">Q5. Have you visited any health care facility (a hospital, emergency room, clinic, medical office, long-term care facility or nursing home, ambulance service, first responder services, or any health care setting) in the past 14 days?  </label>
+                        <div class="mt-2 mb-2 col-12 pl-0 pr-0 ans-wrapper">
+                            <div class="radio-toolbar row">
+                                <div class="col-6 ">
+                                    <input type="radio" id="q5ans1" name="ans5" value="yes" checked>
+                                    <label for="q5ans1">Yes</label>
+                                </div>
+                                <div class="col-6 ">
+                                    <input type="radio" id="q5ans2" name="ans5" value="no" onclick="hideExp('q5ansExp');">
+                                    <label for="q5ans2">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control qExp" id="q5ansExp" placeholder="">
+                        </div>
+                    </div>
+                    <a href="detail0.html">
+                        <div class="btn mt-4">Save</div>
+                    </a>
+                </form>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-12 copyright">
+                        Powered by Emali.io @2020 Immunodex.com All rights reserved
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end of page content -->
+    </div>
+</body>
+
+</html>

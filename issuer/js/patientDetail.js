@@ -1,3 +1,64 @@
+$(document).ready(function () {
+    var productDetail = {
+        "pcr": {
+            "1": {
+                "name": "(Roche) qSARS-CoV-2 PCR Rapid Test",
+                "manufacturer": "Roche",
+                "specificty": "82.5%",
+                "sensitivity": "98.5%"
+            },
+            "2": {
+                "name": "(Cellex, Inc) qSARS-CoV-2 PCR Rapid Test",
+                "manufacturer": "Cellex, Inc",
+                "specificty": "90%",
+                "sensitivity": "99.5%"
+            }
+        },
+        "ab": {
+            "1": {
+                "name": "(Roche) qSARS-CoV-2 IgG/IgM Rapid Test",
+                "manufacturer": "Roche",
+                "specificty": "88.5%",
+                "sensitivity": "92.5%"
+            },
+            "2": {
+                "name": "(Cellex, Inc) qSARS-CoV-2 IgG/IgM Rapid Test",
+                "manufacturer": "Cellex, Inc",
+                "specificty": "93%",
+                "sensitivity": "97.5%"
+            }
+        }
+    };
+
+    $("#pcrTest").change(function () {
+        var val = $(this).val();
+        if (val == 0) {
+            $("#pcr_manufacturer").val("");
+            $("#pcr_spec").val("");
+            $("#pcr_sen").val("");
+        } else {
+            $("#pcr_manufacturer").val(productDetail.pcr[val].manufacturer);
+            $("#pcr_spec").val(productDetail.pcr[val].specificty);
+            $("#pcr_sen").val(productDetail.pcr[val].sensitivity);
+        }
+
+    });
+
+    $("#abTest").change(function () {
+        var val = $(this).val();
+        if (val == 0) {
+            $("#ab_manufacturer").val("");
+            $("#ab_spec").val("");
+            $("#ab_sen").val("");
+        } else {
+            $("#ab_manufacturer").val(productDetail.ab[val].manufacturer);
+            $("#ab_spec").val(productDetail.ab[val].specificty);
+            $("#ab_sen").val(productDetail.ab[val].sensitivity);
+        }
+
+    });
+});
+
 function userFormDisplay() {
     $("#userData").hide();
     $("#userDetailForm").fadeIn();
@@ -46,12 +107,12 @@ function test2DataDisplay() {
     $("#test2EditBtn").fadeIn();
 }
 
-function issuerCred(){
+function issuerCred() {
     $.confirm({
         title: 'Issue Credential',
         columnClass: 'col-6',
         content: `
-        <span class="info-title">Testing ID</span>
+        <span class="info-title">Assessment ID</span>
         <span class="info-value">00131</span>
         
         <span class="info-title">Full Name</span>
@@ -68,8 +129,8 @@ function issuerCred(){
         autoClose: 'Cancel|8000',
         buttons: {
             Cancel: {
-                text:'Cancel',
-                btnClass:'btn btn-default col',
+                text: 'Cancel',
+                btnClass: 'btn btn-default col',
                 action: close()
             },
             deny: {
@@ -89,7 +150,7 @@ function updateResult() {
         columnClass: 'col-6',
         content: `
         <form class="formName" id="resultUpdate">
-        <span>Swab</span>
+        <span>RT-PCR</span>
         <div class="col-12 form-group">
             <select class="form-textbox" id="result" required>
                 <option value="na" selected>N/A</option>
@@ -126,8 +187,8 @@ function updateResult() {
         // autoClose: 'Cancel|8000',
         buttons: {
             Cancel: {
-                text:'Cancel',
-                btnClass:'btn btn-default col',
+                text: 'Cancel',
+                btnClass: 'btn btn-default col',
                 action: close()
             },
             deny: {

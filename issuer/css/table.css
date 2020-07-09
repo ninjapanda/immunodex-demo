@@ -4,7 +4,7 @@ table{
 
 th,
 td {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .page-item.active .page-link {
@@ -153,6 +153,10 @@ table .container input {
     background-color: #E8AC0C;
 }
 
+.table-status-wrapper span{
+    margin-left:8px;
+}
+
 .testResultStatus{
     position: relative;
 }
@@ -184,5 +188,5 @@ table .container input {
 #patienttestRecord .table-status-wrapper .statusDot {
     position: relative;
     top: 1px;
-    left: -12px;
+    left: 0px;
 }

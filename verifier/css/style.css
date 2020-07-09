@@ -39,14 +39,14 @@ body {
 }
 
 .blanket{
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: #fff;
     /* padding: 12px 0px 12px 0px; */
     padding-top: 12px;
     padding-bottom: 12px;
-    -webkit-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.45);
     margin-bottom: 15px;
 }
 
@@ -320,6 +320,15 @@ body {
     padding:10px;
 }
 
+.recordStatus{
+    border-radius: 4px;
+    color:#fff;
+    background-color: #3982F3;
+    padding-left:8px;
+    padding-right:8px;
+    text-align: center;
+}
+
 .status-wrapper{
     position: relative;
 }
@@ -538,6 +547,21 @@ body {
     margin-bottom: 1rem;
 }
 
+
+footer{
+    position: absolute;
+    /* left: 0; */
+    right: 25px;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    text-align: right;
+}
+
+.copyright{
+    color:#979797;
+    font-size: 11px;
+}
 
 /* keyframes */
 .loader-wrapper {
