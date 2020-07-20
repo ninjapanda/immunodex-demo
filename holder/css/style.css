@@ -1181,7 +1181,8 @@ tr {
 }
 
 #statement .statement-wrapper {
-    height: 350px;
+    height: calc(100vh - 300px);
+    /* height:400px; */
     overflow: scroll;
     font-size: 17px;
     background-color: #f2f2f2;
