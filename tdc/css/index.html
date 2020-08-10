@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Immunodex</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper.js,  Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+    <!-- Custom style  -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <link href="css/tab.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="wrapper">
+        <div class="topbar-wrapper topnav">
+            <div class="sidebarBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <p class="logo-text">Immunodex</p><span class="sub-text"> HKTDC</span>
+        </div>
+
+
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <p>Immunodex</p>
+                <span>HKTDC</span>
+            </div>
+
+            <ul class="list-unstyled components">
+
+                <li class="active">
+                    <a href="index.html">Dashboard</a>
+                </li>
+                <li>
+                    <a href="scanQRCode.html">Scan QR Code</a>
+                </li>
+                <li>
+                    <a href="requestList.html">Declaration Request</a>
+                </li>
+                <li>
+                    <a href="createRequest.html">Create Request</a>
+                </li>
+                <li>
+                    <a href="accountDetail.html">Account</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Start page content -->
+        <div class="shadow-wrapper">
+        </div>
+        <div class="container-fluid animate-bottom-1">
+
+            <div class="row">
+                <div class="page-heading col-12 mt-4">
+                    <p>Dashboard</p>
+                    <div class="row mb-4">
+                        <div class="col-md-6 col-sm-12">**All Declaration display at the below table is the latest version of the declaration and attendance.<br>To review the user declaration history, Please click the "Review" button to get more information.</div>
+                        <div class="offset-lg-3 col-lg-3 col-sm-12" onclick="location.href='scanQRCode.html'">
+                            <div class="btn btn-orange">Scan QR Code</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+
+                    <div class="col-sm-12 mb-2 tabs-wrapper">
+                        <div class="row">
+                            <div class="tab col active" onclick="openTab( '#all')">All</div>
+                            <div class="tab col" onclick="openTab( '#attended')">Attended</div>
+                            <div class="tab col" onclick="openTab( '#notAttend')">Not Attend</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <form class="col-12">
+
+                    <div class="blanket table-wrapper">
+                        <div id="all" class="tabcontent" style="display: block;">
+                            <div class="row mb-2 justify-content-end">
+                                <div class="col-md-auto ml-auto dataTables_filter">
+    
+                                    <div class="d-inline-block search-wrapper">
+                                        <input type="text" id="search" placeholder="Search">
+                                    </div>
+                                </div>
+    
+                            </div>
+                            <div class="table-responsive">
+                                <table id="decl" class="table declTable" style="width:100%">
+                                    <thead>
+                                        <tr>
+    
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Mobile No</th>
+                                            <th scope="col">Date of Declaration</th>
+                                            <th scope="col">Available To</th>
+                                            <th scope="col">Status of Health</th>
+                                            <th scope="col">Declaration Status</th>
+                                            <th scope="col">Attended At</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+    
+                                            <td data-label="First Name">Sherlock</td>
+                                            <td data-label="Last Name">Holmes</td>
+                                            <td data-label="Mobile No.">+852 5123 0542</td>
+                                            <td data-label="Date of Declaration">23 Jun, 2020</td>
+                                            <td data-label="Available To">25 Jun, 2020</td>
+                                            <td data-label="Status of Health" class="text-green">Healthy</td>
+                                            <td data-label="Declaration Status"><span class="declStatus valid">Valid</span>
+                                            </td>
+                                            <td data-label="Attended At">24 Jun, 2020 ,13:22</td>
+                                            <td>
+                                                <div class="tableBtn" onclick="location.href='detail(health).html'">Review
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+    
+                                            <td data-label="First Name">Sherlock</td>
+                                            <td data-label="Last Name">Holmes</td>
+                                            <td data-label="Mobile No.">+852 9232 5442</td>
+                                            <td data-label="Date of Declaration">23 Jun, 2020</td>
+                                            <td data-label="Available To">26 Jun, 2020</td>
+                                            <td data-label="Status of Health" class="text-red">Unhealthy</td>
+                                            <td data-label="Declaration Status"><span
+                                                    class="declStatus expired">Expired</span></td>
+                                            <td data-label="Attended At">N/A</td>
+                                            <td>
+                                                <div class="tableBtn" onclick="location.href='detail.html'">Review
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="page-wrapper mt-2 mr-3 mb-2">
+                                    <a class="paginate_button previous disabled" aria-controls="DataTables_Table_0"
+                                        data-dt-idx="0" tabindex="0" id="DataTables_Table_0_previous">Previous</a>
+                                        <a class="paginate_button current active" aria-controls="DataTables_Table_0"
+                                            data-dt-idx="1" tabindex="0">1</a>
+                                        <a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1"
+                                            tabindex="0">2</a>
+                                        <a class="paginate_button next disabled" aria-controls="DataTables_Table_0"
+                                            data-dt-idx="7" tabindex="0" id="DataTables_Table_0_next">Next</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="attended" class="tabcontent">
+                            <div class="row mb-2 justify-content-end">
+                                <div class="col-md-auto ml-auto dataTables_filter">
+    
+                                    <div class="d-inline-block search-wrapper">
+                                        <input type="text" id="search" placeholder="Search">
+                                    </div>
+                                </div>
+    
+                            </div>
+                            <div class="table-responsive">
+                                <table id="decl" class="table declTable" style="width:100%">
+                                    <thead>
+                                        <tr>
+    
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Mobile No</th>
+                                            <th scope="col">Date of Declaration</th>
+                                            <th scope="col">Available To</th>
+                                            <th scope="col">Status of Health</th>
+                                            <th scope="col">Declaration Status</th>
+                                            <th scope="col">Attended At</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+    
+                                            <td data-label="First Name">Sherlock</td>
+                                            <td data-label="Last Name">Holmes</td>
+                                            <td data-label="Mobile No.">+852 5123 0542</td>
+                                            <td data-label="Date of Declaration">23 Jun, 2020</td>
+                                            <td data-label="Available To">25 Jun, 2020</td>
+                                            <td data-label="Status of Health" class="text-green">Healthy</td>
+                                            <td data-label="Declaration Status"><span class="declStatus valid">Valid</span>
+                                            </td>
+                                            <td data-label="Attended At">24 Jun, 2020 ,13:22</td>
+                                            <td>
+                                                <div class="tableBtn" onclick="location.href='detail(health).html'">Review
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="page-wrapper mt-2 mr-3 mb-2">
+                                    <a class="paginate_button previous disabled" aria-controls="DataTables_Table_0"
+                                        data-dt-idx="0" tabindex="0" id="DataTables_Table_0_previous">Previous</a>
+                                        <a class="paginate_button current active" aria-controls="DataTables_Table_0"
+                                            data-dt-idx="1" tabindex="0">1</a>
+                                        <a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1"
+                                            tabindex="0">2</a>
+                                        <a class="paginate_button next disabled" aria-controls="DataTables_Table_0"
+                                            data-dt-idx="7" tabindex="0" id="DataTables_Table_0_next">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="notAttend" class="tabcontent">
+                            <div class="row mb-2 justify-content-end">
+                                <div class="col-md-auto ml-auto dataTables_filter">
+    
+                                    <div class="d-inline-block search-wrapper">
+                                        <input type="text" id="search" placeholder="Search">
+                                    </div>
+                                </div>
+    
+                            </div>
+                            <div class="table-responsive">
+                                <table id="decl" class="table declTable" style="width:100%">
+                                    <thead>
+                                        <tr>
+    
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Mobile No</th>
+                                            <th scope="col">Date of Declaration</th>
+                                            <th scope="col">Available To</th>
+                                            <th scope="col">Status of Health</th>
+                                            <th scope="col">Declaration Status</th>
+                                            <th scope="col">Attended At</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <tr>
+    
+                                            <td data-label="First Name">Sherlock</td>
+                                            <td data-label="Last Name">Holmes</td>
+                                            <td data-label="Mobile No.">+852 9232 5442</td>
+                                            <td data-label="Date of Declaration">23 Jun, 2020</td>
+                                            <td data-label="Available To">26 Jun, 2020</td>
+                                            <td data-label="Status of Health" class="text-red">Unhealthy</td>
+                                            <td data-label="Declaration Status"><span
+                                                    class="declStatus expired">Expired</span></td>
+                                            <td data-label="Attended At">N/A</td>
+                                            <td>
+                                                <div class="tableBtn" onclick="location.href='detail.html'">Review
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="page-wrapper mt-2 mr-3 mb-2">
+                                    <a class="paginate_button previous disabled" aria-controls="DataTables_Table_0"
+                                        data-dt-idx="0" tabindex="0" id="DataTables_Table_0_previous">Previous</a>
+                                        <a class="paginate_button current active" aria-controls="DataTables_Table_0"
+                                            data-dt-idx="1" tabindex="0">1</a>
+                                        <a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1"
+                                            tabindex="0">2</a>
+                                        <a class="paginate_button next disabled" aria-controls="DataTables_Table_0"
+                                            data-dt-idx="7" tabindex="0" id="DataTables_Table_0_next">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+
+            <footer>
+                <div class="row">
+                    <div class="col-12 copyright">
+                        Powered by Emali.io @2020 Immunodex.com All rights reserved
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end of page content -->
+    </div>
+
+</body>
+
+</html>
