@@ -60,7 +60,10 @@
             <ul class="list-unstyled components">
 
                 <li>
-                    <a href="index.html">Health Declaration</a>
+                    <a href="index.html">Dashboard</a>
+                </li>
+                <li>
+                    <a href="scanQRCode.html">Scan QR Code</a>
                 </li>
                 <li class="active">
                     <a href="requestList.html">Declaration Request</a>
@@ -94,7 +97,7 @@
                 </div>
 
                 <form class="col" id="requestDetailForm">
-                    <div class="blanket p-4  h-100">
+                    <div class="blanket p-4">
 
                         <div class="blanket row m-0 p-0">
 
@@ -160,8 +163,15 @@
 
                 </form>
 
-                <div class="col ">
-                    <div class="blanket h-100 p-4">
+                <div class="col">
+                    <div class="blanket p-4" id="requestStatus">
+                        <span class="info-head">
+                            Request Status
+                        </span>
+                        <h5 class="text-red m-0">Expired</h5>
+                        <!-- <h5 class="text-green m-0">Valid</h5> -->
+                    </div>
+                    <div class="blanket p-4">
                         <div class="row mt-2">
                             <div class="col-12">
                                 <form>
@@ -169,10 +179,10 @@
                                         <div class="col-12 mb-1">
                                             Request Link
                                         </div>
-                                        <div class="col-10">
+                                        <div class="col-12 col-lg-10">
                                             <input type="text" id="requestLink" class="form-control" value="https://www.example.com" readonly>
                                         </div>
-                                        <div class="col-2" onclick="copyLink()">
+                                        <div class="col-lg-2 pt-2 pt-lg-0" onclick="copyLink()">
                                             <div class="btn btn-orange" style="border-radius: 4px;">Copy Link</div>
                                         </div>
                                         <div class="col-12 mb-1 mt-4">

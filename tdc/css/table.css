@@ -462,4 +462,8 @@ table .container input {
           width: 100%;
           margin-left:0px;
       }
+
+      .declStatus{
+          padding:8px
+      }
 }

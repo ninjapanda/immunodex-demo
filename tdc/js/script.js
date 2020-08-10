@@ -13,9 +13,19 @@ $(document).ready(() => {
         setTimeout(function () {
             $(".container-fluid").removeClass('position-fixed');
         }, 400);
+    })
 
+    $('.tab').click(function(){
+        $(this).siblings().removeClass('active');
+        $(this).addClass("active");
     })
 });
+
+function openTab(tab) {
+    console.log('openTab');
+    $('.tabcontent').hide();
+    $(tab).fadeIn('slow');
+}
 
 function loaderFadeOut() {
     $(".loader-wrapper").hide();
